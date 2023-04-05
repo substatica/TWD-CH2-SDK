@@ -14,7 +14,7 @@ UCLASS(Blueprintable)
 class TWD_API ATWDWorldSettings : public ASDIWorldSettings {
     GENERATED_BODY()
 public:
-    ATWDWorldSettings();
+    ATWDWorldSettings(const FObjectInitializer& ObjectInitializer);
     
 /*  Unrecognized type 'FSpawnVFXAttachedParams' - type must be a UCLASS, USTRUCT or UENUM
 

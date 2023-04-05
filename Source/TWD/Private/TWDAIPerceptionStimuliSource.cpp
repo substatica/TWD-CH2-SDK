@@ -1,5 +1,5 @@
 #include "TWDAIPerceptionStimuliSource.h"
 
-UTWDAIPerceptionStimuliSource::UTWDAIPerceptionStimuliSource() {
+UTWDAIPerceptionStimuliSource::UTWDAIPerceptionStimuliSource(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

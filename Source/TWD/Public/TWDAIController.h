@@ -21,7 +21,6 @@
 #include "ETWDAICommand.h"
 #include "UObject/NoExportTypes.h"
 #include "TWDNavPathQueryDelegateDelegate.h"
-#include "EAkCallbackType.h"
 #include "ETWDSurvivorTargetRankings.h"
 #include "ETWDAITieBreaker.h"
 #include "UObject/NoExportTypes.h"

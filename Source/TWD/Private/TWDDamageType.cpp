@@ -14,9 +14,11 @@ bool UTWDDamageType::GetUseDeathBlowWounds() const {
     return false;
 }
 
+/*
 UTWDDamageType* UTWDDamageType::GetTWDDamageType(UClass* DamageTypeClass, bool& bValid) const {
     return NULL;
 }
+*/
 
 FVector UTWDDamageType::GetSplashSize() const {
     return FVector{};

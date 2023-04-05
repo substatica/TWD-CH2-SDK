@@ -7,7 +7,7 @@ UCLASS()
 class UTWDGauntletController : public UGauntletTestController {
     GENERATED_BODY()
 public:
-    UTWDGauntletController();
+    UTWDGauntletController(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnTestsRefreshed();
