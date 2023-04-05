@@ -14,18 +14,17 @@ public:
     uint8 bShowPropertyDetails: 1;
     
     UTWDBTT_Base();
+    
     UFUNCTION(BlueprintNativeEvent)
-    TEnumAsByte<EBTNodeResult::Type> OnTick(AAIController* Controller, float DeltaSeconds);
+    EBTNodeResult::Type OnTick(AAIController* Controller, float DeltaSeconds);
     
     UFUNCTION(BlueprintNativeEvent)
     void OnDeactivate(AAIController* Controller);
-
-/*
+    
     UFUNCTION(BlueprintNativeEvent)
-    TEnumAsByte<EBTNodeResult::Type> OnActivate(AAIController* Controller);
-*/      
+    EBTNodeResult::Type OnActivate(AAIController* Controller);
+    
     UFUNCTION(BlueprintNativeEvent)
     void OnAbort(AAIController* Controller);
     
 };
-
