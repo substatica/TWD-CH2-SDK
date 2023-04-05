@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "SDI Save Import/Export Plugin",
+	"Description": "Plugin for exporting and importing legacy game saves to and from SDI Services.",
+	"Category": "Other",
+	"CreatedBy": "Skydance Interactive",
+	"CreatedByURL": "https://www.skydanceinteractive.com/",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"SupportedTargetPlatforms": [
+		"Android",
+		"PS4",
+		"Win64"
+	],
+	"Modules": [
+		{
+			"Name": "SDISaveImportExportPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SDICorePlugin",
+			"Enabled": true
+		}
+	]
+}

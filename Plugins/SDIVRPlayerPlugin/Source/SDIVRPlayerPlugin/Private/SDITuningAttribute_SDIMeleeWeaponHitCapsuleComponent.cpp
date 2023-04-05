@@ -1,0 +1,5 @@
+#include "SDITuningAttribute_SDIMeleeWeaponHitCapsuleComponent.h"
+
+FSDITuningAttribute_SDIMeleeWeaponHitCapsuleComponent::FSDITuningAttribute_SDIMeleeWeaponHitCapsuleComponent() {
+}
+
