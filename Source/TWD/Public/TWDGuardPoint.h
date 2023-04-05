@@ -15,7 +15,7 @@ public:
     UPROPERTY(EditAnywhere)
     TArray<FTWDGuardPointLeash> Leashes;
     
-    ATWDGuardPoint();
+    ATWDGuardPoint(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLeashes(TArray<FTWDGuardPointLeash> NewLeashes);
     

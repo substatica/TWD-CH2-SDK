@@ -31,7 +31,7 @@ public:
     UPROPERTY(Instanced)
     USplineComponent* EditorPathSpline;
     
-    ATWDWaypointPath();
+    ATWDWaypointPath(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void OnUnassigned(UTWDWaypointPatrolComponent* PatrolComponent);
     

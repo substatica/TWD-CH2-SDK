@@ -75,7 +75,7 @@ protected:
     TMap<TWeakObjectPtr<ATWDCharacter>, FTWDWeaponPelletCharacterHit> PelletCharacterHits;
     
 public:
-    ATWDWeaponFirearmAmmoTrace();
+    ATWDWeaponFirearmAmmoTrace(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     ATWDWeaponFirearmAmmoTrace* TuneTWDWeaponFirearmAmmoTrace(FSDITuningAttribute_TWDWeaponFirearmAmmoTrace Attr, float PreModifier, float Add, float PostModifier);
     

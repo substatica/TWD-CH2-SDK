@@ -61,7 +61,7 @@ UCameraComponent* ATWDPlayerCameraManager::GetCameraComponent() const {
 void ATWDPlayerCameraManager::FreezeHMDCamera() {
 }
 
-ATWDPlayerCameraManager::ATWDPlayerCameraManager() {
+ATWDPlayerCameraManager::ATWDPlayerCameraManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CageMesh = NULL;
     this->CageMeshMaterial = NULL;
     this->PlayerCageBlueprint = NULL;

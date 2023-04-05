@@ -367,7 +367,7 @@ void ATWDPlayerCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ATWDPlayerCharacter, RepTuningModifiers);
 }
 
-ATWDPlayerCharacter::ATWDPlayerCharacter() {
+ATWDPlayerCharacter::ATWDPlayerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bInTutorial = false;
     this->NonVRLeftHandPhysicsConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("NonVRLeftHandPhysicsConstraint"));
     this->NonVRRightHandPhysicsConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("NonVRRightHandPhysicsConstraint"));

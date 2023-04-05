@@ -118,7 +118,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Transient)
     float FallingDistance;
     
-    ATWDWalkerAICharacter();
+    ATWDWalkerAICharacter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetSurpriseDoorBreaking(bool bEnable);
     

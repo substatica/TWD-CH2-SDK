@@ -722,7 +722,7 @@ protected:
     int32 SecondaryDismemberHapticEffectLoopId;
     
 public:
-    ATWDWeaponActor();
+    ATWDWeaponActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

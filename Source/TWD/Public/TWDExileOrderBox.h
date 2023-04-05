@@ -47,7 +47,7 @@ protected:
     bool bStartLocked;
     
 public:
-    ATWDExileOrderBox();
+    ATWDExileOrderBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool TryLateAssignExileOrderEvent();
     

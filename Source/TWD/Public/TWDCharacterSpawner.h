@@ -25,7 +25,7 @@ private:
     TSubclassOf<ATWDCharacter> CharacterBlueprint;
     
 public:
-    ATWDCharacterSpawner();
+    ATWDCharacterSpawner(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void StartSpawner();
     

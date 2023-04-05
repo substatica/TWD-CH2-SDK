@@ -10,7 +10,7 @@ void ATWDSpawnControlVolume::GatherAllSpawners() {
 void ATWDSpawnControlVolume::DisableAllSpawners() {
 }
 
-ATWDSpawnControlVolume::ATWDSpawnControlVolume() {
+ATWDSpawnControlVolume::ATWDSpawnControlVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bDisableOnLoad = true;
     this->Volume = CreateDefaultSubobject<UBoxComponent>(TEXT("ControlVolume"));
     this->bEnabled = true;

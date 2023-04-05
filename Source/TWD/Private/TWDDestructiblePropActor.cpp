@@ -17,7 +17,7 @@ void ATWDDestructiblePropActor::GetLifetimeReplicatedProps(TArray<FLifetimePrope
     DOREPLIFETIME(ATWDDestructiblePropActor, CurrentHealth);
 }
 
-ATWDDestructiblePropActor::ATWDDestructiblePropActor() {
+ATWDDestructiblePropActor::ATWDDestructiblePropActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ActiveMesh"));
     this->MaxHealth = 0.00f;
     this->CurrentHealth = 0.00f;

@@ -44,7 +44,7 @@ private:
     AActor* OccupingAgent;
     
 public:
-    ATWDMovementTargetActor();
+    ATWDMovementTargetActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetOccupied(AActor* occupingActor);
     

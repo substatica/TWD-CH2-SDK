@@ -20,7 +20,7 @@ public:
     UPROPERTY(EditAnywhere, Instanced)
     TArray<UTWDCraftingTableProgression*> CraftingTableProgressions;
     
-    ATWDWaveModeGameMode();
+    ATWDWaveModeGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetAllWavesCompleted(bool bSet);
     

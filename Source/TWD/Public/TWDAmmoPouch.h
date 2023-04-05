@@ -83,7 +83,7 @@ protected:
     FTWDAmmoPouchItemInfo CurrentItemInfo;
     
 public:
-    ATWDAmmoPouch();
+    ATWDAmmoPouch(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool WasPouchRecentlyRendered(float Tolerance) const;
     

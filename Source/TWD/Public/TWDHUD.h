@@ -7,6 +7,6 @@ UCLASS(NonTransient)
 class ATWDHUD : public ASDICoreHUD {
     GENERATED_BODY()
 public:
-    ATWDHUD();
+    ATWDHUD(const FObjectInitializer& ObjectInitializer);
 };
 

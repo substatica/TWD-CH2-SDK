@@ -54,7 +54,7 @@ bool ATWDPlayerInventorySlot::InventoryTypeAllowed(ASDIInventoryActor* Inv) cons
 void ATWDPlayerInventorySlot::EnableSlot(bool bEnable) const {
 }
 
-ATWDPlayerInventorySlot::ATWDPlayerInventorySlot() {
+ATWDPlayerInventorySlot::ATWDPlayerInventorySlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SlotCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SlotCollision"));
     this->InventoryType = ETWDInventoryType::Default;
     this->bIgnoreSlotScale = false;

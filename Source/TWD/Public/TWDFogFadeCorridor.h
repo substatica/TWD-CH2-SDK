@@ -54,7 +54,7 @@ protected:
     float EntryValue;
     
 public:
-    ATWDFogFadeCorridor();
+    ATWDFogFadeCorridor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

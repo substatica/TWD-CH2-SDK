@@ -8,7 +8,7 @@ void ATWDSignificanceVolume::OnOverlapEnd(AActor* OverlappedActor, AActor* Other
 void ATWDSignificanceVolume::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActor) {
 }
 
-ATWDSignificanceVolume::ATWDSignificanceVolume() {
+ATWDSignificanceVolume::ATWDSignificanceVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MaxSignificanceHumanTier2 = -1;
     this->MaxSignificanceAICharactersTier2 = -1;
     this->MaxSignificanceHumanTier1 = -1;

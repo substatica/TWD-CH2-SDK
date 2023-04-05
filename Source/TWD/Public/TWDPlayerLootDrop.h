@@ -9,7 +9,7 @@ UCLASS()
 class ATWDPlayerLootDrop : public ATWDInventoryHolderActor {
     GENERATED_BODY()
 public:
-    ATWDPlayerLootDrop();
+    ATWDPlayerLootDrop(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     bool GiveContentsTo(AActor* NewOwner);
     

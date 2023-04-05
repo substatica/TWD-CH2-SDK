@@ -25,6 +25,6 @@ protected:
     ASDIWeaponActor* WeaponActor;
     
 public:
-    ATWDWeaponActorAttachmentEditor();
+    ATWDWeaponActorAttachmentEditor(const FObjectInitializer& ObjectInitializer);
 };
 

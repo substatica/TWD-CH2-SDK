@@ -61,7 +61,7 @@ bool ATWDGameState::GetCharacterSwitchToken() {
     return false;
 }
 
-ATWDGameState::ATWDGameState() {
+ATWDGameState::ATWDGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DefaultTimeUntilBells = 1800.00f;
     this->BellAlarmTime = 60.00f;
     this->PreHordeBellTime = 6.00f;

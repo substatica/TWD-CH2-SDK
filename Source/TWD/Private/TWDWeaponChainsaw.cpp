@@ -23,7 +23,7 @@ float ATWDWeaponChainsaw::GetFuelPropCurrencyAmountInternal(UObject* InventoryHo
     return 0.0f;
 }
 
-ATWDWeaponChainsaw::ATWDWeaponChainsaw() {
+ATWDWeaponChainsaw::ATWDWeaponChainsaw(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->OverlapGenerator = CreateDefaultSubobject<USDIAsyncOverlapEventGeneratorComponent>(TEXT("OverlapGenerator"));
     this->EnvironmentalEffectsRefreshTime = 0.05f;
     this->EnvironmentalSoundRefreshTime = 0.10f;

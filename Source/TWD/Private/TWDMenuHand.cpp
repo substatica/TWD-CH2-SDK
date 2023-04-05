@@ -5,7 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SceneComponent.h"
 
-ATWDMenuHand::ATWDMenuHand() {
+ATWDMenuHand::ATWDMenuHand(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MotionControllerComponent = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionControllerComponent"));
     this->HandMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HandMeshComponent"));
     this->MenuPointerComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MenuPointerComponent"));

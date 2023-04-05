@@ -40,7 +40,7 @@ protected:
     TArray<TSoftObjectPtr<AActor>> Ch1PersistableAreas;
     
 public:
-    ATWDPersistentLevel();
+    ATWDPersistentLevel(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void WaitForLevelsToBeLoaded();
     

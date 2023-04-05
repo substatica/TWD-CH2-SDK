@@ -24,7 +24,7 @@ FName ATWDDeadBody::GetSkinSectionVariant(ETWDCharacterSkinSection Section) cons
 void ATWDDeadBody::GetSkinSectionInfo(ETWDCharacterSkinSection Section, int32& OutIndex, FName& OutVariant, TMap<FName, float>& OutScalarParams, TMap<FName, FLinearColor>& OutColorParams, TMap<FName, TSoftObjectPtr<UTexture>>& OutTextureParams, FSDISkinSkeletalMeshSet& OutSkinMeshSet) const {
 }
 
-ATWDDeadBody::ATWDDeadBody() {
+ATWDDeadBody::ATWDDeadBody(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SplashColorTexture = NULL;
     this->SplashNormalTexture = NULL;
     this->MeatColorTexture = NULL;

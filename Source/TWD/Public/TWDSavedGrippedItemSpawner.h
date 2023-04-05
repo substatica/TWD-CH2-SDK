@@ -21,7 +21,7 @@ protected:
     TArray<TSoftClassPtr<ASDIInventoryActor>> ProhibitedItems;
     
 public:
-    ATWDSavedGrippedItemSpawner();
+    ATWDSavedGrippedItemSpawner(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void SpawnSavedItem();

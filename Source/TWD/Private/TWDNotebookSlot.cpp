@@ -1,5 +1,5 @@
 #include "TWDNotebookSlot.h"
 
-ATWDNotebookSlot::ATWDNotebookSlot() {
+ATWDNotebookSlot::ATWDNotebookSlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

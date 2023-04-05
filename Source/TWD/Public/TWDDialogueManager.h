@@ -49,7 +49,7 @@ private:
     TArray<UDataTable*> ExternalDialogueLineDataTableReferences;
     
 public:
-    ATWDDialogueManager();
+    ATWDDialogueManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UnRegisterSpecialDialogueCharacter(ATWDCharacter* CharacterToRemove);
     

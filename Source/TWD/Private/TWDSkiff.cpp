@@ -27,7 +27,7 @@ FName ATWDSkiff::GetPlayerStartTag() const {
 void ATWDSkiff::ActivateMagicSlots() {
 }
 
-ATWDSkiff::ATWDSkiff() {
+ATWDSkiff::ATWDSkiff(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SkiffMesh"));
     this->bMagicSlotsEnabled = false;
     this->MagicSlotClass = NULL;

@@ -22,6 +22,6 @@ protected:
     TSoftObjectPtr<ASDIPath> WalkThroughPath;
     
 public:
-    ATWDAutomationCoordinator();
+    ATWDAutomationCoordinator(const FObjectInitializer& ObjectInitializer);
 };
 

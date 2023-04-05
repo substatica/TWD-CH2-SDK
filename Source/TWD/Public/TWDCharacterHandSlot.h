@@ -30,6 +30,6 @@ private:
     bool bEnabled;
     
 public:
-    ATWDCharacterHandSlot();
+    ATWDCharacterHandSlot(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -6,6 +6,6 @@ void ATWDHordeLevel::OnHordeTimerComplete_Implementation() {
 void ATWDHordeLevel::HordeTimerComplete() {
 }
 
-ATWDHordeLevel::ATWDHordeLevel() {
+ATWDHordeLevel::ATWDHordeLevel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -6,7 +6,7 @@ bool ATWDGripPhysicsDrawer::NonVROpenDrawer(ATWDCharacter* Character) {
     return false;
 }
 
-ATWDGripPhysicsDrawer::ATWDGripPhysicsDrawer() {
+ATWDGripPhysicsDrawer::ATWDGripPhysicsDrawer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bIsOpen = false;
     this->bNonVRDrawerAutoOpen = false;
     this->NonVROpenVelocity = 50000.00f;

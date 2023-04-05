@@ -1,5 +1,5 @@
 #include "TWDAttackInputSplineActor.h"
 
-ATWDAttackInputSplineActor::ATWDAttackInputSplineActor() {
+ATWDAttackInputSplineActor::ATWDAttackInputSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

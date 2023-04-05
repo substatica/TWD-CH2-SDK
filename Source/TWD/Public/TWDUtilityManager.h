@@ -7,6 +7,6 @@ UCLASS()
 class TWD_API ATWDUtilityManager : public AActor {
     GENERATED_BODY()
 public:
-    ATWDUtilityManager();
+    ATWDUtilityManager(const FObjectInitializer& ObjectInitializer);
 };
 

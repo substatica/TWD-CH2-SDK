@@ -107,7 +107,7 @@ void ATWDAICharacter::ClearStimAllowVolumes() {
 void ATWDAICharacter::AddPathTag(const FGameplayTag& PathTag) {
 }
 
-ATWDAICharacter::ATWDAICharacter() {
+ATWDAICharacter::ATWDAICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bFullyAwareOfPlayerUntilSeen = false;
     this->bHasSeenPlayer = false;
     this->DebugInfo = CreateDefaultSubobject<UTextRenderComponent>(TEXT("DebugInfo"));

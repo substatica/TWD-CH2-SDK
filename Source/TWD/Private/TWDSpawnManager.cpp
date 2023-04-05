@@ -108,7 +108,7 @@ void ATWDSpawnManager::ClearSignificanceAICountOverride() {
 }
 
 
-ATWDSpawnManager::ATWDSpawnManager() {
+ATWDSpawnManager::ATWDSpawnManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MapEnum = EMapTerritoryNodeType::None;
     this->DefaultSpawnCurve = NULL;
     this->bForceScenarioSeed = false;

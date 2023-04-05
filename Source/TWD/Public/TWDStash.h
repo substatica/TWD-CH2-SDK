@@ -62,7 +62,7 @@ protected:
     USceneComponent* InventoryWallRoot;
     
 public:
-    ATWDStash();
+    ATWDStash(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void SaveStashToProgression();
     

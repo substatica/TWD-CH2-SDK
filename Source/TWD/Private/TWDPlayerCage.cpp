@@ -1,6 +1,6 @@
 #include "TWDPlayerCage.h"
 
-ATWDPlayerCage::ATWDPlayerCage() {
+ATWDPlayerCage::ATWDPlayerCage(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CageMatInst = NULL;
 }
 

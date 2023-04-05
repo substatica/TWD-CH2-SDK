@@ -13,7 +13,7 @@ void ATWDFogFadeCorridor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponen
 void ATWDFogFadeCorridor::Initialize() {
 }
 
-ATWDFogFadeCorridor::ATWDFogFadeCorridor() {
+ATWDFogFadeCorridor::ATWDFogFadeCorridor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Collision = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision"));
     this->TargetFog = NULL;
     this->ActiveTargetFog = NULL;

@@ -29,7 +29,7 @@ public:
     UPROPERTY(Transient)
     TMap<TWeakObjectPtr<AActor>, FPeekOcclusionRayCastTracker> RayCastTrackers;
     
-    ATWDAIPerceptionModifierVolume();
+    ATWDAIPerceptionModifierVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     float GetCanBeSeenDistanceFactor(const ATWDCharacter* Observered, const ATWDCharacter* Observer) const;
     

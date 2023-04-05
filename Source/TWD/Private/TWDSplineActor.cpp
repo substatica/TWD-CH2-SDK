@@ -1,5 +1,5 @@
 #include "TWDSplineActor.h"
 
-ATWDSplineActor::ATWDSplineActor() {
+ATWDSplineActor::ATWDSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

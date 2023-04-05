@@ -20,7 +20,7 @@ protected:
     float NonVROpenVelocity;
     
 public:
-    ATWDGripPhysicsDrawer();
+    ATWDGripPhysicsDrawer(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     bool NonVROpenDrawer(ATWDCharacter* Character);
     

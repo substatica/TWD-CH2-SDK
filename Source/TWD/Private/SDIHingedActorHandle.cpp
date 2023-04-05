@@ -27,7 +27,7 @@ AActor* ASDIHingedActorHandle::GetDoor() {
     return NULL;
 }
 
-ASDIHingedActorHandle::ASDIHingedActorHandle() {
+ASDIHingedActorHandle::ASDIHingedActorHandle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GrippedComponent = NULL;
     this->RotationDetectionArrow = NULL;
     this->PlayerHand = NULL;

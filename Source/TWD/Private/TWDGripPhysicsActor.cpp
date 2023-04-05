@@ -25,7 +25,7 @@ void ATWDGripPhysicsActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(ATWDGripPhysicsActor, RepGripPhysicsRotator);
 }
 
-ATWDGripPhysicsActor::ATWDGripPhysicsActor() {
+ATWDGripPhysicsActor::ATWDGripPhysicsActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bForceHideHighlight = true;
     this->bTickWhileAwake = false;
     this->SimulatePhysicsComponent = NULL;

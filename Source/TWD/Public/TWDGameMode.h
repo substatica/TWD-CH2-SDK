@@ -74,7 +74,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TArray<UBehaviorTree*> PreloadBehaviorTree;
     
-    ATWDGameMode();
+    ATWDGameMode(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void StartBells();
     

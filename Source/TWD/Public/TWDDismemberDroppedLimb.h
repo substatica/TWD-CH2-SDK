@@ -86,7 +86,7 @@ protected:
     TArray<FStuckWeapon> StuckWeapons;
     
 public:
-    ATWDDismemberDroppedLimb();
+    ATWDDismemberDroppedLimb(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool ShowGoreBlood() const;
     

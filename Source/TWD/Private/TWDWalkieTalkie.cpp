@@ -1,5 +1,5 @@
 #include "TWDWalkieTalkie.h"
 
-ATWDWalkieTalkie::ATWDWalkieTalkie() {
+ATWDWalkieTalkie::ATWDWalkieTalkie(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -331,7 +331,7 @@ void ATWDAIController::AddExternalSightStimulusEventActor(AActor* StimTarget, bo
 void ATWDAIController::AddExternalSightStimulusEvent(FActorStimData Stim, bool bShareWithAllies) {
 }
 
-ATWDAIController::ATWDAIController() {
+ATWDAIController::ATWDAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TeamNumber = 0;
     this->ExitPoint = NULL;
     this->bDisableCrowdAvoidance = false;

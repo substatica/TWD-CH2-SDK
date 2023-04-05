@@ -63,7 +63,7 @@ void ATWDNonVRObjectInteractionActor::EndConsumeAction() {
 void ATWDNonVRObjectInteractionActor::BeginConsumeAction() {
 }
 
-ATWDNonVRObjectInteractionActor::ATWDNonVRObjectInteractionActor() {
+ATWDNonVRObjectInteractionActor::ATWDNonVRObjectInteractionActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bInBackpackMode = false;
 }
 

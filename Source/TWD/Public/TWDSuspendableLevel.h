@@ -29,7 +29,7 @@ protected:
     TArray<TSoftObjectPtr<AActor>> SaveExcludedActors;
     
 public:
-    ATWDSuspendableLevel();
+    ATWDSuspendableLevel(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void PreSuspend();
     

@@ -50,7 +50,7 @@ protected:
     float LaunchedTimestamp;
     
 public:
-    ATWDAmmoPropArrow();
+    ATWDAmmoPropArrow(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void SetNockedBow(ATWDWeaponBowV2* Bow);
     

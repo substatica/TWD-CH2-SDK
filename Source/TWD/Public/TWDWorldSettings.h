@@ -14,7 +14,7 @@ UCLASS()
 class TWD_API ATWDWorldSettings : public ASDIWorldSettings {
     GENERATED_BODY()
 public:
-    ATWDWorldSettings();
+    ATWDWorldSettings(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void SpawnVFXAttached(FSpawnVFXAttachedParams Params);
     

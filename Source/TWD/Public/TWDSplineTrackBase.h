@@ -24,7 +24,7 @@ private:
     USplineComponent* SplineComponent;
     
 public:
-    ATWDSplineTrackBase();
+    ATWDSplineTrackBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     FRotator GetRotationAtDistance(float Dist) const;
     

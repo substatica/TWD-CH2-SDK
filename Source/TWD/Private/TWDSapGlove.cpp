@@ -13,7 +13,7 @@ class AActor;
 void ATWDSapGlove::OnCharacterDied(ATWDCharacter* Character, float PrevHealth, TSubclassOf<UDamageType> DamageTypeClass, AActor* DamageCauser) {
 }
 
-ATWDSapGlove::ATWDSapGlove() {
+ATWDSapGlove::ATWDSapGlove(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->EquipGuideMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("EquipGuideMesh"));
     this->EquippedMeshComponent = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("EquippedSkeletalMesh"));

@@ -36,7 +36,7 @@ protected:
     float LowPerfTime;
     
 public:
-    ATWDCorpseManager();
+    ATWDCorpseManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDeathPoolTransform(FTransform Transform);
     

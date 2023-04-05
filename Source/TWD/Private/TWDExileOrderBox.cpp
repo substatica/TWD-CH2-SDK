@@ -28,7 +28,7 @@ bool ATWDExileOrderBox::AutoPlaceInventory(ASDIInventoryActor* InventoryActor, b
     return false;
 }
 
-ATWDExileOrderBox::ATWDExileOrderBox() {
+ATWDExileOrderBox::ATWDExileOrderBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InventorySlotRoot = CreateDefaultSubobject<USceneComponent>(TEXT("InventorySlotRoot"));
     this->AssociatedExileOrderEvent = NULL;
     this->bBoxOpen = false;

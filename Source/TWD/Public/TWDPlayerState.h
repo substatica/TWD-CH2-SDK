@@ -33,7 +33,7 @@ private:
     FTWDPlayerStateInfo RepPlayerState;
     
 public:
-    ATWDPlayerState();
+    ATWDPlayerState(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

@@ -7,7 +7,7 @@ UCLASS()
 class TWD_API ATWDHordeLevel : public ALevelScriptActor {
     GENERATED_BODY()
 public:
-    ATWDHordeLevel();
+    ATWDHordeLevel(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void OnHordeTimerComplete();

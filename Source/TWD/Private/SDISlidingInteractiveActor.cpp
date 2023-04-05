@@ -9,7 +9,7 @@ bool ASDISlidingInteractiveActor::IsLocked() const {
     return false;
 }
 
-ASDISlidingInteractiveActor::ASDISlidingInteractiveActor() {
+ASDISlidingInteractiveActor::ASDISlidingInteractiveActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SlidingComponent = NULL;
     this->HandleActor = NULL;
     this->MaxOpenSpeed = 0.75f;

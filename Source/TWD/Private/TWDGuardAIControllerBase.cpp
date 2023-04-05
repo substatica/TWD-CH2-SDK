@@ -1,5 +1,5 @@
 #include "TWDGuardAIControllerBase.h"
 
-ATWDGuardAIControllerBase::ATWDGuardAIControllerBase() {
+ATWDGuardAIControllerBase::ATWDGuardAIControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

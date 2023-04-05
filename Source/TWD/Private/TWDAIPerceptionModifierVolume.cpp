@@ -6,7 +6,7 @@ float ATWDAIPerceptionModifierVolume::GetCanBeSeenDistanceFactor(const ATWDChara
     return 0.0f;
 }
 
-ATWDAIPerceptionModifierVolume::ATWDAIPerceptionModifierVolume() {
+ATWDAIPerceptionModifierVolume::ATWDAIPerceptionModifierVolume(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bNightModifier = false;
     this->StickinessInSeconds = 4.00f;
     this->bIncludeRayCastFromPointSource = false;

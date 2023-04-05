@@ -7,6 +7,6 @@ bool ATWDFlashlightSlot::IsHeadSlot() const {
     return false;
 }
 
-ATWDFlashlightSlot::ATWDFlashlightSlot() {
+ATWDFlashlightSlot::ATWDFlashlightSlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

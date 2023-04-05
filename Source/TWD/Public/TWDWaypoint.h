@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WaitDuration;
     
-    ATWDWaypoint();
+    ATWDWaypoint(const FObjectInitializer& ObjectInitializer);
 };
 

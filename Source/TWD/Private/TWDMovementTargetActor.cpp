@@ -21,7 +21,7 @@ bool ATWDMovementTargetActor::GetOccupied(AActor*& occupingActor) {
 void ATWDMovementTargetActor::ClearOccupied() {
 }
 
-ATWDMovementTargetActor::ATWDMovementTargetActor() {
+ATWDMovementTargetActor::ATWDMovementTargetActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LeftArrowPopout = CreateDefaultSubobject<UArrowComponent>(TEXT("LeftCoverArrow"));
     this->RightArrowPopout = CreateDefaultSubobject<UArrowComponent>(TEXT("RightCoverArrow"));
     this->MoveTargetType = EMovementTargetType::MTT_Both;

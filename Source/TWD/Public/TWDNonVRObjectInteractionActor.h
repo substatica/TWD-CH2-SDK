@@ -40,7 +40,7 @@ protected:
     bool bInBackpackMode;
     
 public:
-    ATWDNonVRObjectInteractionActor();
+    ATWDNonVRObjectInteractionActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void UpdateInteractionHeld(ETWDNonVRInteraction InteractionType, float Duration, float Time);
     

@@ -22,7 +22,7 @@ TArray<UTWDSplineTrackEventComponent*> ATWDSplineTrackBase::GetEvents() const {
     return TArray<UTWDSplineTrackEventComponent*>();
 }
 
-ATWDSplineTrackBase::ATWDSplineTrackBase() {
+ATWDSplineTrackBase::ATWDSplineTrackBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bDrawDebug = true;
     this->SplineComponent = CreateDefaultSubobject<USplineComponent>(TEXT("Spline Component"));
 }

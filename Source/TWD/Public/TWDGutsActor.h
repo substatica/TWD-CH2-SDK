@@ -30,7 +30,7 @@ public:
     UPROPERTY(BlueprintReadOnly)
     bool bIsApplying;
     
-    ATWDGutsActor();
+    ATWDGutsActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void OnApplied(ATWDCharacter* PlayerCharacter);

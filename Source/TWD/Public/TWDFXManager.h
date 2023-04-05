@@ -20,7 +20,7 @@ protected:
     TArray<TWeakObjectPtr<UMaterialInstanceDynamic>> RecipeHighlights;
     
 public:
-    ATWDFXManager();
+    ATWDFXManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RemoveRecipeHighlight(UMaterialInstanceDynamic* MatInst);
     

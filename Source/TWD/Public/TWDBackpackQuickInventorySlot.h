@@ -7,6 +7,6 @@ UCLASS()
 class ATWDBackpackQuickInventorySlot : public ATWDPlayerInventorySlot {
     GENERATED_BODY()
 public:
-    ATWDBackpackQuickInventorySlot();
+    ATWDBackpackQuickInventorySlot(const FObjectInitializer& ObjectInitializer);
 };
 

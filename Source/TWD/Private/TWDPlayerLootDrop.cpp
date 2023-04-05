@@ -6,6 +6,6 @@ bool ATWDPlayerLootDrop::GiveContentsTo_Implementation(AActor* NewOwner) {
     return false;
 }
 
-ATWDPlayerLootDrop::ATWDPlayerLootDrop() {
+ATWDPlayerLootDrop::ATWDPlayerLootDrop(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

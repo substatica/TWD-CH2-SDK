@@ -26,7 +26,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TArray<UMaterialInterface*> MaterialArray;
     
-    ATWDDestructiblePropActor();
+    ATWDDestructiblePropActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 private:

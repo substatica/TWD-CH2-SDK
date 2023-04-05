@@ -22,7 +22,7 @@ protected:
     TSubclassOf<AActor> ItemToSpawn;
     
 public:
-    ATWDOnlineItemSpawner();
+    ATWDOnlineItemSpawner(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void SpawnActor();

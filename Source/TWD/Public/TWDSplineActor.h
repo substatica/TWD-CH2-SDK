@@ -7,6 +7,6 @@ UCLASS()
 class ATWDSplineActor : public ASDISplineMeshActor {
     GENERATED_BODY()
 public:
-    ATWDSplineActor();
+    ATWDSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

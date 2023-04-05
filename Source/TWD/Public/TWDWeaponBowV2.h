@@ -207,7 +207,7 @@ protected:
     TMap<UAkComponent*, FSDIAkAudioEventPairDynamicLoop> DrawSoundLoopComponentPairs;
     
 public:
-    ATWDWeaponBowV2();
+    ATWDWeaponBowV2(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintImplementableEvent)
     void UpdateAmmoWidget(UTWDWidgetComponent* WidgetComponent, TSubclassOf<ATWDAmmoPropArrow> ArrowType, int32 ArrowCount);

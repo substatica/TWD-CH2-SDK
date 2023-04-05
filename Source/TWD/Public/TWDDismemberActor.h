@@ -65,7 +65,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     UParticleSystem* DismemberMovementParticleSystem;
     
-    ATWDDismemberActor();
+    ATWDDismemberActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

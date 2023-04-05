@@ -3,7 +3,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 
-ATWDCharacterHandSlot::ATWDCharacterHandSlot() {
+ATWDCharacterHandSlot::ATWDCharacterHandSlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SlotRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SlotRoot"));
     this->SlotCollision = CreateDefaultSubobject<UCapsuleComponent>(TEXT("SlotCollision"));
     this->SlotMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SlotMesh"));

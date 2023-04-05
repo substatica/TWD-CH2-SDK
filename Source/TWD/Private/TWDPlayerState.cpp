@@ -26,6 +26,6 @@ void ATWDPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(ATWDPlayerState, RepPlayerState);
 }
 
-ATWDPlayerState::ATWDPlayerState() {
+ATWDPlayerState::ATWDPlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

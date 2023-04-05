@@ -246,7 +246,7 @@ private:
     bool bOverrun;
     
 public:
-    ATWDSpawnManager();
+    ATWDSpawnManager(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void UpdateSpawnManager();

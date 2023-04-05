@@ -100,7 +100,7 @@ void ATWDGripPhysicsDoor::BreakDoor_Implementation(FVector Direction) {
 void ATWDGripPhysicsDoor::ApplyPushForce_Implementation(FVector push) {
 }
 
-ATWDGripPhysicsDoor::ATWDGripPhysicsDoor() {
+ATWDGripPhysicsDoor::ATWDGripPhysicsDoor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PlayerHand = NULL;
     this->ServerCommPlayerPawn = NULL;
     this->CurrentSpeed = 0.00f;

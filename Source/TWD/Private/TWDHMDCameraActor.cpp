@@ -70,7 +70,7 @@ ATWDPlayerCharacter* ATWDHMDCameraActor::GetControlledPlayerCharacter() const {
     return NULL;
 }
 
-ATWDHMDCameraActor::ATWDHMDCameraActor() {
+ATWDHMDCameraActor::ATWDHMDCameraActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HeadCollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("HeadCollisionSphere"));
     this->bGrappleUIEnabled = true;
     this->bGutsModeUIEnabled = true;

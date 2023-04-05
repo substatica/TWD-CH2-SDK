@@ -1824,7 +1824,7 @@ private:
     float SignificanceHeuristic;
     
 public:
-    ATWDCharacter();
+    ATWDCharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintPure)

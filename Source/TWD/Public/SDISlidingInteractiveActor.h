@@ -47,7 +47,7 @@ public:
     UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
     bool bIsClosed;
     
-    ASDISlidingInteractiveActor();
+    ASDISlidingInteractiveActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetLocked(bool bWillLock);
     

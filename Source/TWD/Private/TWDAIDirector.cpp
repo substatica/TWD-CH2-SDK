@@ -28,7 +28,7 @@ FGuid ATWDAIDirector::AddGravityWell(float Value, FVector Location, float Halfli
     return FGuid{};
 }
 
-ATWDAIDirector::ATWDAIDirector() {
+ATWDAIDirector::ATWDAIDirector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GridSize = 4;
     this->Bounds = CreateDefaultSubobject<UBoxComponent>(TEXT("Bounds"));
     this->AverageCellValue = 0.00f;

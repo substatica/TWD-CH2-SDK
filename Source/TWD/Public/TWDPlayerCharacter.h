@@ -649,7 +649,7 @@ public:
     UPROPERTY(VisibleAnywhere)
     uint32 PlayerDeathCount;
     
-    ATWDPlayerCharacter();
+    ATWDPlayerCharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintPure)

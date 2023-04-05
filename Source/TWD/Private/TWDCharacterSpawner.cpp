@@ -14,7 +14,7 @@ void ATWDCharacterSpawner::SpawnSingle_Implementation() {
 void ATWDCharacterSpawner::OnCharacterDied(ATWDCharacter* Character, float PrevHealth, TSubclassOf<UDamageType> DamageTypeClass, AActor* DamageCauser) {
 }
 
-ATWDCharacterSpawner::ATWDCharacterSpawner() {
+ATWDCharacterSpawner::ATWDCharacterSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CharacterBlueprint = NULL;
 }
 

@@ -1,5 +1,5 @@
 #include "TWDEdibleCorpse.h"
 
-ATWDEdibleCorpse::ATWDEdibleCorpse() {
+ATWDEdibleCorpse::ATWDEdibleCorpse(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

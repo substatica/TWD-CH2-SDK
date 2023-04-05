@@ -48,6 +48,6 @@ protected:
     TMap<ESDIVRControllerType, FRotator> PointerRelativeRotation;
     
 public:
-    ATWDMenuHand();
+    ATWDMenuHand(const FObjectInitializer& ObjectInitializer);
 };
 

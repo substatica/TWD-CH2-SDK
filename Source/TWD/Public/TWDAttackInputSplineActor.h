@@ -7,6 +7,6 @@ UCLASS()
 class ATWDAttackInputSplineActor : public ATWDInputSplineActor {
     GENERATED_BODY()
 public:
-    ATWDAttackInputSplineActor();
+    ATWDAttackInputSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

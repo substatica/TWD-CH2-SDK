@@ -7,7 +7,7 @@ UCLASS()
 class TWD_API ATWDFlashlightSlot : public ATWDPlayerInventorySlot {
     GENERATED_BODY()
 public:
-    ATWDFlashlightSlot();
+    ATWDFlashlightSlot(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void UpdateAvailability();
     

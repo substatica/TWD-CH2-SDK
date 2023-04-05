@@ -1,5 +1,5 @@
 #include "TWDInventoryHolderActor.h"
 
-ATWDInventoryHolderActor::ATWDInventoryHolderActor() {
+ATWDInventoryHolderActor::ATWDInventoryHolderActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -14,6 +14,6 @@ protected:
     USplineComponent* SplineComponent;
     
 public:
-    ATWDAutomationSplineActor();
+    ATWDAutomationSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

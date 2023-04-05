@@ -8,7 +8,7 @@ UCLASS()
 class TWD_API ATWDEdibleCorpse : public AActor, public IAISightTargetInterface {
     GENERATED_BODY()
 public:
-    ATWDEdibleCorpse();
+    ATWDEdibleCorpse(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

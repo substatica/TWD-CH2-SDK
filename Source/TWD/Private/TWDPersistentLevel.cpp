@@ -16,7 +16,7 @@ void ATWDPersistentLevel::AddExcludedActor(AActor* ActorToExclude) {
 void ATWDPersistentLevel::AddDeletionExcludedActor(AActor* ActorToExclude) {
 }
 
-ATWDPersistentLevel::ATWDPersistentLevel() {
+ATWDPersistentLevel::ATWDPersistentLevel(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bPersistenceHandled = false;
 }
 

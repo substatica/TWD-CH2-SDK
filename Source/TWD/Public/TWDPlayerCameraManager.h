@@ -107,7 +107,7 @@ protected:
     bool bPendingUpdateCachedUserHeight;
     
 public:
-    ATWDPlayerCameraManager();
+    ATWDPlayerCameraManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
     void UpdatePlayerCageVisibility() const;
     

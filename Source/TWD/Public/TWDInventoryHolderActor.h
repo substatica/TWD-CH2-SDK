@@ -8,7 +8,7 @@ UCLASS()
 class ATWDInventoryHolderActor : public ASDIInventoryHolderActor, public ITWDInteractiveHighlightInterface {
     GENERATED_BODY()
 public:
-    ATWDInventoryHolderActor();
+    ATWDInventoryHolderActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

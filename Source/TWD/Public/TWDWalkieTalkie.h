@@ -7,6 +7,6 @@ UCLASS()
 class TWD_API ATWDWalkieTalkie : public ATWDProp {
     GENERATED_BODY()
 public:
-    ATWDWalkieTalkie();
+    ATWDWalkieTalkie(const FObjectInitializer& ObjectInitializer);
 };
 

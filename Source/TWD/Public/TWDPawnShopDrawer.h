@@ -20,7 +20,7 @@ protected:
     FTWDInventorySlotGrid InventorySlotGrid;
     
 public:
-    ATWDPawnShopDrawer();
+    ATWDPawnShopDrawer(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnInventorySlotContentChanged(ATWDPlayerInventorySlot* InvSlot, ASDIInventoryActor* CurrentInventory);
     

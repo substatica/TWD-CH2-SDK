@@ -461,7 +461,7 @@ public:
     UPROPERTY()
     TMap<AVolume*, FSingleCombatVolumeEntry> CombatVolumeRegistry;
     
-    ATWDPlayerController();
+    ATWDPlayerController(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION()

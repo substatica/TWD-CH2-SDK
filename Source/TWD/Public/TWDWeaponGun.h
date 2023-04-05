@@ -189,7 +189,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     bool bPlatformDoEjectClipOnDryFire;
     
-    ATWDWeaponGun();
+    ATWDWeaponGun(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)

@@ -58,7 +58,7 @@ protected:
     float AutoAdvanceCheckDelay;
     
 public:
-    ATWDStashBox();
+    ATWDStashBox(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void TransferFromPlayerInventory();
     

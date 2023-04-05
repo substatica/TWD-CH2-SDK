@@ -2,7 +2,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TWDAutoTickAkComponent.h"
 
-ATWDLookActor::ATWDLookActor() {
+ATWDLookActor::ATWDLookActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->StartLookingAudioEvent = NULL;
     this->LookingLoopPlayAudioEvent = NULL;
     this->LookingLoopStopAudioEvent = NULL;

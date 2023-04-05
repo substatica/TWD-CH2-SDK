@@ -14,6 +14,6 @@ ATWDFXManager* ATWDFXManager::GetTWDFXManager(const UObject* WorldContextObject)
 void ATWDFXManager::AddRecipeHighlight(UMaterialInstanceDynamic* MatInst) {
 }
 
-ATWDFXManager::ATWDFXManager() {
+ATWDFXManager::ATWDFXManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

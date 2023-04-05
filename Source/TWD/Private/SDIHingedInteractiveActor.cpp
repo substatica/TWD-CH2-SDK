@@ -20,7 +20,7 @@ bool ASDIHingedInteractiveActor::IsDoorLocked() {
 void ASDIHingedInteractiveActor::DoorHitTimerCompleted() {
 }
 
-ASDIHingedInteractiveActor::ASDIHingedInteractiveActor() {
+ASDIHingedInteractiveActor::ASDIHingedInteractiveActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DoorComponent = NULL;
     this->HandleActor = NULL;
     this->YawDeceleration = -0.75f;

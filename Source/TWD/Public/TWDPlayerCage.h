@@ -14,6 +14,6 @@ protected:
     UMaterialInstanceDynamic* CageMatInst;
     
 public:
-    ATWDPlayerCage();
+    ATWDPlayerCage(const FObjectInitializer& ObjectInitializer);
 };
 

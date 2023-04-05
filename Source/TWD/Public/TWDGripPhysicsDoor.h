@@ -164,7 +164,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BreakingNoiseVolume;
     
-    ATWDGripPhysicsDoor();
+    ATWDGripPhysicsDoor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintNativeEvent)
     bool UsePlayerKeyIfExists(ATWDPlayerCharacter* PlayerCharacter);

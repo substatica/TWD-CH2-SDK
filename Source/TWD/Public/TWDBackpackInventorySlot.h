@@ -15,6 +15,6 @@ protected:
     int32 AuxMeshElementIndex;
     
 public:
-    ATWDBackpackInventorySlot();
+    ATWDBackpackInventorySlot(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -47,6 +47,6 @@ private:
     ATWDCorpseManager* CorpseManager;
     
 public:
-    ATWDGameDirector();
+    ATWDGameDirector(const FObjectInitializer& ObjectInitializer);
 };
 

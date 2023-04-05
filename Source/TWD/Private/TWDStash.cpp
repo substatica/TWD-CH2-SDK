@@ -62,7 +62,7 @@ bool ATWDStash::AutoPlaceInventory(ASDIInventoryActor* InventoryActor, bool bFor
     return false;
 }
 
-ATWDStash::ATWDStash() {
+ATWDStash::ATWDStash(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InventorySlotBlueprint = NULL;
     this->InventorySlotRoot = CreateDefaultSubobject<USceneComponent>(TEXT("InventorySlotRoot"));
     this->InventorySlotRadius = 5.00f;

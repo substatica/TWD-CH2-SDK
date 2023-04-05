@@ -120,7 +120,7 @@ private:
     TEnumAsByte<ETWDInventorySlot::Type> slotIdx;
     
 public:
-    ATWDPlayerInventorySlot();
+    ATWDPlayerInventorySlot(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool WasSlotRecentlyRendered(float Tolerance) const;
     

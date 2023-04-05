@@ -15,6 +15,6 @@ protected:
     TSubclassOf<UTWDCharacterSkin> OverrideSkin;
     
 public:
-    ATWDPrologueCharacter();
+    ATWDPrologueCharacter(const FObjectInitializer& ObjectInitializer);
 };
 

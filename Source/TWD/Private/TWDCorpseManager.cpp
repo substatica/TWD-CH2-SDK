@@ -18,7 +18,7 @@ ATWDCharacter* ATWDCorpseManager::AcquireCharacterFromDeathPool(TSubclassOf<ATWD
     return NULL;
 }
 
-ATWDCorpseManager::ATWDCorpseManager() {
+ATWDCorpseManager::ATWDCorpseManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CorpseCleanupDesiredSpawnWalkerDelay = 10.00f;
     this->CorpseCleanupSpawnWalkerOffscreenTime = 10.00f;
     this->LowPerfTime = 0.00f;

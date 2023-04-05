@@ -15,6 +15,6 @@ protected:
     float TimeDilationMaxDuration;
     
 public:
-    ATWDInputSplineActor();
+    ATWDInputSplineActor(const FObjectInitializer& ObjectInitializer);
 };
 

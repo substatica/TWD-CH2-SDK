@@ -24,7 +24,7 @@ protected:
     UCurveFloat* ScaleCurve;
     
 public:
-    ATWDInteractiveHighlightActor();
+    ATWDInteractiveHighlightActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void UpdateHighlight(bool bShowHighlight, float Highlight);
     

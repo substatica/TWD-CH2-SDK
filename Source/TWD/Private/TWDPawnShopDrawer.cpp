@@ -11,7 +11,7 @@ bool ATWDPawnShopDrawer::AutoPlaceInventory(ASDIInventoryActor* InventoryActor, 
     return false;
 }
 
-ATWDPawnShopDrawer::ATWDPawnShopDrawer() {
+ATWDPawnShopDrawer::ATWDPawnShopDrawer(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InventorySlotRoot = CreateDefaultSubobject<USceneComponent>(TEXT("InventorySlotRoot"));
 }
 

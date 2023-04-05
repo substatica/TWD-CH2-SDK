@@ -1,5 +1,5 @@
 #include "TWDUtilityManager.h"
 
-ATWDUtilityManager::ATWDUtilityManager() {
+ATWDUtilityManager::ATWDUtilityManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

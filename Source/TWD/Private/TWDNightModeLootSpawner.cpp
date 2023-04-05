@@ -6,7 +6,7 @@ ATWDNightModeLootSpawnerNetwork* ATWDNightModeLootSpawner::GetSpawnNetwork() con
     return NULL;
 }
 
-ATWDNightModeLootSpawner::ATWDNightModeLootSpawner() {
+ATWDNightModeLootSpawner::ATWDNightModeLootSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AverageSpawnTable = NULL;
     this->RareSpawnTable = NULL;
     this->bRare = false;

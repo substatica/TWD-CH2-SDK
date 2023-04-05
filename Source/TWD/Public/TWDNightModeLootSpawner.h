@@ -30,7 +30,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     UAnimSequence* PoseOverride;
     
-    ATWDNightModeLootSpawner();
+    ATWDNightModeLootSpawner(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintPure)
     ATWDNightModeLootSpawnerNetwork* GetSpawnNetwork() const;

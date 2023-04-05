@@ -7,6 +7,6 @@ UCLASS()
 class TWD_API ATWDGuardAIControllerBase : public ATWDAIController {
     GENERATED_BODY()
 public:
-    ATWDGuardAIControllerBase();
+    ATWDGuardAIControllerBase(const FObjectInitializer& ObjectInitializer);
 };
 

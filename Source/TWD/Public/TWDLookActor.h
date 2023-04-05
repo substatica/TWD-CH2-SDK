@@ -35,6 +35,6 @@ protected:
     UTWDAutoTickAkComponent* AkAudioComponent;
     
 public:
-    ATWDLookActor();
+    ATWDLookActor(const FObjectInitializer& ObjectInitializer);
 };
 

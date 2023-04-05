@@ -1527,7 +1527,7 @@ void ATWDCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ATWDCharacter, RepCurrentHealth);
 }
 
-ATWDCharacter::ATWDCharacter() {
+ATWDCharacter::ATWDCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AkAudioComponent = CreateDefaultSubobject<UTWDAutoTickAkComponent>(TEXT("AkAudioComponent"));
     this->SpeechAudioComponent = CreateDefaultSubobject<UTWDAutoTickAkComponent>(TEXT("SpeechAudioComponent"));
     this->ActiveRagdollComponent = CreateDefaultSubobject<UTWDActiveRagdollComponent>(TEXT("ActiveRagdollComponent"));

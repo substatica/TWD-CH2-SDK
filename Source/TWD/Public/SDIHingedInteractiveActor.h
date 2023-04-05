@@ -75,7 +75,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* DoorClosedSound;
     
-    ASDIHingedInteractiveActor();
+    ASDIHingedInteractiveActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDoorLocked(bool bLocked);
     

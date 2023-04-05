@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FOnDeliveryCompletedDelegate OnDeliveryCompleted;
     
-    ATWDExileOrderDeliveryBox();
+    ATWDExileOrderDeliveryBox(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void OnDeliveryBoxOpenStateChanged();

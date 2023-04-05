@@ -49,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UAkAudioEvent* FiredRoundAudioEvent;
     
-    ATWDWeaponImposterGun();
+    ATWDWeaponImposterGun(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool PredictFireModeTransform(ESDIInteractiveInteractType Type, FTransform& OutTransform) const;
     

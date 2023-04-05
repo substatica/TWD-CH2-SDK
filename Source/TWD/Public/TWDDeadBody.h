@@ -73,7 +73,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     UParticleSystem* DismemberMovementParticleSystem;
     
-    ATWDDeadBody();
+    ATWDDeadBody(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool ShowGoreBlood() const;
     

@@ -30,7 +30,7 @@ protected:
     bool bEnabled;
     
 public:
-    ATWDSpawnControlVolume();
+    ATWDSpawnControlVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RevertLastCommand();
     

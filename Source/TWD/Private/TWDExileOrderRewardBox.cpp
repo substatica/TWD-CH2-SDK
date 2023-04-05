@@ -7,6 +7,6 @@ bool ATWDExileOrderRewardBox::IsRewardClaimed() const {
     return false;
 }
 
-ATWDExileOrderRewardBox::ATWDExileOrderRewardBox() {
+ATWDExileOrderRewardBox::ATWDExileOrderRewardBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

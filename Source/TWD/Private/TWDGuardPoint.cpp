@@ -37,6 +37,6 @@ bool ATWDGuardPoint::DoesLeashSupportReaction(const FTWDGuardPointLeash& Leash, 
     return false;
 }
 
-ATWDGuardPoint::ATWDGuardPoint() {
+ATWDGuardPoint::ATWDGuardPoint(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

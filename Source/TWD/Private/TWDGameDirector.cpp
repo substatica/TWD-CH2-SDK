@@ -1,6 +1,6 @@
 #include "TWDGameDirector.h"
 
-ATWDGameDirector::ATWDGameDirector() {
+ATWDGameDirector::ATWDGameDirector(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpawnManagerBlueprint = NULL;
     this->UtilityManagerBlueprint = NULL;
     this->CorpseManagerBlueprint = NULL;

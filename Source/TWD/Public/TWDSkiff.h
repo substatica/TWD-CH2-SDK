@@ -47,7 +47,7 @@ protected:
     FName PlayerStartTag;
     
 public:
-    ATWDSkiff();
+    ATWDSkiff(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void OnReadyForPlay();

@@ -11,6 +11,6 @@ bool ATWDExileOrderDeliveryBox::IsDeliveryComplete() const {
     return false;
 }
 
-ATWDExileOrderDeliveryBox::ATWDExileOrderDeliveryBox() {
+ATWDExileOrderDeliveryBox::ATWDExileOrderDeliveryBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

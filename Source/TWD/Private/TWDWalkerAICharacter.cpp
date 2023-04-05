@@ -33,7 +33,7 @@ FVector ATWDWalkerAICharacter::GetAssignedCombatRingLocation() const {
 void ATWDWalkerAICharacter::ClearCurrentTarget() {
 }
 
-ATWDWalkerAICharacter::ATWDWalkerAICharacter() {
+ATWDWalkerAICharacter::ATWDWalkerAICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DistanceToTarget = 0.00f;
     this->bIsLungeAttack = false;
     this->bIsFailedLungeAttack = false;

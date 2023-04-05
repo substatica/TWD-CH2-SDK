@@ -6,7 +6,7 @@ class USceneComponent;
 void ATWDInteractiveHighlightManager::SetCustomHighlight(AActor* Actor, USceneComponent* Component, bool bHighlighted, ETWDInteractionType Type) {
 }
 
-ATWDInteractiveHighlightManager::ATWDInteractiveHighlightManager() {
+ATWDInteractiveHighlightManager::ATWDInteractiveHighlightManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->NearbyRadius = 256.00f;
     this->NearbyOverlapChannel = ECC_GameTraceChannel2;
     this->NearbyLOSChannel = ECC_WorldDynamic;

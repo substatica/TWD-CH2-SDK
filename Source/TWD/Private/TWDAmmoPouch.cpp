@@ -20,7 +20,7 @@ int32 ATWDAmmoPouch::GetAmmoPropCurrencyCount(UObject* InventoryHolder, ATWDWeap
     return 0;
 }
 
-ATWDAmmoPouch::ATWDAmmoPouch() {
+ATWDAmmoPouch::ATWDAmmoPouch(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HeldGunLeft = NULL;
     this->HeldGunRight = NULL;
     this->ActiveGun = NULL;

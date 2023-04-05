@@ -51,7 +51,7 @@ void ATWDProp::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetime
     DOREPLIFETIME(ATWDProp, RepTWDInventoryData);
 }
 
-ATWDProp::ATWDProp() {
+ATWDProp::ATWDProp(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AkAudioComponent = CreateDefaultSubobject<UTWDAutoTickAkComponent>(TEXT("AkAudioComponent"));
     this->bBlockInventorySlotPlacement = false;
 }

@@ -135,7 +135,7 @@ private:
     bool bDialogueAvailabilityWidgetWasVisible;
     
 public:
-    ATWDHMDCameraActor();
+    ATWDHMDCameraActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void UpdateFadeProxy(float FadeAmount, float ElapsedTime);
     

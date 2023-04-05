@@ -1,5 +1,5 @@
 #include "TWDHUD.h"
 
-ATWDHUD::ATWDHUD() {
+ATWDHUD::ATWDHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

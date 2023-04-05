@@ -29,7 +29,7 @@ protected:
     TArray<TWeakObjectPtr<APawn>> OverlappedPawns;
     
 public:
-    ATWDSeamlessTravelVehicle();
+    ATWDSeamlessTravelVehicle(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void SetTravelling(bool bTravelling);
     

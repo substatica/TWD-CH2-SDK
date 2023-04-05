@@ -27,7 +27,7 @@ protected:
     float NonVRMaxInteractDistance;
     
 public:
-    ATWDGripPhysicsActor();
+    ATWDGripPhysicsActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

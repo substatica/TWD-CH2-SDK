@@ -111,7 +111,7 @@ private:
     float EquippingEffectScale;
     
 public:
-    ATWDSapGlove();
+    ATWDSapGlove(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void OnCharacterDied(ATWDCharacter* Character, float PrevHealth, TSubclassOf<UDamageType> DamageTypeClass, AActor* DamageCauser);

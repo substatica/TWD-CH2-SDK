@@ -1,5 +1,5 @@
 #include "TWDBackpackQuickInventorySlot.h"
 
-ATWDBackpackQuickInventorySlot::ATWDBackpackQuickInventorySlot() {
+ATWDBackpackQuickInventorySlot::ATWDBackpackQuickInventorySlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

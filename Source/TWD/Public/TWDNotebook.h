@@ -83,7 +83,7 @@ private:
     UTWDNonVRNotebookWidget* NonVRNotebookWidget;
     
 public:
-    ATWDNotebook();
+    ATWDNotebook(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopNonVRInteraction();
     

@@ -147,7 +147,7 @@ private:
     ASDIInventoryActor* EquippedHandWeapon;
     
 public:
-    ATWDPlayerHand();
+    ATWDPlayerHand(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool WouldGripInventorySlot(ASDIInventorySlot*& OutSlot) const;
     

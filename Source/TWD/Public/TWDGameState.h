@@ -99,7 +99,7 @@ public:
     UPROPERTY(Transient)
     bool bOnGameActivityActivationRequested;
     
-    ATWDGameState();
+    ATWDGameState(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void StopMusic();
     

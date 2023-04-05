@@ -68,7 +68,7 @@ public:
     UPROPERTY(EditAnywhere)
     float MaxPlayerTargetAgeBeforeDespawn;
     
-    ATWDAIDirector();
+    ATWDAIDirector(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void SpawnRemainingRoamers();
     

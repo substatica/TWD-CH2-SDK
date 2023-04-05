@@ -33,7 +33,7 @@ protected:
     UDataTable* LootInventoryTable;
     
 public:
-    ATWDNightModeLootHolder();
+    ATWDNightModeLootHolder(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintCallable)
     void SetSlotsVisible(bool NewVisible);

@@ -173,7 +173,7 @@ public:
     UPROPERTY(BlueprintReadOnly)
     FEGOAIProperties EGOProperties;
     
-    ATWDAICharacter();
+    ATWDAICharacter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void UpdateThreatMeter(float DeltaSeconds);
     

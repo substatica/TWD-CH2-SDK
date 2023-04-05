@@ -26,7 +26,7 @@ bool ATWDDialogueManager::IsDialoguePlaying(TSubclassOf<UTWDDialogue> Dialogue) 
     return false;
 }
 
-ATWDDialogueManager::ATWDDialogueManager() {
+ATWDDialogueManager::ATWDDialogueManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GameDirector = NULL;
     this->BarkSemaphore = CreateDefaultSubobject<UTWDBarkSemaphore>(TEXT("BarkSemaphore"));
 }

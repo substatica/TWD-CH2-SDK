@@ -18,7 +18,7 @@ private:
     TArray<UDataTable*> DialogueLineDataTableReferences;
     
 public:
-    ATWDInteractiveActor();
+    ATWDInteractiveActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PerceptionOverrideDotProductMinimum;
     
-    ATWDFlashlight();
+    ATWDFlashlight(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetUVMode(bool isUV);
     

@@ -19,6 +19,6 @@ protected:
     TArray<UClass*> SkinTemplates;
     
 public:
-    ATWDNightModeLootSpawnerNetwork();
+    ATWDNightModeLootSpawnerNetwork(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     int32 MaxSignificanceAICharactersTier0HiSpec;
     
-    ATWDSignificanceVolume();
+    ATWDSignificanceVolume(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnOverlapEnd(AActor* OverlappedActor, AActor* OtherActor);
     

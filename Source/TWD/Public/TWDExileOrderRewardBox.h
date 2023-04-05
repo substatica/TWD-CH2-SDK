@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FOnRewardTheftDelegate OnRewardTheft;
     
-    ATWDExileOrderRewardBox();
+    ATWDExileOrderRewardBox(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void OnRewardBoxOpenStateChanged();

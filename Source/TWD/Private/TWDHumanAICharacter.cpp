@@ -61,7 +61,7 @@ void ATWDHumanAICharacter::ActivateEphemeralKnifeAtAttachment(FName SocketName, 
 void ATWDHumanAICharacter::ActivateEphemeralKnife() {
 }
 
-ATWDHumanAICharacter::ATWDHumanAICharacter() {
+ATWDHumanAICharacter::ATWDHumanAICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PushBackDistance = 130.00f;
     this->PushbackMaxSpeed = 340282346638528859811704183484516925440.00f;
     this->PushBackTime = 0.15f;

@@ -76,7 +76,7 @@ bool ATWDPlayerHand::CanStab() const {
     return false;
 }
 
-ATWDPlayerHand::ATWDPlayerHand() {
+ATWDPlayerHand::ATWDPlayerHand(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->StaminaDrainLoopFeedback = NULL;
     this->StaminaActionFailedFeedback = NULL;
     this->StaminaActionEndedFeedback = NULL;

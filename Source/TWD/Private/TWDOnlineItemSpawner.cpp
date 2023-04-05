@@ -3,7 +3,7 @@
 void ATWDOnlineItemSpawner::SpawnActor() {
 }
 
-ATWDOnlineItemSpawner::ATWDOnlineItemSpawner() {
+ATWDOnlineItemSpawner::ATWDOnlineItemSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ItemToSpawn = NULL;
 }
 

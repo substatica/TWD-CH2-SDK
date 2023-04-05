@@ -43,7 +43,7 @@ protected:
     uint32 NearbyDistributionCounter;
     
 public:
-    ATWDInteractiveHighlightManager();
+    ATWDInteractiveHighlightManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     static void SetCustomHighlight(AActor* Actor, USceneComponent* Component, bool bHighlighted, ETWDInteractionType Type);
     

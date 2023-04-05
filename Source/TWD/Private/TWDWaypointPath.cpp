@@ -22,7 +22,7 @@ bool ATWDWaypointPath::CanActorSendWaypointEvent_Implementation(const AActor* Ac
     return false;
 }
 
-ATWDWaypointPath::ATWDWaypointPath() {
+ATWDWaypointPath::ATWDWaypointPath(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bIsLooping = false;
     this->bShowDebugWapointConnections = false;
     this->EditorPathSpline = CreateDefaultSubobject<USplineComponent>(TEXT("Path"));

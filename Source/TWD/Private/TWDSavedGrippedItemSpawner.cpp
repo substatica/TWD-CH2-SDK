@@ -3,7 +3,7 @@
 void ATWDSavedGrippedItemSpawner::SpawnSavedItem() {
 }
 
-ATWDSavedGrippedItemSpawner::ATWDSavedGrippedItemSpawner() {
+ATWDSavedGrippedItemSpawner::ATWDSavedGrippedItemSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GripHand = EControllerHand::Left;
     this->bDisableGravity = false;
 }

@@ -50,7 +50,7 @@ UTWDAIManager* ATWDGameMode::GetAIManager() {
     return NULL;
 }
 
-ATWDGameMode::ATWDGameMode() {
+ATWDGameMode::ATWDGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bProcessingQueuedExplosions = false;
     this->AIManagerClass = NULL;
     this->bEnableSleepingAISystem = false;

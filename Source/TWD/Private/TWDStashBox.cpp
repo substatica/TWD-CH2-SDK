@@ -38,7 +38,7 @@ bool ATWDStashBox::AutoPlaceInventory(ASDIInventoryActor* InventoryActor, bool b
     return false;
 }
 
-ATWDStashBox::ATWDStashBox() {
+ATWDStashBox::ATWDStashBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ActivePageIndex = 0;
     this->AvailablePages = 1;
     this->InventorySlotBlueprint = NULL;

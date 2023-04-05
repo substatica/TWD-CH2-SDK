@@ -16,7 +16,7 @@ bool ATWDWaveModeGameMode::AllWavesCompleted() const {
     return false;
 }
 
-ATWDWaveModeGameMode::ATWDWaveModeGameMode() {
+ATWDWaveModeGameMode::ATWDWaveModeGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->BalancedWaveCount = 0;
 }
 

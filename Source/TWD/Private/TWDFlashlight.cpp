@@ -25,7 +25,7 @@ bool ATWDFlashlight::IsOn() const {
     return false;
 }
 
-ATWDFlashlight::ATWDFlashlight() {
+ATWDFlashlight::ATWDFlashlight(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bInsideOnRep_bRepInsideInventory = false;
     this->bSwitchedOn = false;
     this->bPowered = true;

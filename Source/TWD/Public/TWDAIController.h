@@ -396,7 +396,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool SupressAutomaticFocus;
     
-    ATWDAIController();
+    ATWDAIController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void UpdateNearbyCombatAllyAndEnemyLists(TArray<TWeakObjectPtr<ATWDCharacter>> Allies, TArray<TWeakObjectPtr<ATWDCharacter>> Enemies);
     

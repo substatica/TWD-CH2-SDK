@@ -7,6 +7,6 @@ UCLASS()
 class TWD_API ATWDNotebookSlot : public ATWDPlayerInventorySlot {
     GENERATED_BODY()
 public:
-    ATWDNotebookSlot();
+    ATWDNotebookSlot(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -122,7 +122,7 @@ protected:
     uint8 DEBUG_ShowReactionInfo: 1;
     
 public:
-    ATWDHumanAICharacter();
+    ATWDHumanAICharacter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateRotation_PostRM(const FTransform& NewRotation);
     

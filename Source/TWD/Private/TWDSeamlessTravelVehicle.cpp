@@ -27,7 +27,7 @@ ATWDSeamlessTravelVehicle* ATWDSeamlessTravelVehicle::GetTravelDestinationVehicl
     return NULL;
 }
 
-ATWDSeamlessTravelVehicle::ATWDSeamlessTravelVehicle() {
+ATWDSeamlessTravelVehicle::ATWDSeamlessTravelVehicle(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->Collision = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision"));
     this->bStart = false;
     this->bIsTravelling = false;

@@ -283,7 +283,7 @@ void ATWDWeaponActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(ATWDWeaponActor, RepStabHit);
 }
 
-ATWDWeaponActor::ATWDWeaponActor() {
+ATWDWeaponActor::ATWDWeaponActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AkAudioComponent = CreateDefaultSubobject<UTWDAutoTickAkComponent>(TEXT("AkAudioComponent"));
     this->WeaponShoveComp = CreateDefaultSubobject<UTWDWeaponShoveComponent>(TEXT("WeaponShove"));
     this->BrokenReplacementClass = NULL;

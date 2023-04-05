@@ -106,7 +106,7 @@ protected:
     FSDIAuxTickFunction PostPhysicsTick;
     
 public:
-    ATWDWeaponChainsaw();
+    ATWDWeaponChainsaw(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintImplementableEvent)
     void TickPostPhysics(UObject* TickOwner, float DeltaTime);
     

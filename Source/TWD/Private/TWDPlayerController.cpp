@@ -481,7 +481,7 @@ void ATWDPlayerController::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(ATWDPlayerController, SuspiciousNPCs);
 }
 
-ATWDPlayerController::ATWDPlayerController() {
+ATWDPlayerController::ATWDPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LinearMovementSpeedMultiplier = 1.00f;
     this->LinearTurnSpeedMultiplier = 1.00f;
     this->VRWithoutHMDLookUpRate = 135.00f;

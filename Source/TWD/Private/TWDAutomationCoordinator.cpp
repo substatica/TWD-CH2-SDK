@@ -1,5 +1,5 @@
 #include "TWDAutomationCoordinator.h"
 
-ATWDAutomationCoordinator::ATWDAutomationCoordinator() {
+ATWDAutomationCoordinator::ATWDAutomationCoordinator(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 
