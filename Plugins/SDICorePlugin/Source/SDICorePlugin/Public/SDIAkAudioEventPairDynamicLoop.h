@@ -10,21 +10,20 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDIAkAudioEventPairDynamicLoop {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIAkAudioEventPair StartEvent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIAkAudioEventPair StopEvent;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UAkComponent> LoopPlayingComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<AActor> LoopInstigator;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bPlayedLocalEvent;
     
     FSDIAkAudioEventPairDynamicLoop();
 };
-

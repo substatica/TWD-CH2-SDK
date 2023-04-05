@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadOnly, Transient)
     TWeakObjectPtr<ASDIPlayerController> WeakController;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadOnly, Export, Transient)
     TWeakObjectPtr<UPrimitiveComponent> Component;
     
     UPROPERTY(BlueprintReadOnly, Transient)

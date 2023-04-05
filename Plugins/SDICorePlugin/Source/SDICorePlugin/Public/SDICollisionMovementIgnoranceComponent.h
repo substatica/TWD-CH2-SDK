@@ -3,31 +3,31 @@
 #include "Components/ActorComponent.h"
 #include "SDICollisionMovementIgnoranceComponent.generated.h"
 
-class USDICollisionMovementIgnoranceComponent;
 class UPrimitiveComponent;
+class USDICollisionMovementIgnoranceComponent;
 class AActor;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SDICOREPLUGIN_API USDICollisionMovementIgnoranceComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UPrimitiveComponent> WeakCollisionComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bDynamicallyCreated;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TMap<TWeakObjectPtr<UPrimitiveComponent>, bool> ComponentIgnoranceMap;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TMap<TWeakObjectPtr<UPrimitiveComponent>, bool> ComponentClearanceMap;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<AActor>> ActorIgnorances;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<AActor>> ActorClearances;
     
 public:
@@ -47,16 +47,16 @@ public:
     UFUNCTION(BlueprintCallable)
     bool SetActorIgnorance(AActor* OtherActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool K2IsIgnoringComponent(UPrimitiveComponent* OtherComp, bool& bOutReciprocate) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool K2IsComponentWaitingForClearance(UPrimitiveComponent* OtherComp, bool& bOutReciprocate) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsIgnoringActor(AActor* OtherActor) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsActorWaitingForClearance(AActor* OtherActor) const;
     
     UFUNCTION(BlueprintCallable)
@@ -65,22 +65,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void IgnoreActorUntilClear(AActor* OtherActor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UPrimitiveComponent*, bool> GetIgnoredComponents() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AActor*> GetIgnoredActors() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<UPrimitiveComponent*, bool> GetComponentsWaitingForClearance() const;
     
     UFUNCTION(BlueprintCallable)
     static USDICollisionMovementIgnoranceComponent* GetCollisionMovementIgnoranceComponentFor(UPrimitiveComponent* PrimitiveComponent, bool bCreate);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     UPrimitiveComponent* GetCollisionComponent() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AActor*> GetActorsWaitingForClearance() const;
     
     UFUNCTION(BlueprintCallable)
@@ -120,4 +120,3 @@ public:
     void CancelActorWaitForClearance(AActor* OtherActor);
     
 };
-

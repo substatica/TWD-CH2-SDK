@@ -162,7 +162,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     TArray<UMaterialInstanceDynamic*> TrackedHandMaterialInstances;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> HandMeshTarget;
     
     UPROPERTY(Transient)
@@ -210,7 +210,7 @@ protected:
     UPROPERTY(Transient)
     float ShoulderLockLimitedTime;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<USDICollisionChannelIgnoranceComponent>> CollisionIgnoranceRestorationPullbackComps;
     
     UPROPERTY(Transient)

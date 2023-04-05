@@ -12,22 +12,22 @@ public:
     UPROPERTY(Transient)
     float ActivationSpeed;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform Transform;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableEffectorSpring;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Alpha;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USceneComponent> RelativeComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FName RelativeSocketName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform RelativeTransform;
     
     FSDIAnimationHandIKTarget();

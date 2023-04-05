@@ -10,7 +10,7 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDIThrusterEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UPrimitiveComponent> Component;
     
     UPROPERTY(Transient)

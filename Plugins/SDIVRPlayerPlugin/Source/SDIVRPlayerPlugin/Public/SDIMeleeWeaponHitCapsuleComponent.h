@@ -119,7 +119,7 @@ protected:
     UPROPERTY()
     FSDIAuxTickFunction OverlapTick;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USDIWeaponHitHistoryComponent> HistoryComponent;
     
     UPROPERTY(Transient)

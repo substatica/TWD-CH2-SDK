@@ -36,13 +36,13 @@ protected:
     UPROPERTY(Transient)
     FTransform LocationTransform;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> LocationParent;
     
     UPROPERTY(Transient)
     FName LocationParentSocketName;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> LocationRef;
     
     UPROPERTY(Transient)
@@ -69,13 +69,13 @@ protected:
     UPROPERTY(Transient)
     FRotator RotationExtent;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> RotationParent;
     
     UPROPERTY(Transient)
     FName RotationParentSocketName;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> RotationRef;
     
     UPROPERTY(Transient)
@@ -87,7 +87,7 @@ protected:
     UPROPERTY(Transient)
     FTransform LastLimitedLocationParentTransform;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> LastLimitedLocationParent;
     
     UPROPERTY(Transient)
@@ -120,7 +120,7 @@ protected:
     UPROPERTY(Transient)
     FSDIHandPoseInfo LockHandPose;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UActorComponent> LockGripComponent;
     
     UPROPERTY(Transient)

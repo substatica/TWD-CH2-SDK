@@ -74,7 +74,7 @@ protected:
     UPROPERTY(Transient)
     float LastValidWorldClimbableTouchTimestamp;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> ExtraWorldGripCollisionIgnorances;
     
 public:

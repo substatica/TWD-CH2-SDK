@@ -49,10 +49,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIndividualTimestampsPerBody;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<UPrimitiveComponent*> RegisteredComponents;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TSet<TWeakObjectPtr<UPrimitiveComponent>> PendingRegisteredComponents;
     
     UPROPERTY(Transient)

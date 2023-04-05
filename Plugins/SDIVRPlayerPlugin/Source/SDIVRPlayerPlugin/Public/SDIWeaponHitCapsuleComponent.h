@@ -145,7 +145,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector PlaneScale;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USDIWeaponHitHistoryComponent> HistoryComponent;
     
     UPROPERTY(Transient)
@@ -157,7 +157,7 @@ protected:
     UPROPERTY(Transient)
     bool bRegisteredOnActorHit;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UAkComponent* MovementLoopComponent;
     
     UPROPERTY(Transient)

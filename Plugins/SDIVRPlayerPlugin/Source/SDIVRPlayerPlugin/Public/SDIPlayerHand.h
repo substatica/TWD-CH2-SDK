@@ -370,7 +370,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     bool bHandPhysicsAllowed;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadOnly, Export, Transient)
     TWeakObjectPtr<UPrimitiveComponent> GrippingPhysicsComponent;
     
     UPROPERTY(BlueprintReadOnly, Transient)
@@ -394,7 +394,7 @@ protected:
     UPROPERTY(Transient)
     FTransform HandActivityLevelLastActorRelTransform;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UActorComponent> CosmeticGripComp;
     
     UPROPERTY(Transient)

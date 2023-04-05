@@ -50,7 +50,7 @@ private:
     UPROPERTY(EditDefaultsOnly)
     FSDIBlendOption MinLimitedForceScaleBlend;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> DesiredRelativeComp;
     
     UPROPERTY(Transient)

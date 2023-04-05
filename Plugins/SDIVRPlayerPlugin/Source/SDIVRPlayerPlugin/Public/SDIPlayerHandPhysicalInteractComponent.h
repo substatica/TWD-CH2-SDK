@@ -67,7 +67,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     float PhysicalInteractPushTime;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UWidgetInteractionComponent>> CachedWidgetInteractComponents;
     
     UPROPERTY()

@@ -25,10 +25,10 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FRFloat WeaponDamageDuration;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<USDIMeleeWeaponHitCapsuleComponent>> MeleeWeaponComponents;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<USDIWeaponHitCapsuleComponent>> WeaponComponents;
     
     UPROPERTY(Transient)

@@ -30,7 +30,7 @@ protected:
     UPROPERTY(Transient)
     TMap<TWeakObjectPtr<ASDIMeleeWeaponActor>, FTimerHandle> StuckWeapons;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<USDIActiveRagdollComponent> WeakARComp;
     
     UPROPERTY(Transient)

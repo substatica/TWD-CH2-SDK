@@ -111,7 +111,7 @@ protected:
     UPROPERTY(Transient)
     bool bUpdatingBaseMovement;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UPrimitiveComponent> MantleIgnoredCollisionComponent;
     
     UPROPERTY(Transient)

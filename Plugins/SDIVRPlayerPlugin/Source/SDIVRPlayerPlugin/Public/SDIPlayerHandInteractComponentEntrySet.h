@@ -15,7 +15,7 @@ protected:
     UPROPERTY(Transient)
     ASDIPlayerController* Owner;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TMap<ESDIInteractRangeType, TWeakObjectPtr<USDIPlayerHandInteractComponent>> Components;
     
     UPROPERTY(Transient)

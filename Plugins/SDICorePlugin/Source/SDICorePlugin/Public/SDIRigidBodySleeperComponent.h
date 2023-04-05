@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "SDIRigidBodySleeperComponent.generated.h"
 
 class UPrimitiveComponent;
 
-UCLASS(BlueprintType, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SDICOREPLUGIN_API USDIRigidBodySleeperComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseWakeEvents;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LowActivityDurationForSleep;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LowActivityTranslationThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LowActivityVelocityThreshold;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float ActivityTimestamp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<FName, FTransform> ThresholdBodyTransforms;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<UPrimitiveComponent> RegisteredComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FName> RegisteredBodyNames;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FTimerHandle ReRegisterComponentTimer;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TSet<FName> AwakeBodies;
     
 public:
@@ -53,16 +53,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void StartMonitoring(bool bReset);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ReRegisterComponent();
     
     UFUNCTION(BlueprintCallable)
     void RegisterComponent(UPrimitiveComponent* Component, const TArray<FName>& BodyNames);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPhysicsComponentWake(UPrimitiveComponent* WakingComponent, FName BoneName);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnPhysicsComponentSleep(UPrimitiveComponent* SleepingComponent, FName BoneName);
     
     UFUNCTION(BlueprintCallable)
@@ -72,4 +72,3 @@ public:
     void ForceSleep();
     
 };
-

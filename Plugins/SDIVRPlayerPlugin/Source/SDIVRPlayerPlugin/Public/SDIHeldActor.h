@@ -241,7 +241,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     TWeakObjectPtr<ASDIPlayerHand> LastPrimaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadOnly, Export, Transient)
     TWeakObjectPtr<UActorComponent> LastPrimaryHeldHandGripComp;
     
     UPROPERTY(BlueprintReadOnly, Transient)
@@ -253,7 +253,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     TWeakObjectPtr<ASDIPlayerHand> LastSecondaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadOnly, Export, Transient)
     TWeakObjectPtr<UActorComponent> LastSecondaryHeldHandGripComp;
     
     UPROPERTY(BlueprintReadOnly, Transient)

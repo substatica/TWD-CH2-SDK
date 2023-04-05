@@ -13,10 +13,10 @@ class SDICOREPLUGIN_API ASDIComplexTrigger : public ASDITriggerActorBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<FComponentReference> Collisions;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> CachedCollisions;
     
 public:

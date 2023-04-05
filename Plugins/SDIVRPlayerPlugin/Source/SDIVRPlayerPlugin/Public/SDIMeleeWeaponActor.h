@@ -121,7 +121,7 @@ protected:
     UPROPERTY(Transient)
     bool bStabContacted;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USDIActiveRagdollComponent> StabAR;
     
     UPROPERTY(Transient)

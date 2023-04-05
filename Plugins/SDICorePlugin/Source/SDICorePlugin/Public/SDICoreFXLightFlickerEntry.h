@@ -10,10 +10,9 @@ struct SDICOREPLUGIN_API FSDICoreFXLightFlickerEntry : public FSDICoreFXCurveAni
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Export, Transient)
     TWeakObjectPtr<ULightComponent> LightComponent;
     
 public:
     FSDICoreFXLightFlickerEntry();
 };
-

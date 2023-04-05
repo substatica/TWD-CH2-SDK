@@ -23,7 +23,7 @@ class SDIVRPLAYERPLUGIN_API USDIPlayerHandInteractComponent : public UCapsuleCom
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> OverlappedComponents;
     
     UPROPERTY(Transient)
