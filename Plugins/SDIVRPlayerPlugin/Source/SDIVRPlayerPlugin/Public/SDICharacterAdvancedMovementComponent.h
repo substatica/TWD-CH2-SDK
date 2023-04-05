@@ -21,6 +21,7 @@
 #include "ESDIMovementHandGripState.h"
 #include "NetworkPredictionData_Server_SDICharacterAdvanced_Adjustment.h"
 #include "Engine/NetSerialization.h"
+#include "Engine/SpringInterpolator.h"
 #include "GameFramework/RootMotionSource.h"
 #include "SDICharacterAdvancedMovementComponent.generated.h"
 
@@ -68,17 +69,17 @@ protected:
     
     UPROPERTY(Transient)
     float ClimbingLeftHandInterpolation;
-    
+
     UPROPERTY(Transient)
     FVectorRK4SpringInterpolator MovementSpring;
     
     UPROPERTY(Transient)
     FFloatRK4SpringInterpolator YawSpring;
-    
+
     UPROPERTY(Transient)
     bool bWantsToCrawl;
     
-    UPROPERTY(Transient)
+UPROPERTY(Transient)
     bool bForceCrawl;
     
     UPROPERTY(Transient)
@@ -377,13 +378,13 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FSDIBlendOption SwimmingHandMotionVelocityVerticalBlend;
-    
+/*
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVectorRK4SpringInterpolator SwimmingHandMotionVelocityAccelSpring;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FVectorRK4SpringInterpolator SwimmingHandMotionVelocityDecelSpring;
-    
+*/    
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SwimmingSingleHandMotionVelocityBoost;
     
@@ -401,10 +402,10 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SwimmingDesiredHeightBelowSurface;
-    
+/*
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FFloatRK4SpringInterpolator SwimmingDesiredHeightSpring;
-    
+*/      
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float SwimmingCameraWaterPlaneRadius;
     

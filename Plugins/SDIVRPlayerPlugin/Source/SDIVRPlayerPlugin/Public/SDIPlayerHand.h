@@ -27,6 +27,7 @@
 #include "SDIMeleeWeaponStabInterfaceData.h"
 #include "SDIMeleeWeaponStabEndedSignatureDelegate.h"
 #include "ESDIInteractRangeType.h"
+#include "Engine/SpringInterpolator.h"
 #include "ESDIHandGripState.h"
 #include "ESDIGripType.h"
 #include "GameplayTagContainer.h"
@@ -241,7 +242,7 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float BodySlotOnscreenAngleDegrees;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripLocationSpring;
     
@@ -253,10 +254,10 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripSwing2Spring;
-    
+
     UPROPERTY(EditDefaultsOnly)
     FVectorRK4SpringInterpolator UnderWaterLocationSpring;
-    
+
     UPROPERTY(EditDefaultsOnly)
     float ExitUnderWaterInterpolationDuration;
     

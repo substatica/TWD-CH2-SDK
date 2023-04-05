@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "BoneContainer.h"
 #include "RRotator.h"
+#include "Engine/SpringInterpolator.h"
 #include "UObject/NoExportTypes.h"
 #include "SDIAnimNode_FingerIK_FingerBone.generated.h"
 
@@ -14,10 +15,10 @@ public:
     
     UPROPERTY(EditAnywhere)
     FRRotator RotationRange;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator Spring;
-    
+
     UPROPERTY(Transient)
     float TargetLerp;
     

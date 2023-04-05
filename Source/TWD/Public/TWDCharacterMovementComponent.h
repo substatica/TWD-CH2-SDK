@@ -7,6 +7,7 @@
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "SDIPlayerHandMove.h"
+#include "Engine/SpringInterpolator.h"
 #include "UObject/NoExportTypes.h"
 #include "TWDCharacterMovementComponent.generated.h"
 
@@ -215,10 +216,10 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     UCurveFloat* HandLockPhysicsForceCurve;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FFloatRK4SpringInterpolator HandLockPhysicsForceSpring;
-    
+
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     float HandLockPhysicsForceOneHandMultiplier;
     

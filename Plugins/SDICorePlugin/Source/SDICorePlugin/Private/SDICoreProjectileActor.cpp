@@ -35,7 +35,7 @@ UPrimitiveComponent* ASDICoreProjectileActor::GetCollisionComponent_Implementati
     return NULL;
 }
 
-ASDICoreProjectileActor::ASDICoreProjectileActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDICoreProjectileActor::ASDICoreProjectileActor() {
     this->ProjectileMovement = CreateDefaultSubobject<USDICoreProjectileMovementComponent>(TEXT("ProjectileMovement"));
     this->ProjectileMass = 1.00f;
     this->HitReactImpulseMultiplier = 1.00f;

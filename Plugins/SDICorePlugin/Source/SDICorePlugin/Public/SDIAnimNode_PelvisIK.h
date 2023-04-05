@@ -32,10 +32,10 @@ public:
     
     UPROPERTY(EditAnywhere)
     FBoneReference RightFootBone;
-    
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator EffectorLocationSpring;
-    
+*/        
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ERelativeTransformSpace> EffectorLocationSpace;
     

@@ -17,13 +17,15 @@ protected:
     
     UPROPERTY(EditDefaultsOnly)
     FName HandCenterSocket;
-    
+
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator EffectorLocationSpring;
     
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator EffectorRotationSpring;
-    
+*/    
+
     UPROPERTY(EditAnywhere)
     TEnumAsByte<ERelativeTransformSpace> EffectorTransformSpace;
     

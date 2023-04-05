@@ -14,10 +14,10 @@ bool USDICollisionChannelIgnoranceComponent::SetComponentIgnorance(UPrimitiveCom
 
 void USDICollisionChannelIgnoranceComponent::SetCollisionComponent(UPrimitiveComponent* InComp) {
 }
-
+/*
 void USDICollisionChannelIgnoranceComponent::RemoveTimedChannelIgnorance(int32 ID, bool bWaitForClearance) {
 }
-
+*/
 int32 USDICollisionChannelIgnoranceComponent::RemoveChannelIgnorance(TEnumAsByte<ECollisionChannel> Channel, bool bWaitForClearance) {
     return 0;
 }
@@ -42,11 +42,11 @@ void USDICollisionChannelIgnoranceComponent::IgnoreComponentsUntilClear(TArray<U
 
 void USDICollisionChannelIgnoranceComponent::IgnoreChannelUntilClear(TEnumAsByte<ECollisionChannel> Channel) {
 }
-
+/*
 int32 USDICollisionChannelIgnoranceComponent::IgnoreChannelForDuration(TEnumAsByte<ECollisionChannel> Channel, float Duration, bool bWaitForClearance) {
     return 0;
 }
-
+*/
 void USDICollisionChannelIgnoranceComponent::IgnoreActorUntilClear(AActor* OtherActor) {
 }
 

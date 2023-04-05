@@ -3,6 +3,7 @@
 #include "SDIPlayerController.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/SpringInterpolator.h"
 #include "SDIPlayerControllerAdvanced.generated.h"
 
 UCLASS()

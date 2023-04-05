@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "BoneContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/SpringInterpolator.h"
 #include "SDIAnimNode_ArmIK_TwistBone.generated.h"
 
 USTRUCT(BlueprintType)
@@ -16,10 +17,11 @@ public:
     
     UPROPERTY(EditAnywhere)
     bool bUseSpring;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator Spring;
-    
+
+
 protected:
     UPROPERTY(Transient)
     bool bIsValidToEvaluate;

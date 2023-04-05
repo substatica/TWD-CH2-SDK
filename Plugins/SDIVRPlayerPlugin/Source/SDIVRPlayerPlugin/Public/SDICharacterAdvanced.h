@@ -6,6 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/SpringInterpolator.h"
 #include "SDICharacterAdvanced.generated.h"
 
 UCLASS()
@@ -36,7 +37,7 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FRFloat HMDEyeHeightAllowedRange;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightSpring;
     
@@ -45,28 +46,28 @@ protected:
     
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightGroundMovementSpring;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EyeHeightGroundMovementSpringMaxOffset;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightRopeMovementSpring;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EyeHeightRopeMovementSpringMaxOffset;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightLandingMovementSpring;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EyeHeightLandingMovementSpringMaxOffset;
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float EyeHeightLandingMovementSpringMaxVel;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightCapsuleOffsetSpring;
-    
+
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bAlwaysSprint;
     

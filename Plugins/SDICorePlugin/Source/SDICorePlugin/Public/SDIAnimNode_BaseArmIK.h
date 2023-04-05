@@ -4,6 +4,7 @@
 #include "BoneContainer.h"
 #include "SDIAnimNode_ArmIK_TwistBone.h"
 #include "SDIAnimNode_ControlledBone.h"
+#include "Engine/SpringInterpolator.h"
 #include "RFloat.h"
 #include "UObject/NoExportTypes.h"
 #include "SDIAnimNode_BaseArmIK.generated.h"
@@ -56,10 +57,10 @@ public:
     
     UPROPERTY(EditAnywhere)
     float CalcElbowParallelBlendExp;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator ElbowRotationSpring;
-    
+
 protected:
     UPROPERTY(Transient)
     float SideMultiplier;

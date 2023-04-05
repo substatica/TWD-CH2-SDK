@@ -4,6 +4,7 @@
 #include "ESDIAxisType.h"
 #include "Curves/CurveFloat.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/SpringInterpolator.h"
 #include "SDIAxisControlCurve.generated.h"
 
 USTRUCT(BlueprintType)
@@ -30,10 +31,10 @@ public:
     
     UPROPERTY(EditAnywhere)
     FRuntimeFloatCurve ControlCurve;
-    
+
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator Spring;
-    
+
 protected:
     UPROPERTY(Transient)
     bool bResetSpring;

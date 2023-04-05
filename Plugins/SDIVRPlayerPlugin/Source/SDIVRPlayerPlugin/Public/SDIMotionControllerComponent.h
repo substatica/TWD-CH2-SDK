@@ -21,9 +21,10 @@ class SDIVRPLAYERPLUGIN_API USDIMotionControllerComponent : public UMotionContro
     GENERATED_BODY()
 public:
 protected:
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator MotionSpring;
-    
+*/  
     UPROPERTY(EditAnywhere)
     FSDIMotionHistory History;
     

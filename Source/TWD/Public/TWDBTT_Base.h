@@ -19,10 +19,11 @@ public:
     
     UFUNCTION(BlueprintNativeEvent)
     void OnDeactivate(AAIController* Controller);
-    
+
+/*
     UFUNCTION(BlueprintNativeEvent)
     TEnumAsByte<EBTNodeResult::Type> OnActivate(AAIController* Controller);
-    
+*/      
     UFUNCTION(BlueprintNativeEvent)
     void OnAbort(AAIController* Controller);
     

@@ -49,8 +49,8 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     int32 PassThroughAsyncTracePlatformLevel;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TEnumAsByte<ECollisionChannel> TraceChannel;
+    UPROPERTY(EditAnywhere)
+    float TraceChannel;
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     FRuntimeFloatCurve DirectDamageDistanceMultiplierCurve;
@@ -95,9 +95,11 @@ protected:
     void HandleHit(int32 ShotID, const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform, const FTransform& SpreadShotTransform, const FHitResult& Hit, const int32& HitIndex, const TArray<AActor*>& InDamagedActors, TArray<AActor*>& OutDamagedActors);
     
 public:
+/*
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    float GetTraceRange(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform);
-    
+    TEnumAsByte<ECollisionChannel> GetTraceChannel(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform);
+*/
+  
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     float GetTraceImpactVelocity(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform, const FTransform& SpreadShotTransform, const FHitResult& Hit, const int32& HitIndex, const TArray<AActor*>& DamagedActors);
@@ -105,10 +107,7 @@ protected:
 public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<AActor*> GetTraceIgnoreActors(const FSDIWeaponFirearmFiredShotInfo& FiredShotInfo, const FTransform& ShotTransform);
-    
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-    TEnumAsByte<ECollisionChannel> GetTraceChannel(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform);
-    
+
 protected:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void GetDamageMultiplier(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform, const FTransform& SpreadShotTransform, const FHitResult& Hit, const TArray<AActor*>& DamagedActors, float& OutDirectDamageMultiplier, float& OutRadialDamageMultiplier);

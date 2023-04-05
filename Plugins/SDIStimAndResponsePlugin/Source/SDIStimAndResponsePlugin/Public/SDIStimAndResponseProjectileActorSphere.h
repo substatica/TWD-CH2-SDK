@@ -5,15 +5,14 @@
 
 class USphereComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SDISTIMANDRESPONSEPLUGIN_API ASDIStimAndResponseProjectileActorSphere : public ASDIStimAndResponseProjectileActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereCollision;
     
 public:
-    ASDIStimAndResponseProjectileActorSphere(const FObjectInitializer& ObjectInitializer);
+    ASDIStimAndResponseProjectileActorSphere();
 };
-

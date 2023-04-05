@@ -9,9 +9,11 @@ TEnumAsByte<EBTNodeResult::Type> UTWDBTT_Base::OnTick_Implementation(AAIControll
 void UTWDBTT_Base::OnDeactivate_Implementation(AAIController* Controller) {
 }
 
+
 TEnumAsByte<EBTNodeResult::Type> UTWDBTT_Base::OnActivate_Implementation(AAIController* Controller) {
-    return EBTNodeResult::Succeeded;
+    return Succeeded;
 }
+
 
 void UTWDBTT_Base::OnAbort_Implementation(AAIController* Controller) {
 }

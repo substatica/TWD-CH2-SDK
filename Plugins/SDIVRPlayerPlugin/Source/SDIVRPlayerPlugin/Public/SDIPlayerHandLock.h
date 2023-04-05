@@ -29,10 +29,10 @@ protected:
     
     UPROPERTY(Transient)
     bool bResetLocationSpring;
-    
+/*
     UPROPERTY(Transient)
     FVectorRK4SpringInterpolator LocationSpring;
-    
+*/  
     UPROPERTY(Transient)
     FTransform LocationTransform;
     

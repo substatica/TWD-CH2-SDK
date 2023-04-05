@@ -25,7 +25,7 @@ protected:
 public:
     USDIDamageType();
     UFUNCTION(BlueprintPure)
-    static USDIDamageType* GetSDIDamageType(UClass* DamageTypeClass, bool& bValid) const;
+    static USDIDamageType* GetSDIDamageType(UClass* DamageTypeClass, bool& bValid);
     
     UFUNCTION(BlueprintPure)
     FGameplayTagContainer GetGameplayTagContainer() const;

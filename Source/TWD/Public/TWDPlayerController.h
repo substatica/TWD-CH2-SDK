@@ -40,6 +40,7 @@
 #include "SDITargetSearchEntry.h"
 #include "TWDNonVRMeleeAttackDetails.h"
 #include "SDITransformCollisionShape.h"
+#include "Engine/SpringInterpolator.h"
 #include "ETWDNonVRMeleeAttackType.h"
 #include "EAlertEventSeverity.h"
 #include "DialogueLine.h"

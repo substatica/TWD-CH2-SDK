@@ -108,6 +108,7 @@
 #include "SDIEnumTypeHandle.h"
 #include "EAkCallbackType.h"
 #include "SDIReplicatedDamageData.h"
+#include "Engine/SpringInterpolator.h"
 #include "Engine/NetSerialization.h"
 #include "InventoryGivenDelegate.h"
 #include "ETWDGunAction.h"

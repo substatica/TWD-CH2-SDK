@@ -7,33 +7,32 @@
 #include "UObject/NoExportTypes.h"
 #include "SDIObjectPoolManager.generated.h"
 
-class ASDIObjectPool;
 class UObject;
+class ASDIObjectPool;
 
-UCLASS(Config=Game)
+UCLASS(Blueprintable, Config=Game)
 class SDICOREPLUGIN_API USDIObjectPoolManager : public USDICoreGameInstanceSubObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Config, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnablePooling;
     
-    UPROPERTY(Config, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSDIObjectPoolManagerEntry> Pools;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TMap<UClass*, ASDIObjectPool*> PoolMap;
     
-    UPROPERTY(BlueprintReadWrite, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UClass*> AlwaysAllowCreateExactClassOverrides;
-    
 public:
     USDIObjectPoolManager();
-    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
+    UFUNCTION(BlueprintCallable)
     static void AddPoolStatic(const UObject* WorldContextObject, UClass* InObjectClass, int32 InStartingPoolSize, int32 InMaxPoolSize, TSubclassOf<ASDIObjectPool> InPoolClass);
     
-    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static UObject* AcquireFromPoolStatic(const UObject* WorldContextObject, const UClass*& ObjectClass, FVector Location, FRotator Rotation, FVector Scale3D, bool bCreateIfNecessary);
+    UFUNCTION(BlueprintCallable)
+    static UObject* AcquireFromPoolStatic(const UObject* WorldContextObject, UClass * ObjectClass, FVector Location, FRotator Rotation, FVector Scale3D, bool bCreateIfNecessary);
     
 };
 

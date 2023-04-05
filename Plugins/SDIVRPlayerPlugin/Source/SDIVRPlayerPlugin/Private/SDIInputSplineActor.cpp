@@ -38,9 +38,11 @@ bool ASDIInputSplineActor::HasValidArc() const {
     return false;
 }
 
+/*
 TEnumAsByte<ECollisionChannel> ASDIInputSplineActor::GetTraceChannel_Implementation() const {
     return ECC_WorldStatic;
 }
+*/
 
 TArray<AActor*> ASDIInputSplineActor::GetIgnoredActors_Implementation() const {
     return TArray<AActor*>();
@@ -70,7 +72,7 @@ bool ASDIInputSplineActor::ArcUsesHMD() const {
     return false;
 }
 
-ASDIInputSplineActor::ASDIInputSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDIInputSplineActor::ASDIInputSplineActor() {
     this->DestinationBlueprint = NULL;
     this->ArcTraceChannel = ECC_Pawn;
     this->bArcUseHMD = false;

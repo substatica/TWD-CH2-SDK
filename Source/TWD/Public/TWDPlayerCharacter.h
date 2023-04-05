@@ -26,6 +26,7 @@
 #include "ETWDNonVRGrappleMinigameState.h"
 #include "ETWDGunAction.h"
 #include "ETWDNonVRGrappleAnimState.h"
+#include "Engine/SpringInterpolator.h"
 #include "SDITuningAccumulator.h"
 #include "SDIReplicatedTuningModifier.h"
 #include "SDITuningAttribute_TWDPlayerCharacter.h"

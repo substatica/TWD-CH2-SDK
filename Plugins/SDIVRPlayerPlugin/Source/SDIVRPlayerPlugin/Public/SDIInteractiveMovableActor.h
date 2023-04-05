@@ -47,10 +47,10 @@ protected:
     
     UPROPERTY(EditAnywhere)
     FSDIQuatPIDController MantleRotationPIDController;
-    
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator HandOffsetSpring;
-    
+*/      
     UPROPERTY(EditAnywhere)
     FRFloatExp HandOffsetRange;
     

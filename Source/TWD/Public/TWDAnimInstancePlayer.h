@@ -11,6 +11,7 @@
 #include "ETWDNonVREquipmentActionType.h"
 #include "ETWDNonVRMeleeAttackType.h"
 #include "ETWDNonVRGrappleAnimState.h"
+#include "Engine/SpringInterpolator.h"
 #include "InputCoreTypes.h"
 #include "TWDAnimInstancePlayer.generated.h"
 
@@ -22,12 +23,13 @@ class TWD_API UTWDAnimInstancePlayer : public USDIAnimInstance {
     GENERATED_BODY()
 public:
 protected:
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFloatRK4SpringInterpolator AimRotationLagPitchSpring;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFloatRK4SpringInterpolator AimRotationLagYawSpring;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRotator AimRotationLagLimit;
     
@@ -36,10 +38,10 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AimRotationLagMoveRightYawVel;
-    
+
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFloatRK4SpringInterpolator SpineDragSpring;
-    
+     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SpineDragLimit;
     
@@ -264,7 +266,7 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     float AngleOfStrike;
-    
+
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     FFloatRK4SpringInterpolator AngleOfStrikeSpring;
     

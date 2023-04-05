@@ -49,13 +49,13 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bForwardMeleeAttack;
-    
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator GrappleOffsetSpring;
     
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator GrappleOffsetRotSpring;
-    
+*/        
     UPROPERTY(EditAnywhere)
     FSDIDoubleRubberBandVector GrappleOffsetRubberBand;
     
@@ -73,13 +73,13 @@ protected:
     
     UPROPERTY(EditAnywhere)
     bool bDebugRenderGrappleBounds;
-    
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator GrappleAttackOffsetSpring;
     
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator GrappleAttackPushBackOffsetSpring;
-    
+*/  
     UPROPERTY(EditAnywhere)
     FRVector GrappleAttackBlendSpaceExtent;
     
@@ -115,13 +115,13 @@ protected:
     
     UPROPERTY(BlueprintReadOnly, EditAnywhere)
     ETWDNonVRGrappleAnimState NonVRGrappleAttackAnimState;
-    
+/*
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator BrainedOffsetSpring;
     
     UPROPERTY(EditAnywhere)
     FVectorRK4SpringInterpolator StabOffsetRotSpring;
-    
+*/    
     UPROPERTY(EditAnywhere)
     float StabOffsetRotVelocityDeg;
     
