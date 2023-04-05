@@ -57,7 +57,7 @@ public:
     UPROPERTY(AdvancedDisplay, EditAnywhere)
     float SimulateGravityCheckDistance;
     
-    ASDIActorSpawner();
+    ASDIActorSpawner(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     AActor* SpawnSpecificClass(TSubclassOf<AActor> ClassType, ASDIObjectPool* Pool);
     

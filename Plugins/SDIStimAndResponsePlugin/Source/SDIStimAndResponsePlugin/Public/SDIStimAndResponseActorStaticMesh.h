@@ -14,6 +14,6 @@ protected:
     UStaticMeshComponent* StaticMeshComponent;
     
 public:
-    ASDIStimAndResponseActorStaticMesh();
+    ASDIStimAndResponseActorStaticMesh(const FObjectInitializer& ObjectInitializer);
 };
 

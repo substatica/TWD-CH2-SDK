@@ -19,7 +19,7 @@ void ASDISkinnedActorSkeletalMesh::GetLifetimeReplicatedProps(TArray<FLifetimePr
     DOREPLIFETIME(ASDISkinnedActorSkeletalMesh, ReplicatedSkinData);
 }
 
-ASDISkinnedActorSkeletalMesh::ASDISkinnedActorSkeletalMesh() {
+ASDISkinnedActorSkeletalMesh::ASDISkinnedActorSkeletalMesh(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SkinComponent = NULL;
 }
 

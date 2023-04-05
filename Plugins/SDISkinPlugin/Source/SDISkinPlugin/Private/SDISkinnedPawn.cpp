@@ -19,7 +19,7 @@ void ASDISkinnedPawn::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(ASDISkinnedPawn, ReplicatedSkinData);
 }
 
-ASDISkinnedPawn::ASDISkinnedPawn() {
+ASDISkinnedPawn::ASDISkinnedPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SkinComponent = NULL;
 }
 

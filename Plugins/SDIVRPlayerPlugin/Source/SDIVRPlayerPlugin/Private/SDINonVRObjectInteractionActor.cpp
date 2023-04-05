@@ -106,7 +106,7 @@ void ASDINonVRObjectInteractionActor::AdjustRotation(FRotator Rot) {
 void ASDINonVRObjectInteractionActor::AdjustPosition(FVector Offset) {
 }
 
-ASDINonVRObjectInteractionActor::ASDINonVRObjectInteractionActor() {
+ASDINonVRObjectInteractionActor::ASDINonVRObjectInteractionActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MovementRoot = CreateDefaultSubobject<USceneComponent>(TEXT("MovementRoot"));
     this->AttachmentRoot = CreateDefaultSubobject<USceneComponent>(TEXT("AttachmentRoot"));
     this->DefaultDistance = 32.00f;

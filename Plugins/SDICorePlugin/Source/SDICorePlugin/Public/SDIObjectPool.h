@@ -29,7 +29,7 @@ private:
     TMap<TWeakObjectPtr<UObject>, FName> ActiveObjects;
     
 public:
-    ASDIObjectPool();
+    ASDIObjectPool(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     int32 K2GetPoolSize(int32& Active, int32& Pooled) const;
     

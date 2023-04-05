@@ -10,6 +10,6 @@ void ASDITuningAsyncTriggerCapsule::GetLifetimeReplicatedProps(TArray<FLifetimeP
     DOREPLIFETIME(ASDITuningAsyncTriggerCapsule, RepTuningModifiers);
 }
 
-ASDITuningAsyncTriggerCapsule::ASDITuningAsyncTriggerCapsule() {
+ASDITuningAsyncTriggerCapsule::ASDITuningAsyncTriggerCapsule(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

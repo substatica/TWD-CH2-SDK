@@ -48,7 +48,7 @@ protected:
     UCapsuleComponent* SpacialComponent;
     
 public:
-    ASDIActorSpawnerNetwork();
+    ASDIActorSpawnerNetwork(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
     TArray<AActor*> SpawnSeveralOfTier(int32 Count, int32 Tier);
     

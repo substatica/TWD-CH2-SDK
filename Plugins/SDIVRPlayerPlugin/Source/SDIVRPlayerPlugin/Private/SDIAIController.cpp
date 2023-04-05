@@ -10,6 +10,6 @@ TEnumAsByte<EPathFollowingRequestResult::Type> ASDIAIController::MoveToLocationW
     return EPathFollowingRequestResult::Failed;
 }
 
-ASDIAIController::ASDIAIController() {
+ASDIAIController::ASDIAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

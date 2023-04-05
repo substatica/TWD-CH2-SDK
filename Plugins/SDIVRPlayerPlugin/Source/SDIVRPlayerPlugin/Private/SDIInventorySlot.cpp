@@ -65,7 +65,7 @@ bool ASDIInventorySlot::AttachInventory_Implementation(ASDIInventoryActor* Inv, 
     return false;
 }
 
-ASDIInventorySlot::ASDIInventorySlot() {
+ASDIInventorySlot::ASDIInventorySlot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DefaultInventory = NULL;
     this->bDefaultInventoryExactMatch = true;
     this->bHideAttachedInventory = true;

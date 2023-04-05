@@ -14,6 +14,6 @@ protected:
     USDIAsyncOverlapEventGeneratorComponent* OverlapGenerator;
     
 public:
-    ASDIAsyncTriggerBox();
+    ASDIAsyncTriggerBox(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -6,7 +6,7 @@ float ASDISignificanceActor::SignificanceFunction(UObject* QueryObj, const FTran
     return 0.0f;
 }
 
-ASDISignificanceActor::ASDISignificanceActor() {
+ASDISignificanceActor::ASDISignificanceActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SignificanceTag = TEXT("SDISignificanceActor");
 }
 

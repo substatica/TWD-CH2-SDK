@@ -17,6 +17,6 @@ protected:
     USphereComponent* ExitCollisionComponent;
     
 public:
-    ASDIEnterExitSphereTrigger();
+    ASDIEnterExitSphereTrigger(const FObjectInitializer& ObjectInitializer);
 };
 

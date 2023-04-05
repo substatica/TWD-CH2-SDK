@@ -94,7 +94,7 @@ void ASDICharacterAdvanced::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>
     DOREPLIFETIME(ASDICharacterAdvanced, bRepIsCrawling);
 }
 
-ASDICharacterAdvanced::ASDICharacterAdvanced() {
+ASDICharacterAdvanced::ASDICharacterAdvanced(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bUseVRFacingForMovement = true;
     this->BaseTurnRate = 45.00f;
     this->CrouchToCrawlHoldTime = 1.00f;

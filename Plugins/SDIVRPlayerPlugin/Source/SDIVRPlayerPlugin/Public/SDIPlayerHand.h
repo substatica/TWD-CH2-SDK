@@ -431,7 +431,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIMeleeWeaponStabEndedSignature StabEndedDelegate;
     
-    ASDIPlayerHand();
+    ASDIPlayerHand(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdatePhysicsHandle();
     

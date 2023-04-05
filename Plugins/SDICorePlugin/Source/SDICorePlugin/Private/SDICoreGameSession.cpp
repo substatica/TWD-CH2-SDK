@@ -1,5 +1,5 @@
 #include "SDICoreGameSession.h"
 
-ASDICoreGameSession::ASDICoreGameSession() {
+ASDICoreGameSession::ASDICoreGameSession(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

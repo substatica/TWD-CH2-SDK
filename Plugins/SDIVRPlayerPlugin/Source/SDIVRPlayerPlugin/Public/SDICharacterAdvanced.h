@@ -92,7 +92,7 @@ public:
     UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bRepIsCrawling)
     bool bRepIsCrawling;
     
-    ASDICharacterAdvanced();
+    ASDICharacterAdvanced(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)

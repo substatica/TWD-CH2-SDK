@@ -31,7 +31,7 @@ FTransform ASDIMovementTargetActor::GetMovementTargetFromHitResult(const FHitRes
     return FTransform{};
 }
 
-ASDIMovementTargetActor::ASDIMovementTargetActor() {
+ASDIMovementTargetActor::ASDIMovementTargetActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->LocationSpline = CreateDefaultSubobject<USplineComponent>(TEXT("LocationSpline"));
     this->Collision = CreateDefaultSubobject<UBoxComponent>(TEXT("Collision"));
     this->Facing = CreateDefaultSubobject<UArrowComponent>(TEXT("Facing"));

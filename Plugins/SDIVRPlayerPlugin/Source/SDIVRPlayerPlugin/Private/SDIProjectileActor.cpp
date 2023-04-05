@@ -1,5 +1,5 @@
 #include "SDIProjectileActor.h"
 
-ASDIProjectileActor::ASDIProjectileActor() {
+ASDIProjectileActor::ASDIProjectileActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

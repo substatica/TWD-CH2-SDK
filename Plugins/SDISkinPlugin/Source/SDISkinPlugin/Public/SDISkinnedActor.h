@@ -34,7 +34,7 @@ protected:
     USceneComponent* SkinComponent;
     
 public:
-    ASDISkinnedActor();
+    ASDISkinnedActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

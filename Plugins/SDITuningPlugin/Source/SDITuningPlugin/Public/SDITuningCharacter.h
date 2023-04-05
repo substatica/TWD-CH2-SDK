@@ -21,7 +21,7 @@ protected:
     TArray<FSDIReplicatedTuningModifier> RepTuningModifiers;
     
 public:
-    ASDITuningCharacter();
+    ASDITuningCharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)

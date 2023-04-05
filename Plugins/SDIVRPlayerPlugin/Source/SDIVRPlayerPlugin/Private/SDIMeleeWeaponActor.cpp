@@ -38,7 +38,7 @@ bool ASDIMeleeWeaponActor::CanMeleeHitCapsuleComponentApplyDamage_Implementation
     return false;
 }
 
-ASDIMeleeWeaponActor::ASDIMeleeWeaponActor() {
+ASDIMeleeWeaponActor::ASDIMeleeWeaponActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AkAudioComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
     this->bStabSyncMoveTarget = false;
     this->bStabSyncMoveAttacker = true;

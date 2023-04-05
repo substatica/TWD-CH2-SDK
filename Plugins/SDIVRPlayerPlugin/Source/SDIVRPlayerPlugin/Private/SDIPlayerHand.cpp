@@ -408,7 +408,7 @@ bool ASDIPlayerHand::AreAllInteractDisabled() const {
 void ASDIPlayerHand::AdjustThrowInfo(UPrimitiveComponent* ThrownComponent, FTransform& InOutTransform, FVector& InOutLinearVelocity, FVector& InOutAngularVelocity) const {
 }
 
-ASDIPlayerHand::ASDIPlayerHand() {
+ASDIPlayerHand::ASDIPlayerHand(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InteractComponent = CreateDefaultSubobject<USDIPlayerHandInteractComponent>(TEXT("InteractComponent"));
     this->RangedInteractComponent = CreateDefaultSubobject<USDIPlayerHandInteractComponent>(TEXT("RangedInteractComponent"));
     this->PhysicalInteractComponent = NULL;

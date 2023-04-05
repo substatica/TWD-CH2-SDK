@@ -359,7 +359,7 @@ protected:
     FSDIReplicatedDamageData RepDamageInflictedData;
     
 public:
-    ASDICorePlayerController();
+    ASDICorePlayerController(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintPure)

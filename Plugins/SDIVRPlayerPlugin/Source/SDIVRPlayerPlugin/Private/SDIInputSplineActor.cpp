@@ -70,7 +70,7 @@ bool ASDIInputSplineActor::ArcUsesHMD() const {
     return false;
 }
 
-ASDIInputSplineActor::ASDIInputSplineActor() {
+ASDIInputSplineActor::ASDIInputSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DestinationBlueprint = NULL;
     this->ArcTraceChannel = ECC_Pawn;
     this->bArcUseHMD = false;

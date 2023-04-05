@@ -109,7 +109,7 @@ protected:
     FVector StickMovementVelocity;
     
 public:
-    ASDIInteractiveMovableActor();
+    ASDIInteractiveMovableActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateTickEnabled();
     

@@ -18,7 +18,7 @@ UObject* ASDIObjectPool::AcquireFromPool(FVector Location, FRotator Rotation, FV
     return NULL;
 }
 
-ASDIObjectPool::ASDIObjectPool() {
+ASDIObjectPool::ASDIObjectPool(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ObjectClass = NULL;
     this->StartingPoolSize = 0;
     this->MaxPoolSize = 0;

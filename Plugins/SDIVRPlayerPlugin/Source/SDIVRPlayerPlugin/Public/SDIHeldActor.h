@@ -365,7 +365,7 @@ public:
     UPROPERTY(Transient)
     bool bOverrideNonVRAnimatedAttachSocketSet;
     
-    ASDIHeldActor();
+    ASDIHeldActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintPure)

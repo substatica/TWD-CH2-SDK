@@ -7,6 +7,6 @@ UCLASS()
 class SDICOREPLUGIN_API ASDIMovementOverrideTriggerBox : public ATriggerBox {
     GENERATED_BODY()
 public:
-    ASDIMovementOverrideTriggerBox();
+    ASDIMovementOverrideTriggerBox(const FObjectInitializer& ObjectInitializer);
 };
 

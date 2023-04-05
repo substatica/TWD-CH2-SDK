@@ -53,7 +53,7 @@ protected:
     TArray<TWeakObjectPtr<AActor>> OverlapDamagedActors;
     
 public:
-    ASDICoreProjectileActor();
+    ASDICoreProjectileActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     bool ShouldStick(const FHitResult& Hit) const;
     

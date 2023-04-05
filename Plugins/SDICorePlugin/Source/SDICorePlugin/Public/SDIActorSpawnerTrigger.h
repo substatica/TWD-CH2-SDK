@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSpawnerTriggerEvent OnOverlapEndEvent;
     
-    ASDIActorSpawnerTrigger();
+    ASDIActorSpawnerTrigger(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void OnOverlapEnd(AActor* OverlappedActor, AActor* OtherActors);

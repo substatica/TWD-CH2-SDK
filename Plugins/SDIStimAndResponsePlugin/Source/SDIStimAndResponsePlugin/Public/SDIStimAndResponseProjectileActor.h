@@ -37,7 +37,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSaRProjectileActorStimulusChangedSignature OnStimulusChangedDelegate;
     
-    ASDIStimAndResponseProjectileActor();
+    ASDIStimAndResponseProjectileActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

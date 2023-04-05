@@ -78,7 +78,7 @@ protected:
     TArray<TWeakObjectPtr<UPrimitiveComponent>> ExtraWorldGripCollisionIgnorances;
     
 public:
-    ASDIPlayerHandAdvanced();
+    ASDIPlayerHandAdvanced(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool WorldGripPossible() const;
     

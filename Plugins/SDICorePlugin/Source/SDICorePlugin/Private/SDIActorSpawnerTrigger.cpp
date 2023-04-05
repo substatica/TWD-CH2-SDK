@@ -8,7 +8,7 @@ void ASDIActorSpawnerTrigger::OnOverlapEnd(AActor* OverlappedActor, AActor* Othe
 void ASDIActorSpawnerTrigger::OnOverlapBegin(AActor* OverlappedActor, AActor* OtherActors) {
 }
 
-ASDIActorSpawnerTrigger::ASDIActorSpawnerTrigger() {
+ASDIActorSpawnerTrigger::ASDIActorSpawnerTrigger(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SpawnNetwork = NULL;
 }
 

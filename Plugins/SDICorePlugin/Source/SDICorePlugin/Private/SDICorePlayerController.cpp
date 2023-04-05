@@ -244,7 +244,7 @@ void ASDICorePlayerController::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(ASDICorePlayerController, RepDamageInflictedData);
 }
 
-ASDICorePlayerController::ASDICorePlayerController() {
+ASDICorePlayerController::ASDICorePlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bRecoilUseInputCompensation = true;
     this->bFlinchUseInputCompensation = true;
     this->bEnableAimAssistOnGamepad = true;

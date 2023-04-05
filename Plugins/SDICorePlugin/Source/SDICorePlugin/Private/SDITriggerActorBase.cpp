@@ -28,7 +28,7 @@ bool ASDITriggerActorBase::AllowEntrance_Implementation(AActor* OtherActor, UPri
     return false;
 }
 
-ASDITriggerActorBase::ASDITriggerActorBase() {
+ASDITriggerActorBase::ASDITriggerActorBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bIsActive = true;
     this->TriggerFilter = ESDITriggerFilterType::AllPawns;
 }

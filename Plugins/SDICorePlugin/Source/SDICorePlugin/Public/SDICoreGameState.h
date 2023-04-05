@@ -36,7 +36,7 @@ protected:
     TWeakObjectPtr<ASDICoreFXManager> FXManager;
     
 public:
-    ASDICoreGameState();
+    ASDICoreGameState(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

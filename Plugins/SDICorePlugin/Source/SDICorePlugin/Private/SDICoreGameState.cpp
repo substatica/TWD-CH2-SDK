@@ -21,7 +21,7 @@ void ASDICoreGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(ASDICoreGameState, RepServerTickMS);
 }
 
-ASDICoreGameState::ASDICoreGameState() {
+ASDICoreGameState::ASDICoreGameState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->FXManagerClass = ASDICoreFXManager::StaticClass();
     this->RepServerTimeStamp = 0.00f;
     this->RepServerTimeStampDelta = 0.00f;

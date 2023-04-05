@@ -19,6 +19,6 @@ void ASDISkinnedCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>&
     DOREPLIFETIME(ASDISkinnedCharacter, ReplicatedSkinData);
 }
 
-ASDISkinnedCharacter::ASDISkinnedCharacter() {
+ASDISkinnedCharacter::ASDISkinnedCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

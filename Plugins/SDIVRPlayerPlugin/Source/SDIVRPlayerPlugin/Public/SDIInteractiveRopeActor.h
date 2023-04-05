@@ -59,7 +59,7 @@ private:
     FSDIPooledObjectData PooledObjectData;
     
 public:
-    ASDIInteractiveRopeActor();
+    ASDIInteractiveRopeActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void UpdateTickEnabled();
     

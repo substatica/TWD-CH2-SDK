@@ -24,7 +24,7 @@ protected:
     TArray<FSDICoreFXLightFlickerEntry> LightFlickers;
     
 public:
-    ASDICoreFXManager();
+    ASDICoreFXManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void RemoveLightFlicker(ULightComponent* LightComponent);
     

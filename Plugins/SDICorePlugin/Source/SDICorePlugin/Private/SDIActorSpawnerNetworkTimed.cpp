@@ -20,7 +20,7 @@ TArray<AActor*> ASDIActorSpawnerNetworkTimed::ActivateTimedEvent() {
     return TArray<AActor*>();
 }
 
-ASDIActorSpawnerNetworkTimed::ASDIActorSpawnerNetworkTimed() {
+ASDIActorSpawnerNetworkTimed::ASDIActorSpawnerNetworkTimed(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bLooping = false;
     this->bSpawnFirstBeforeTimer = true;
     this->MaxLoopCount = -1;

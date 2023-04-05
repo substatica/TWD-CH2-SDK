@@ -123,7 +123,7 @@ APawn* ASDICoreSpectatorPawn::GetViewPawn() const {
     return NULL;
 }
 
-ASDICoreSpectatorPawn::ASDICoreSpectatorPawn() {
+ASDICoreSpectatorPawn::ASDICoreSpectatorPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ReplaySkipTime = 30.00f;
     this->ReplayRewindTime = 30.00f;
     this->ReplaySpeedStep = 0;

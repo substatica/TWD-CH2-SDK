@@ -47,7 +47,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIMovementTargetActor_OnMovementStopped OnMovementStoppedDelegate;
     
-    ASDIMovementTargetActor();
+    ASDIMovementTargetActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void UpdateMovementHighlightTransform(ASDICharacter* Character, const FTransform& Transform);
     

@@ -285,7 +285,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDisableMusic;
     
-    ASDIPlayerController();
+    ASDIPlayerController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(Exec)
     void ToggleMusic();
     

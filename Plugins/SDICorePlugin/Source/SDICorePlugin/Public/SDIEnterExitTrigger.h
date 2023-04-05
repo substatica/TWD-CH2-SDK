@@ -33,7 +33,7 @@ protected:
     TWeakObjectPtr<UPrimitiveComponent> CachedExitCollision;
     
 public:
-    ASDIEnterExitTrigger();
+    ASDIEnterExitTrigger(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnComponentEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

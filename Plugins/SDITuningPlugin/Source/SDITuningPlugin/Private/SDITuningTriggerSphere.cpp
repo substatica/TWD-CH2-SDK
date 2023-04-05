@@ -10,6 +10,6 @@ void ASDITuningTriggerSphere::GetLifetimeReplicatedProps(TArray<FLifetimePropert
     DOREPLIFETIME(ASDITuningTriggerSphere, RepTuningModifiers);
 }
 
-ASDITuningTriggerSphere::ASDITuningTriggerSphere() {
+ASDITuningTriggerSphere::ASDITuningTriggerSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

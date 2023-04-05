@@ -244,7 +244,7 @@ protected:
     TArray<FSDIPlayerHandShake> HandShakes;
     
 public:
-    ASDIPlayerHandBase();
+    ASDIPlayerHandBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent)
     void UpdateHandHidden(bool bHandHidden);
     

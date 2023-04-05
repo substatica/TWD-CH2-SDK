@@ -128,7 +128,7 @@ protected:
     FName SecondaryAimAssistSocketName;
     
 public:
-    ASDICoreCharacter();
+    ASDICoreCharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintPure)

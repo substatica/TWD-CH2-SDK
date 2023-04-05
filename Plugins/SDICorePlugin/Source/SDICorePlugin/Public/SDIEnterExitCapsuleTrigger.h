@@ -17,6 +17,6 @@ protected:
     UCapsuleComponent* ExitCollisionComponent;
     
 public:
-    ASDIEnterExitCapsuleTrigger();
+    ASDIEnterExitCapsuleTrigger(const FObjectInitializer& ObjectInitializer);
 };
 

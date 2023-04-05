@@ -7,6 +7,6 @@ UCLASS()
 class SDIVRPLAYERPLUGIN_API ASDILookAtActor : public ASDICoreLookAtActor {
     GENERATED_BODY()
 public:
-    ASDILookAtActor();
+    ASDILookAtActor(const FObjectInitializer& ObjectInitializer);
 };
 

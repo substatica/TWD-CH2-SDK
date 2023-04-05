@@ -1,6 +1,6 @@
 #include "SDISkinnedPlayerHandBase.h"
 
-ASDISkinnedPlayerHandBase::ASDISkinnedPlayerHandBase() {
+ASDISkinnedPlayerHandBase::ASDISkinnedPlayerHandBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bCosmeticPhysicsFingersWereActive = false;
 }
 

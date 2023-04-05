@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSpawnsActiveAtOnce;
     
-    ASDIActorSpawnerNetworkTimed();
+    ASDIActorSpawnerNetworkTimed(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool WillSpawnAgain();
     

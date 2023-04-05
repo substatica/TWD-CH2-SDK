@@ -65,7 +65,7 @@ protected:
     bool bInitialHMDReset;
     
 public:
-    ASDIPlayerCameraManager();
+    ASDIPlayerCameraManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetVignetteSettings(float StrengthMultiplier, float OpacityMultiplier, float Comfort);
     

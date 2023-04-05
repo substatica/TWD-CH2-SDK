@@ -63,7 +63,7 @@ protected:
     FSDIAttachmentInfo SlotAttachment;
     
 public:
-    ASDIInventorySlot();
+    ASDIInventorySlot(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetDefaultInventory(bool bForce);
     

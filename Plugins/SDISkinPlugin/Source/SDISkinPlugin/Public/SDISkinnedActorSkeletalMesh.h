@@ -35,7 +35,7 @@ protected:
     USceneComponent* SkinComponent;
     
 public:
-    ASDISkinnedActorSkeletalMesh();
+    ASDISkinnedActorSkeletalMesh(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

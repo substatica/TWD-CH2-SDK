@@ -16,7 +16,7 @@ protected:
     FGameplayTagContainer GameplayTagContainer;
     
 public:
-    ASDIGameplayTagActor();
+    ASDIGameplayTagActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)

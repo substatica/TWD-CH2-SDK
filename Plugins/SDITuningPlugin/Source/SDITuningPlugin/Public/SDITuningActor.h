@@ -18,7 +18,7 @@ protected:
     TArray<FSDIReplicatedTuningModifier> RepTuningModifiers;
     
 public:
-    ASDITuningActor();
+    ASDITuningActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

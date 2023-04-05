@@ -43,7 +43,7 @@ protected:
     TWeakObjectPtr<ASDIInventoryActor> CurrencyPtr;
     
 public:
-    ASDIWeaponFirearmAmmo();
+    ASDIWeaponFirearmAmmo(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool HasInfiniteCurrency() const;
     

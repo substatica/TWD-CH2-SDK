@@ -1,5 +1,5 @@
 #include "SDIStreamingDoor.h"
 
-ASDIStreamingDoor::ASDIStreamingDoor() {
+ASDIStreamingDoor::ASDIStreamingDoor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

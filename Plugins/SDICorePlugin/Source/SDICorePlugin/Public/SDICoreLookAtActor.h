@@ -67,7 +67,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDICoreLookAtActorDisengagedSignature OnLookAtActorDisengagedDelegate;
     
-    ASDICoreLookAtActor();
+    ASDICoreLookAtActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetActive(bool bActive);
     

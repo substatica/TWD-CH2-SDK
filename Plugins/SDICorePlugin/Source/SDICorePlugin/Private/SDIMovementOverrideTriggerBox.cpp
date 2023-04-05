@@ -1,5 +1,5 @@
 #include "SDIMovementOverrideTriggerBox.h"
 
-ASDIMovementOverrideTriggerBox::ASDIMovementOverrideTriggerBox() {
+ASDIMovementOverrideTriggerBox::ASDIMovementOverrideTriggerBox(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

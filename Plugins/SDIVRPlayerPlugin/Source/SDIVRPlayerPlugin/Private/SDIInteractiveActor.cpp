@@ -18,6 +18,6 @@ FText ASDIInteractiveActor::GetDescription_Implementation() const {
     return FText::GetEmpty();
 }
 
-ASDIInteractiveActor::ASDIInteractiveActor() {
+ASDIInteractiveActor::ASDIInteractiveActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -25,7 +25,7 @@ bool ASDIActorSpawner::IsSpawnerEnabled() const {
     return false;
 }
 
-ASDIActorSpawner::ASDIActorSpawner() {
+ASDIActorSpawner::ASDIActorSpawner(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bHasSpawned = false;
     this->SpawnNetwork = NULL;
     this->bMultiUseSpawner = false;

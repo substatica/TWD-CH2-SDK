@@ -10,6 +10,6 @@ void ASDITuningActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
     DOREPLIFETIME(ASDITuningActor, RepTuningModifiers);
 }
 
-ASDITuningActor::ASDITuningActor() {
+ASDITuningActor::ASDITuningActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

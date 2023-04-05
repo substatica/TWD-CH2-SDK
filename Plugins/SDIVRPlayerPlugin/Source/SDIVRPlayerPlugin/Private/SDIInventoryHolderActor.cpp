@@ -12,6 +12,6 @@ void ASDIInventoryHolderActor::GetLifetimeReplicatedProps(TArray<FLifetimeProper
     DOREPLIFETIME(ASDIInventoryHolderActor, RepInventoryList);
 }
 
-ASDIInventoryHolderActor::ASDIInventoryHolderActor() {
+ASDIInventoryHolderActor::ASDIInventoryHolderActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

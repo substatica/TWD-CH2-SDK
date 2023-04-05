@@ -15,7 +15,7 @@ ASDICoreFXManager* ASDICoreFXManager::GetFXManager(const UObject* WorldContextOb
 void ASDICoreFXManager::AddLightFlicker(ULightComponent* LightComponent, UCurveFloat* IntensityCurve, float StartTime, bool bLooping) {
 }
 
-ASDICoreFXManager::ASDICoreFXManager() {
+ASDICoreFXManager::ASDICoreFXManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MaxLightFlickerUpdatesPerFrame = 0;
     this->LightFlickerUpdateIndex = 0;
 }

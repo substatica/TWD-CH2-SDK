@@ -348,7 +348,7 @@ void ASDIPlayerController::AdjustHapticEffectFrequencyScale(UHapticFeedbackEffec
 void ASDIPlayerController::AddAbsYawInput(float Val) {
 }
 
-ASDIPlayerController::ASDIPlayerController() {
+ASDIPlayerController::ASDIPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->DefaultInteractiveHighlightManagerClass = NULL;
     this->DefaultNonVRObjectInteractionActorClass = NULL;
     this->DefaultPlayerHandBlueprint = NULL;

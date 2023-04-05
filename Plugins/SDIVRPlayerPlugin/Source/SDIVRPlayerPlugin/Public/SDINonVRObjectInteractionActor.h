@@ -91,7 +91,7 @@ protected:
     bool bIsInteracting;
     
 public:
-    ASDINonVRObjectInteractionActor();
+    ASDINonVRObjectInteractionActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void StopInteraction();
     

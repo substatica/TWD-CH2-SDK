@@ -16,7 +16,7 @@ protected:
     uint8 RepMonkeyMode;
     
 public:
-    ASDICorePlayerState();
+    ASDICorePlayerState(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(Reliable, Server, WithValidation)

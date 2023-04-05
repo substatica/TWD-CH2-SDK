@@ -27,7 +27,7 @@ protected:
     bool bDrawMonkey;
     
 public:
-    ASDICoreHUD();
+    ASDICoreHUD(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool WorldToScreenSize(FVector WorldLocation, float InWorldW, float InWorldH, float& OutScreenW, float& OutScreenH) const;
     

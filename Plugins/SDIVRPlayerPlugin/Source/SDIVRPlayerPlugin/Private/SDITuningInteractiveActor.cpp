@@ -1,5 +1,5 @@
 #include "SDITuningInteractiveActor.h"
 
-ASDITuningInteractiveActor::ASDITuningInteractiveActor() {
+ASDITuningInteractiveActor::ASDITuningInteractiveActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

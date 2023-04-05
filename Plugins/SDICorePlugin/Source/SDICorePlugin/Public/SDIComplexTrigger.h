@@ -20,7 +20,7 @@ protected:
     TArray<TWeakObjectPtr<UPrimitiveComponent>> CachedCollisions;
     
 public:
-    ASDIComplexTrigger();
+    ASDIComplexTrigger(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnComponentEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     

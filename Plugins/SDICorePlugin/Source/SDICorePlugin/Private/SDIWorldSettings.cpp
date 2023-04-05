@@ -1,5 +1,5 @@
 #include "SDIWorldSettings.h"
 
-ASDIWorldSettings::ASDIWorldSettings() {
+ASDIWorldSettings::ASDIWorldSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

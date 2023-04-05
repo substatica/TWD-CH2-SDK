@@ -1,5 +1,5 @@
 #include "SDILookAtActor.h"
 
-ASDILookAtActor::ASDILookAtActor() {
+ASDILookAtActor::ASDILookAtActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

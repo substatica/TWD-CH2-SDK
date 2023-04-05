@@ -25,7 +25,7 @@ protected:
     TArray<USplineMeshComponent*> SplineSegments;
     
 public:
-    ASDISplineMeshActor();
+    ASDISplineMeshActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UpdateSpline();
     

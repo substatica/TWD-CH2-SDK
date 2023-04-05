@@ -7,6 +7,6 @@ ASDIInteractiveHighlightManager* ASDIInteractiveHighlightManager::GetInteractive
     return NULL;
 }
 
-ASDIInteractiveHighlightManager::ASDIInteractiveHighlightManager() {
+ASDIInteractiveHighlightManager::ASDIInteractiveHighlightManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -39,7 +39,7 @@ ASDIActorSpawner* ASDIActorSpawnerNetwork::FindAvailableSpawner(bool bRemoveWhen
     return NULL;
 }
 
-ASDIActorSpawnerNetwork::ASDIActorSpawnerNetwork() {
+ASDIActorSpawnerNetwork::ASDIActorSpawnerNetwork(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bSingleUseSpawnpoints = true;
     this->bUseConnectionReroutePoint = true;
     this->SpacialComponent = NULL;

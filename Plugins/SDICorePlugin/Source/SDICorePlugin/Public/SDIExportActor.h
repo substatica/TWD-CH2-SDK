@@ -15,7 +15,7 @@ protected:
     FSDIExportData ExportData;
     
 public:
-    ASDIExportActor();
+    ASDIExportActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
     UFUNCTION(BlueprintCallable)

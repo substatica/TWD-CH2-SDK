@@ -35,6 +35,6 @@ protected:
     FVector SmoothThumbComponent;
     
 public:
-    ASDIPlayerControllerAdvanced();
+    ASDIPlayerControllerAdvanced(const FObjectInitializer& ObjectInitializer);
 };
 

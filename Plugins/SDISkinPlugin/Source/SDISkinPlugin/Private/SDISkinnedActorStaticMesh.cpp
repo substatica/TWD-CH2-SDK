@@ -19,7 +19,7 @@ void ASDISkinnedActorStaticMesh::GetLifetimeReplicatedProps(TArray<FLifetimeProp
     DOREPLIFETIME(ASDISkinnedActorStaticMesh, ReplicatedSkinData);
 }
 
-ASDISkinnedActorStaticMesh::ASDISkinnedActorStaticMesh() {
+ASDISkinnedActorStaticMesh::ASDISkinnedActorStaticMesh(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SkinComponent = NULL;
 }
 

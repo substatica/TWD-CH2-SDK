@@ -89,6 +89,6 @@ int32 ASDICorePlayerCameraManager::AddCameraSettings(const FSDICameraSettings& S
     return 0;
 }
 
-ASDICorePlayerCameraManager::ASDICorePlayerCameraManager() {
+ASDICorePlayerCameraManager::ASDICorePlayerCameraManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

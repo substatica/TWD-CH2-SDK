@@ -1,7 +1,7 @@
 #include "SDIAsyncTriggerSphere.h"
 #include "SDIAsyncOverlapEventGeneratorComponent.h"
 
-ASDIAsyncTriggerSphere::ASDIAsyncTriggerSphere() {
+ASDIAsyncTriggerSphere::ASDIAsyncTriggerSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->OverlapGenerator = CreateDefaultSubobject<USDIAsyncOverlapEventGeneratorComponent>(TEXT("OverlapGenerator"));
 }
 

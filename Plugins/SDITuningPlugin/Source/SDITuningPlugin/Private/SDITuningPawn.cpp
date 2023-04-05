@@ -10,6 +10,6 @@ void ASDITuningPawn::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
     DOREPLIFETIME(ASDITuningPawn, RepTuningModifiers);
 }
 
-ASDITuningPawn::ASDITuningPawn() {
+ASDITuningPawn::ASDITuningPawn(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

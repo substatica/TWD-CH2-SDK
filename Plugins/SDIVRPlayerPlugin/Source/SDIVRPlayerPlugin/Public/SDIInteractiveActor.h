@@ -58,7 +58,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIInteractiveActorInteractReleasedSignature OnInteractiveActorInteractReleased;
     
-    ASDIInteractiveActor();
+    ASDIInteractiveActor(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintNativeEvent, BlueprintPure)
     UTexture2D* GetUIIcon() const;
     

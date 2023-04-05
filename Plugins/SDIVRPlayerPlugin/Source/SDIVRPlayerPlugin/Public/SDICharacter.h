@@ -169,7 +169,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIMeleeWeaponStabEndedSignature StabEndedDelegate;
     
-    ASDICharacter();
+    ASDICharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)

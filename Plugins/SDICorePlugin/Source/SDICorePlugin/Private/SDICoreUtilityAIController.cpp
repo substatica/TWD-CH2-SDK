@@ -49,7 +49,7 @@ UBlackboardComponent* ASDICoreUtilityAIController::GetBlackboard() const {
     return NULL;
 }
 
-ASDICoreUtilityAIController::ASDICoreUtilityAIController() {
+ASDICoreUtilityAIController::ASDICoreUtilityAIController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->UtilityAIClass = NULL;
     this->bUtilityAIEnabled = true;
     this->Difficulty = ESDIUtilityAIDifficulty::Medium;

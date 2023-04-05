@@ -7,6 +7,6 @@ UCLASS()
 class SDICOREPLUGIN_API ASDIWorldSettings : public AWorldSettings {
     GENERATED_BODY()
 public:
-    ASDIWorldSettings();
+    ASDIWorldSettings(const FObjectInitializer& ObjectInitializer);
 };
 

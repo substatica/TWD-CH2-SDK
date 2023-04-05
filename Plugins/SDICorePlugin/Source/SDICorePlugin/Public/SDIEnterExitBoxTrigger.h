@@ -17,6 +17,6 @@ protected:
     UBoxComponent* ExitCollisionComponent;
     
 public:
-    ASDIEnterExitBoxTrigger();
+    ASDIEnterExitBoxTrigger(const FObjectInitializer& ObjectInitializer);
 };
 

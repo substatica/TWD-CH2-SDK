@@ -3,7 +3,7 @@
 void ASDIThrowInputSplineActor::UpdateThrowInputSpline_Implementation(float DeltaSeconds) {
 }
 
-ASDIThrowInputSplineActor::ASDIThrowInputSplineActor() {
+ASDIThrowInputSplineActor::ASDIThrowInputSplineActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bArcRequiresHold = false;
     this->bArcThrowOnRelease = false;
     this->bArcAllowThrowBehind = false;

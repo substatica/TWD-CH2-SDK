@@ -37,7 +37,7 @@ protected:
     float MinArcVelocityMaxDistanceError;
     
 public:
-    ASDIThrowInputSplineActor();
+    ASDIThrowInputSplineActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void UpdateThrowInputSpline(float DeltaSeconds);

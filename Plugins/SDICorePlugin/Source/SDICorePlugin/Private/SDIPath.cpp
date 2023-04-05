@@ -36,7 +36,7 @@ int32 ASDIPath::ClosestPathNodeToLocation(FVector InputLocation, FVector& Output
 void ASDIPath::ChangeBranchWeight(const FString& PathNode1, const FString& PathNode2, float Weight) {
 }
 
-ASDIPath::ASDIPath() {
+ASDIPath::ASDIPath(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PathComponent = CreateDefaultSubobject<USDIPathComponent>(TEXT("PathComponent"));
 }
 

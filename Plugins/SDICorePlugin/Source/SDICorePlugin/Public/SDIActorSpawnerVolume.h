@@ -24,6 +24,6 @@ protected:
     TSubclassOf<ASDIActorSpawner> SpawnerModel;
     
 public:
-    ASDIActorSpawnerVolume();
+    ASDIActorSpawnerVolume(const FObjectInitializer& ObjectInitializer);
 };
 

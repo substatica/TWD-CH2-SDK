@@ -17,6 +17,6 @@ protected:
     UCapsuleComponent* CapsuleComponent;
     
 public:
-    ASDIPrecomputedVisibilityTestActor();
+    ASDIPrecomputedVisibilityTestActor(const FObjectInitializer& ObjectInitializer);
 };
 

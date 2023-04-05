@@ -19,7 +19,7 @@ protected:
     TArray<ASDIInventoryActor*> RepInventoryList;
     
 public:
-    ASDIInventoryHolderActor();
+    ASDIInventoryHolderActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

@@ -212,7 +212,7 @@ void ASDICoreCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     DOREPLIFETIME(ASDICoreCharacter, RepDamageInflictedData);
 }
 
-ASDICoreCharacter::ASDICoreCharacter() {
+ASDICoreCharacter::ASDICoreCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->CapsuleCollisionIgnoranceComp = CreateDefaultSubobject<USDICollisionChannelIgnoranceComponent>(TEXT("CapsuleCollisionIgnorance"));
     this->MeshCollisionIgnoranceComp = CreateDefaultSubobject<USDICollisionChannelIgnoranceComponent>(TEXT("MeshCollisionIgnorance"));
     this->RigidBodySleeperComponent = CreateDefaultSubobject<USDIRigidBodySleeperComponent>(TEXT("RigidBodySleeperComponent"));

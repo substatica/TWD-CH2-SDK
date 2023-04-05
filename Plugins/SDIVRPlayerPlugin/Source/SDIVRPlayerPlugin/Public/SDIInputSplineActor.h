@@ -91,7 +91,7 @@ protected:
     TWeakObjectPtr<APawn> OverridePawn;
     
 public:
-    ASDIInputSplineActor();
+    ASDIInputSplineActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION(BlueprintNativeEvent)
     bool UpdateTransform();

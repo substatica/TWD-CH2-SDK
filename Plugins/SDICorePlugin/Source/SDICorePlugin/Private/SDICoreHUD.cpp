@@ -95,7 +95,7 @@ float ASDICoreHUD::CalculateScreenPercentage(float Percent) const {
 void ASDICoreHUD::CalculatePivot(ESDICoordinatePivot Pivot, float InScreenX, float InScreenY, float InScreenW, float InScreenH, float& OutScreenX, float& OutScreenY) {
 }
 
-ASDICoreHUD::ASDICoreHUD() {
+ASDICoreHUD::ASDICoreHUD(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bDrawUtilityAI = false;
     this->bDrawMonkey = false;
 }

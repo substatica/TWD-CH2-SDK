@@ -34,7 +34,7 @@ FVector ASDISplineMeshActor::GetPoint(int32 PointIndex, TEnumAsByte<ESplineCoord
     return FVector{};
 }
 
-ASDISplineMeshActor::ASDISplineMeshActor() {
+ASDISplineMeshActor::ASDISplineMeshActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SplineComp = CreateDefaultSubobject<USplineComponent>(TEXT("SplineComp"));
     this->NumSegments = 10;
     this->SplineSegments.AddDefaulted(1);

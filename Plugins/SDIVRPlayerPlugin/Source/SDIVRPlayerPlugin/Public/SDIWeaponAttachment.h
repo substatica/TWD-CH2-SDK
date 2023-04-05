@@ -49,7 +49,7 @@ protected:
     bool bLocalAttached;
     
 public:
-    ASDIWeaponAttachment();
+    ASDIWeaponAttachment(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

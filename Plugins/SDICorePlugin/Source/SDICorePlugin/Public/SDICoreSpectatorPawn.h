@@ -21,7 +21,7 @@ protected:
     int32 ReplaySpeedStep;
     
 public:
-    ASDICoreSpectatorPawn();
+    ASDICoreSpectatorPawn(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintPure)
     bool IsSpectatingReplay(float& OutTime, float& OutDuration, float& OutSpeed, int32& OutSpeedStep) const;
     

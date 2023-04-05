@@ -1,5 +1,5 @@
 #include "SDITuningGameplayTagActor.h"
 
-ASDITuningGameplayTagActor::ASDITuningGameplayTagActor() {
+ASDITuningGameplayTagActor::ASDITuningGameplayTagActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

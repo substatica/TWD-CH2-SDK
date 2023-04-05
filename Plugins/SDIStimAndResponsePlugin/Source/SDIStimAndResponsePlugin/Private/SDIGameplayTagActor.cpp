@@ -1,5 +1,5 @@
 #include "SDIGameplayTagActor.h"
 
-ASDIGameplayTagActor::ASDIGameplayTagActor() {
+ASDIGameplayTagActor::ASDIGameplayTagActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

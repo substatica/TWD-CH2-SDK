@@ -23,6 +23,6 @@ protected:
     TArray<TWeakObjectPtr<ASDIMovementTargetActor>> VisibleMovementTargets;
     
 public:
-    ASDIInputSplineActorMovement();
+    ASDIInputSplineActorMovement(const FObjectInitializer& ObjectInitializer);
 };
 

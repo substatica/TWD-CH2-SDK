@@ -31,7 +31,7 @@ protected:
     FSDISkinDynamicData DynamicSkinData;
     
 public:
-    ASDISkinnedCharacter();
+    ASDISkinnedCharacter(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
 protected:

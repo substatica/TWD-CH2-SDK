@@ -31,7 +31,7 @@ protected:
     USDICoreUtilityAI* UtilityAI;
     
 public:
-    ASDICoreUtilityAIController();
+    ASDICoreUtilityAIController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintAuthorityOnly, BlueprintPure)
     bool UtilityAIEnabled() const;
     

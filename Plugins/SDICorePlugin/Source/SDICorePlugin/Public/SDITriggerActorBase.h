@@ -31,7 +31,7 @@ protected:
     TArray<AActor*> Occupants;
     
 public:
-    ASDITriggerActorBase();
+    ASDITriggerActorBase(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void SetActive(bool bActive);
     

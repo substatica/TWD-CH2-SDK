@@ -26,6 +26,6 @@ protected:
     bool ActorPreviouslyDeactivated;
     
 public:
-    ASDISignificanceStasisActor();
+    ASDISignificanceStasisActor(const FObjectInitializer& ObjectInitializer);
 };
 

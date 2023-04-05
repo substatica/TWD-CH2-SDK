@@ -33,7 +33,7 @@ protected:
     FTimerHandle QueuedRagdollTimerHandle;
     
 public:
-    ASDICoreGameMode();
+    ASDICoreGameMode(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void ProcessQueuedRagdolls();

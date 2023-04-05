@@ -36,7 +36,7 @@ bool ASDIInteractiveRopeActor::CanBeUsedForMovement() const {
     return false;
 }
 
-ASDIInteractiveRopeActor::ASDIInteractiveRopeActor() {
+ASDIInteractiveRopeActor::ASDIInteractiveRopeActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RopeComponent = CreateDefaultSubobject<USDIInteractiveRopeComponent>(TEXT("RopeComponent"));
     this->bCanBeUsedForMovement = false;
     this->bAllowRangedGrab = true;

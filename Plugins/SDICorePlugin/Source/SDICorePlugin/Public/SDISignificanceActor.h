@@ -16,7 +16,7 @@ protected:
     FName SignificanceTag;
     
 public:
-    ASDISignificanceActor();
+    ASDISignificanceActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     float SignificanceFunction(UObject* QueryObj, const FTransform& ViewerTransform);

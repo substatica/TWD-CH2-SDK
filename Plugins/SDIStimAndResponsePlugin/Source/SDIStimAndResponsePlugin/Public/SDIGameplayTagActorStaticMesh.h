@@ -14,6 +14,6 @@ protected:
     UStaticMeshComponent* StaticMeshComponent;
     
 public:
-    ASDIGameplayTagActorStaticMesh();
+    ASDIGameplayTagActorStaticMesh(const FObjectInitializer& ObjectInitializer);
 };
 

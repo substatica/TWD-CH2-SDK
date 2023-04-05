@@ -14,7 +14,7 @@ protected:
     FSDITuningAccumulator TuningAccumulator;
     
 public:
-    ASDITuningStimAndResponseActor();
+    ASDITuningStimAndResponseActor(const FObjectInitializer& ObjectInitializer);
     
     // Fix for true pure virtual functions not being implemented
 };

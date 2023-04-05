@@ -103,7 +103,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIMeleeWeaponStabEndedSignature StabEndedDelegate;
     
-    ASDIDamageableActor();
+    ASDIDamageableActor(const FObjectInitializer& ObjectInitializer);
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)

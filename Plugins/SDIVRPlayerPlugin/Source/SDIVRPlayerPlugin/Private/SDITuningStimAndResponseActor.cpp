@@ -1,5 +1,5 @@
 #include "SDITuningStimAndResponseActor.h"
 
-ASDITuningStimAndResponseActor::ASDITuningStimAndResponseActor() {
+ASDITuningStimAndResponseActor::ASDITuningStimAndResponseActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

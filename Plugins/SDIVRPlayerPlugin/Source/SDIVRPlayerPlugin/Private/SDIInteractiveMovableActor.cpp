@@ -77,7 +77,7 @@ bool ASDIInteractiveMovableActor::AllowHandMove_Implementation(ASDIPlayerHand* h
     return false;
 }
 
-ASDIInteractiveMovableActor::ASDIInteractiveMovableActor() {
+ASDIInteractiveMovableActor::ASDIInteractiveMovableActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->PhysicsConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("PhysicsConstraint"));
     this->CollisionIgnoranceComp = CreateDefaultSubobject<USDICollisionChannelIgnoranceComponent>(TEXT("CollisionIgnorance"));
     this->bCanBeMoved = true;

@@ -158,7 +158,7 @@ void ASDICharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ASDICharacter, RepLastServerHMDHandReplicationTimestamp);
 }
 
-ASDICharacter::ASDICharacter() {
+ASDICharacter::ASDICharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InteractiveHighlightManagerClass = NULL;
     this->PlayerHandBlueprint = NULL;
     this->PlayerLeftHandBlueprint = NULL;

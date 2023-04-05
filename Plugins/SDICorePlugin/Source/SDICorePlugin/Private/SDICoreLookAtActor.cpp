@@ -29,7 +29,7 @@ void ASDICoreLookAtActor::EngageLookAt_Implementation(ACharacter* LookAtChar) {
 void ASDICoreLookAtActor::DisengageLookAt_Implementation(ACharacter* LookAtChar) {
 }
 
-ASDICoreLookAtActor::ASDICoreLookAtActor() {
+ASDICoreLookAtActor::ASDICoreLookAtActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->SphereCollision = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollision"));
     this->AkAudioComponent = CreateDefaultSubobject<UAkComponent>(TEXT("AkAudioComponent"));
     this->EngageAngleDegrees = 15.00f;

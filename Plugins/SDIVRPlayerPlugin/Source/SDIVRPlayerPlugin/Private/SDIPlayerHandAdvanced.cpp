@@ -14,7 +14,7 @@ bool ASDIPlayerHandAdvanced::ClimbGripPossible() const {
     return false;
 }
 
-ASDIPlayerHandAdvanced::ASDIPlayerHandAdvanced() {
+ASDIPlayerHandAdvanced::ASDIPlayerHandAdvanced(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->GrabSurfaceFeedback = NULL;
     this->GrabClimbableSurfaceFeedback = NULL;
     this->TouchSurfaceFeedback = NULL;

@@ -131,7 +131,7 @@ protected:
     TArray<int32> StabLoopFeedbackIds;
     
 public:
-    ASDIMeleeWeaponActor();
+    ASDIMeleeWeaponActor(const FObjectInitializer& ObjectInitializer);
 protected:
     UFUNCTION()
     void StabActiveRagdollDeactivated(AActor* Actor, USDIActiveRagdollComponent* Comp);

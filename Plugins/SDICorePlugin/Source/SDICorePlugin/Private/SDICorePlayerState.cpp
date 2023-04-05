@@ -34,7 +34,7 @@ void ASDICorePlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ASDICorePlayerState, RepMonkeyMode);
 }
 
-ASDICorePlayerState::ASDICorePlayerState() {
+ASDICorePlayerState::ASDICorePlayerState(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->RepMonkeyDifficulty = ESDIUtilityAIDifficulty::Medium;
     this->RepMonkeyMode = 0;
 }

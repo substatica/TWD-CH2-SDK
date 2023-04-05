@@ -370,7 +370,7 @@ bool ASDIPlayerHandBase::AdjustHapticEffectScale(UHapticFeedbackEffect_Base* Hap
 void ASDIPlayerHandBase::AdjustHandShakeScale(int32 ID, float Scale) {
 }
 
-ASDIPlayerHandBase::ASDIPlayerHandBase() {
+ASDIPlayerHandBase::ASDIPlayerHandBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MotionController = CreateDefaultSubobject<USDIMotionControllerComponent>(TEXT("MotionController"));
     this->HandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HandMesh"));
     this->TrackedHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TrackedHandMesh"));

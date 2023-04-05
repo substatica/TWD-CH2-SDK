@@ -10,7 +10,7 @@ UCLASS()
 class SDIVRPLAYERPLUGIN_API ASDIInteractiveHighlightManager : public AActor {
     GENERATED_BODY()
 public:
-    ASDIInteractiveHighlightManager();
+    ASDIInteractiveHighlightManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static ASDIInteractiveHighlightManager* GetInteractiveHighlightManager(const UObject* WorldContextObject);
     

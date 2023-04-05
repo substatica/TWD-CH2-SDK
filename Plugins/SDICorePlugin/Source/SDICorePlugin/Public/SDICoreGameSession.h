@@ -7,6 +7,6 @@ UCLASS()
 class SDICOREPLUGIN_API ASDICoreGameSession : public AGameSession {
     GENERATED_BODY()
 public:
-    ASDICoreGameSession();
+    ASDICoreGameSession(const FObjectInitializer& ObjectInitializer);
 };
 

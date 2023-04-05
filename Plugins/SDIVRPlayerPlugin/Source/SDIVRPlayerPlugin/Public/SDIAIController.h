@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FString, FNavAgentProperties> NavAgentPropsList;
     
-    ASDIAIController();
+    ASDIAIController(const FObjectInitializer& ObjectInitializer);
     UFUNCTION()
     void OnAIMovetoNextDestinationFinished(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> Result);
     

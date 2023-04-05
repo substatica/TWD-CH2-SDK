@@ -98,7 +98,7 @@ void ASDIDamageableActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ASDIDamageableActor, RepSkinData);
 }
 
-ASDIDamageableActor::ASDIDamageableActor() {
+ASDIDamageableActor::ASDIDamageableActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->HealthAttr = CreateDefaultSubobject<USDICoreAttributeComponent>(TEXT("Health"));
     this->NonDamageHitMinImpactVelocity = 64.00f;
     this->NonDamageHitInterval = 0.50f;

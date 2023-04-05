@@ -16,6 +16,6 @@ void ASDITuningCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
     DOREPLIFETIME(ASDITuningCharacter, RepTuningModifiers);
 }
 
-ASDITuningCharacter::ASDITuningCharacter() {
+ASDITuningCharacter::ASDITuningCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

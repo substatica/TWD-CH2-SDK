@@ -16,7 +16,7 @@ FTransform ASDIPlayerCameraManager::GetCameraParentTransform() const {
     return FTransform{};
 }
 
-ASDIPlayerCameraManager::ASDIPlayerCameraManager() {
+ASDIPlayerCameraManager::ASDIPlayerCameraManager(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->TurnVignetteCurve = NULL;
     this->MoveVignetteCurve = NULL;
     this->VignetteParameterCollection = NULL;

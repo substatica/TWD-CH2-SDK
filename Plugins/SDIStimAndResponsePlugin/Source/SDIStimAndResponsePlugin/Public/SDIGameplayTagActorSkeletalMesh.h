@@ -14,6 +14,6 @@ protected:
     USkeletalMeshComponent* SkeletalMeshComponent;
     
 public:
-    ASDIGameplayTagActorSkeletalMesh();
+    ASDIGameplayTagActorSkeletalMesh(const FObjectInitializer& ObjectInitializer);
 };
 

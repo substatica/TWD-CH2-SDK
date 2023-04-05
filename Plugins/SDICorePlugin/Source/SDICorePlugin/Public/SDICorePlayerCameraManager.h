@@ -17,7 +17,7 @@ protected:
     TArray<FSDICameraSettings> CameraSettings;
     
 public:
-    ASDICorePlayerCameraManager();
+    ASDICorePlayerCameraManager(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     bool UpdateCameraPostProcessSettings(int32 ID, const FPostProcessSettings& Settings);
     

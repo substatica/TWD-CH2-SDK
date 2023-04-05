@@ -1,5 +1,5 @@
 #include "SDIExportActor.h"
 
-ASDIExportActor::ASDIExportActor() {
+ASDIExportActor::ASDIExportActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
 }
 

@@ -21,7 +21,7 @@ public:
     UPROPERTY(BlueprintAssignable)
     FSDIPathNodeTriggerDelegate PathNodeTriggerDelegate;
     
-    ASDIPath();
+    ASDIPath(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     int32 GetStarterId();
     

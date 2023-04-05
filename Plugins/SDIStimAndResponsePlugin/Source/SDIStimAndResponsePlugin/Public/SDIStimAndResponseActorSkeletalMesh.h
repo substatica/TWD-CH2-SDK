@@ -14,6 +14,6 @@ protected:
     USkeletalMeshComponent* SkeletalMeshComponent;
     
 public:
-    ASDIStimAndResponseActorSkeletalMesh();
+    ASDIStimAndResponseActorSkeletalMesh(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -13,6 +13,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> UnloadLevelNames;
     
-    ASDIStreamingDoor();
+    ASDIStreamingDoor(const FObjectInitializer& ObjectInitializer);
 };
 
