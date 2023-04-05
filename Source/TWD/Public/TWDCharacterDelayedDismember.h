@@ -22,7 +22,7 @@ public:
     UPROPERTY(Transient)
     TWeakObjectPtr<ATWDWeaponActor> WeakWeapon;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UTWDWeaponHitCapsuleComponent> WeakDismemberCapsule;
     
     UPROPERTY(Transient)

@@ -109,7 +109,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FName LowDurabilityMaterialParam;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<UPrimitiveComponent*> LowDurabilityMaterialPrimitives;
     
     UPROPERTY(Transient)
@@ -265,7 +265,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
     TArray<UPhysicalMaterial*> StickPhysicalMaterials;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UPhysicsConstraintComponent* CurrentStabPhysicsConstraint;
     
     UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
@@ -682,7 +682,7 @@ protected:
     UPROPERTY(BlueprintReadOnly, Transient)
     bool bPlayedStabSawLoopStartEvent;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USDIActiveRagdollComponent> ActiveRagdollComp;
     
     UPROPERTY(Transient)

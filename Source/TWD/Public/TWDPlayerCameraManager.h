@@ -46,7 +46,7 @@ protected:
     UPROPERTY(Transient)
     ATWDHMDCameraActor* HMDCamera;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UStaticMeshComponent> CageMeshComponent;
     
     UPROPERTY(Transient)

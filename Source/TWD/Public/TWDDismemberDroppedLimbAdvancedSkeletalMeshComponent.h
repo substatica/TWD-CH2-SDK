@@ -8,7 +8,7 @@ class UTWDDismemberDroppedLimbAdvancedSkeletalMeshComponent : public USkeletalMe
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USkeletalMeshComponent> PoseCopyMesh;
     
     UPROPERTY(Transient)

@@ -72,10 +72,10 @@ protected:
     UPROPERTY(Transient)
     float MotorOnMassOverrideAlpha;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     UShapeComponent* ChainsawBladeCollisionComponent;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<UPrimitiveComponent>> BladeOverlapComponents;
     
     UPROPERTY(Transient)

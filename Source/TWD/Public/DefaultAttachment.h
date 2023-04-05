@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FDefaultAttachment {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> Comp;
     
     UPROPERTY(Transient)
     FTransform Transform;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> Parent;
     
     UPROPERTY(Transient)

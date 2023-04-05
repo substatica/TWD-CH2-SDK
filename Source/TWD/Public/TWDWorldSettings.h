@@ -1,25 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "SDIWorldSettings.h"
+#include "Particles/WorldPSCPool.h"
+#include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SpawnVFXAttachedParams -FallbackName=SpawnVFXAttachedParams
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Particles/WorldPSCPool.h"
 #include "TWDWorldSettings.generated.h"
 
-class UFXSystemAsset;
 class UObject;
+class UFXSystemAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TWD_API ATWDWorldSettings : public ASDIWorldSettings {
     GENERATED_BODY()
 public:
-    ATWDWorldSettings(const FObjectInitializer& ObjectInitializer);
-    UFUNCTION()
-    void SpawnVFXAttached(FSpawnVFXAttachedParams Params);
+    ATWDWorldSettings();
     
-    UFUNCTION(meta=(WorldContext="WorldContextObject"))
+/*  Unrecognized type 'FSpawnVFXAttachedParams' - type must be a UCLASS, USTRUCT or UENUM
+
+    UFUNCTION(BlueprintCallable)
+    void SpawnVFXAttached(FSpawnVFXAttachedParams Params);
+*/  
+    UFUNCTION(BlueprintCallable)
     void SpawnVFXAtLocation(const UObject* WorldContextObject, UFXSystemAsset* EmitterTemplate, FVector Location, FRotator Rotation, FVector Scale, bool bAutoDestroy, EPSCPoolMethod PoolingMethod, bool bAutoActivateSystem);
     
 };
-

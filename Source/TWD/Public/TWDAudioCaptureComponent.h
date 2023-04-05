@@ -75,7 +75,7 @@ public:
     UPROPERTY(Transient)
     float EnvelopeValueHistoryTotal;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> AttachedParent;
     
     UTWDAudioCaptureComponent();
