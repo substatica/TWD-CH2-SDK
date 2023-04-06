@@ -9,13 +9,13 @@ class TWD_API UTWDWidgetComponent : public USDICoreWidgetComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUseLightingChannelOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FLightingChannels LightingChannelOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUseStereoLayer;
     
     UPROPERTY(EditDefaultsOnly)

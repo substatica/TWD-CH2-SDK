@@ -38,7 +38,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MaxYawSpeed;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float CurrentYawSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
@@ -50,16 +50,16 @@ protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditDefaultsOnly)
     float DoorShutBufferZoneSize;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     ASDIPlayerHand* PlayerHand;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bHandleGripped;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDoorIsLocked;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDoorIsClosed;
     
 public:

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDFavorDecaySettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRuntimeFloatCurve PositiveFavorDeltaCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRuntimeFloatCurve NegativeFavorDeltaCurve;
     
     FTWDFavorDecaySettings();

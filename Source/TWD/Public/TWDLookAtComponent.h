@@ -61,10 +61,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bSaveToNotebook;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDestroyOwnerAfterSave;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float InterpDuration;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)

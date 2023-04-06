@@ -13,10 +13,10 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float SelectionThreshold;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 SelectedIndex;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bIsInHidingProcess;
     
 public:

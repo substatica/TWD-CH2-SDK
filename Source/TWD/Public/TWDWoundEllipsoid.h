@@ -48,10 +48,10 @@ public:
     UPROPERTY(BlueprintReadWrite)
     bool bDoSever;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 WoundID;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float WoundTimestamp;
     
     TWD_API FTWDWoundEllipsoid();

@@ -45,10 +45,10 @@ public:
     UPROPERTY(BlueprintAssignable)
     FPauseAIDelegate PauseAIDelegate;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<UTWDAIManager> AIManagerClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bEnableSleepingAISystem;
     
 private:

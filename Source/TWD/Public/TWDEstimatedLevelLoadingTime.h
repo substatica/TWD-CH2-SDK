@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDEstimatedLevelLoadingTime {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditDefaultsOnly)
     FString Map;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditDefaultsOnly)
     float Time;
     
     FTWDEstimatedLevelLoadingTime();

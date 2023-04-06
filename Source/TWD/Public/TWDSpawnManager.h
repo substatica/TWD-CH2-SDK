@@ -35,7 +35,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     EMapTerritoryNodeType MapEnum;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* DefaultSpawnCurve;
     
     UPROPERTY()
@@ -62,7 +62,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSpawnClassLimit> SpawnLimits;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSpawnClassLimit> CommonSpawnLimits;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
@@ -80,7 +80,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bShowPlayerProximityRange;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUseWasRecentlyRenderedForSpawning;
     
     UPROPERTY(EditAnywhere)
@@ -128,28 +128,28 @@ protected:
     UPROPERTY(Transient)
     FTimerHandle UpdateSpawnManagerHandle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceHuman;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceAICharacters;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceHumanTier0;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceAICharactersTier0;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceHumanDelMar;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceAICharactersDelMar;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceHumanHi;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxSignificanceAICharactersHi;
     
     UPROPERTY(Transient)
@@ -161,22 +161,22 @@ protected:
     UPROPERTY(Transient)
     TArray<FSpawnerQueueNode> SpawnerQueue;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bUseSpawnOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<AActor> SpawnClassOverride;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATWDWalkerAICharacter> WalkerSpawnClassOverride;
     
     UPROPERTY(Transient)
     int32 CurrentRegionIndex;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float OverrunRestorationRequiredTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 OverrunRestorationRequiredKills;
     
 public:
@@ -223,7 +223,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bRefreshPossibleSpawnCounts;
     
-    UPROPERTY(BlueprintReadOnly, Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Transient, VisibleAnywhere)
     TMap<FName, int32> PossibleSpawnCounts;
     
     UPROPERTY(Config)

@@ -11,7 +11,7 @@ UCLASS()
 class TWD_API ATWDPersistentLevel : public ALevelScriptActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bPersistenceHandled;
     
     UPROPERTY(BlueprintAssignable)

@@ -8,7 +8,7 @@ UCLASS()
 class TWD_API UTWDScenarioEvent : public UTWDWorldEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSpawnScenarioCommand ScenarioCommand;
     
     UTWDScenarioEvent();

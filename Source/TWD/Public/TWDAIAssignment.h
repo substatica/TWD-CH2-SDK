@@ -25,10 +25,10 @@ public:
     float Duration;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ATWDAIController* Assignee;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AActor* Assigner;
     
     UPROPERTY(BlueprintReadWrite, Transient)

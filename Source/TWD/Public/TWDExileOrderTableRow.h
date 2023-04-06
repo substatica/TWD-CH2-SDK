@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTWDExileOrderTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<UTWDExileOrder> OrderClass;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<int32, float> WeightByGlobalFavorTier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<int32, float> WeightByLocalFavorTier;
     
     TWD_API FTWDExileOrderTableRow();

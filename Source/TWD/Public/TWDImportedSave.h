@@ -7,10 +7,10 @@ UCLASS()
 class TWD_API UTWDImportedSave : public UTWDSaveGame {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FText DebugMenuText;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FString LiveSaveNameOverride;
     
     UTWDImportedSave();

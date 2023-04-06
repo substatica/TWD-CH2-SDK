@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDNonVRInteractionPrompt {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ETWDNonVRInteraction Command;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FKey InputKey;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bCanBeLongPressed;
     
     FTWDNonVRInteractionPrompt();

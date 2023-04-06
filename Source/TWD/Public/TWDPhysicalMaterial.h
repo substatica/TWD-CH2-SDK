@@ -7,53 +7,53 @@
 class UParticleSystem;
 class UObject;
 class AActor;
-class UHapticFeedbackEffect_Base;
+class UObject;
 
 UCLASS(CollapseCategories)
 class UTWDPhysicalMaterial : public USDIPhysicalMaterial {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* DefaultBulletParticle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* DefaultBulletSound;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<AActor> DefaultBulletDecal;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bBulletOrientUsingImpactVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* DefaultFootstepSound;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* DefaultGripSound;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CharacterNoiseMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ObjectNoiseMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UParticleSystem* DefaultParticle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<AActor> DefaultDecal;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UHapticFeedbackEffect_Base* DefaultHaptic;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UObject* DefaultHaptic;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* SoundPlayEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* SoundStopEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UObject* DamageSound;
     
 public:
@@ -71,7 +71,7 @@ public:
     float GetObjectNoiseMultiplier() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetHaptic() const;
+    UObject* GetHaptic() const;
     
     UFUNCTION(BlueprintPure)
     UObject* GetDefaultGripSound() const;

@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTWDNightModeLootInventoryTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<ASDIInventoryActor> LootInventoryClass;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Weight;
     
     TWD_API FTWDNightModeLootInventoryTableRow();

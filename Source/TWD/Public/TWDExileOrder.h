@@ -8,7 +8,7 @@ class TWD_API UTWDExileOrder : public UTWDRecipe {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bHideOutputs;
     
 public:

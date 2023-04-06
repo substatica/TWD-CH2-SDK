@@ -7,16 +7,16 @@ USTRUCT(BlueprintType)
 struct FTWDDragSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PitchSpringStiffnessConstant;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PitchSpringDampeningRatio;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float YawSpringStiffnessConstant;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float YawSpringDampeningRatio;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

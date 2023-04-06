@@ -22,10 +22,10 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<ATWDPlayerInventorySlot> InventorySlotBlueprint;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* InventorySlotRoot;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FIntVector InventorySlotCount;
     
     UPROPERTY(EditDefaultsOnly)
@@ -34,10 +34,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float InventorySlotRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanSaveContents;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<FTWDStashPage> InventoryPages;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -46,16 +46,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<TSubclassOf<ASDIInventoryActor>> SalvageMaterialClasses;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 ActivePageIndex;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 AvailablePages;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* NextPageCollision;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* PrevPageCollision;
     
     UPROPERTY(Instanced, VisibleAnywhere)

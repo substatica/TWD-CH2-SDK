@@ -16,11 +16,11 @@ protected:
     UPROPERTY(Instanced, Transient)
     TArray<UTWDSplineTrackEventComponent*> Events;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDrawDebug;
     
 private:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere, meta=(AllowPrivateAccess=true))
     USplineComponent* SplineComponent;
     
 public:

@@ -3,7 +3,7 @@
 
 class UObject;
 class UParticleSystem;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class AActor;
 
 UObject* UTWDPhysicalMaterial::GetSoundStopEvent() const {
@@ -22,7 +22,7 @@ float UTWDPhysicalMaterial::GetObjectNoiseMultiplier() const {
     return 0.0f;
 }
 
-UHapticFeedbackEffect_Base* UTWDPhysicalMaterial::GetHaptic() const {
+UObject* UTWDPhysicalMaterial::GetHaptic() const {
     return NULL;
 }
 

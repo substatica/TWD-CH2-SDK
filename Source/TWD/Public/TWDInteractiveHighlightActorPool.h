@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct FTWDInteractiveHighlightActorPool {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ATWDInteractiveHighlightActor> HighlightActorClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 InitialPoolSize;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<ATWDInteractiveHighlightActor*> Pool;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<ATWDInteractiveHighlightActor*> InUse;
     
     TWD_API FTWDInteractiveHighlightActorPool();

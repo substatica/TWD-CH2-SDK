@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct FTWDWeaponBoneStabCurveOverrideMapEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIncludeChildren;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* Curve;
     
     TWD_API FTWDWeaponBoneStabCurveOverrideMapEntry();

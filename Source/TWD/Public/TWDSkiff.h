@@ -19,19 +19,19 @@ class TWD_API ATWDSkiff : public ATWDInventoryHolderActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* MeshComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bMagicSlotsEnabled;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<ATWDPlayerInventorySlot*> MagicSlots;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ATWDPlayerInventorySlot> MagicSlotClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     USceneComponent* MagicSlotRoot;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)

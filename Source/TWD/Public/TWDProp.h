@@ -24,13 +24,13 @@ class ATWDProp : public ASDIInventoryActor, public ITWDSeamlessTravelActorInterf
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDAutoTickAkComponent* AkAudioComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTWDInventoryActorInterfaceData TWDInventoryData;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_RepTWDInventoryData)
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_RepTWDInventoryData)
     FTWDReplicatedInventoryActorInterfaceData RepTWDInventoryData;
     
     UPROPERTY(BlueprintReadWrite, Transient)

@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct FTWDNightModeLootSpawnTableRow : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSoftClassPtr<AActor> SpawnClass;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Weight;
     
     TWD_API FTWDNightModeLootSpawnTableRow();

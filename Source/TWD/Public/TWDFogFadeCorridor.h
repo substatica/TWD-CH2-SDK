@@ -14,10 +14,10 @@ class TWD_API ATWDFogFadeCorridor : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly, Instanced)
     UBoxComponent* Collision;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     AExponentialHeightFog* TargetFog;
     
     UPROPERTY(Transient, VisibleAnywhere)
@@ -32,25 +32,25 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     float ValueOnExit;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float CurrentValue;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float TargetValue;
     
     UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     float ValueChangeRate;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector EnterLocation;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FVector ExitLocation;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float LastProgress;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float EntryValue;
     
 public:

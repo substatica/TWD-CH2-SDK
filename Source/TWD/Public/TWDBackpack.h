@@ -35,10 +35,10 @@ class TWD_API ATWDBackpack : public ATWDWeaponActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* BackpackMeshComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* UIMeshComponent;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
@@ -74,49 +74,49 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* AudioItemPlaceSpecial;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 AvailablePages;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     int32 ActivePageIndex;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* NextPageCollision;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UBoxComponent* PrevPageCollision;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIPointGripComponent* PointGripLeft;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIPointGripComponent* PointGripRight;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<ATWDPlayerInventorySlot*> InventorySlots;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TArray<ATWDPlayerInventorySlot*> LargeSlots;
     
     UPROPERTY(Instanced, VisibleAnywhere)
     UChildActorComponent* QuickSlotComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ATWDPlayerInventorySlot> InventorySlotBlueprint;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ATWDPlayerInventorySlot> SpecialInventorySlotBlueprint;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<UTWDNonVRBackpackWidget> NonVRBackpackWidgetClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<TSoftClassPtr<ASDIInventoryActor>> LowPriorityKeyItemClasses;
     
     UPROPERTY(Instanced, VisibleAnywhere)
     USceneComponent* InventorySlotRoot;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FIntVector InventorySlotCount;
     
     UPROPERTY(Transient)
@@ -125,16 +125,16 @@ protected:
     UPROPERTY(Transient)
     UMaterialInstanceDynamic* UIMeshMaterialInstance;
     
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly)
     int32 LeftArrowMeshElementIndex;
     
-    UPROPERTY(BlueprintReadOnly, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleDefaultsOnly)
     int32 RightArrowMeshElementIndex;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FLinearColor ArrowMeshElementBaseColor;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FLinearColor ArrowMeshElementHighlightedColor;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

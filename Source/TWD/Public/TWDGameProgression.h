@@ -73,7 +73,7 @@ protected:
     UPROPERTY(Transient)
     UTWDScenarioManager* ScenarioManager;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<TSubclassOf<UTWDTask>, TSubclassOf<UTWDTask>> TaskDependencies;
     
     UPROPERTY()
@@ -119,28 +119,28 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TArray<TSubclassOf<UTWDWorldEvent>> NewGameWorldEvents;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 BalancedGameLength;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 TotalStoryEvents;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StoryEventWeight;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDDifficultyMode, FTWDDifficultyMods> DifficultyMods;
     
     UPROPERTY()
     FString QuestLineContextKeys[4];
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool UseImportedSave;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool ShouldStartInTutorial;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FTWDAchievementData AchievementRequirements;
     
     UPROPERTY()

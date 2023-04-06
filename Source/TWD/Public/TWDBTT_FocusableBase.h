@@ -12,13 +12,13 @@ UCLASS()
 class TWD_API UTWDBTT_FocusableBase : public UTWDBTT_Base {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FBlackboardKeySelector TargetKey;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDFocusAction ActivateAction;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDFocusAction DeactivateAction;
     
 protected:

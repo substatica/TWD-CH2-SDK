@@ -30,13 +30,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputDropButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDInventoryType, FTransform> TransformOffsetByType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FTransform FinalTransformOffset;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bInBackpackMode;
     
 public:

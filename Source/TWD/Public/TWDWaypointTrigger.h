@@ -9,13 +9,13 @@ USTRUCT(BlueprintType)
 struct FTWDWaypointTrigger {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDWaypointTriggerOperation TriggerOperation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FTWDWaypointTriggerEventData> Events;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDWaypointTriggerAction Action;
     
     TWD_API FTWDWaypointTrigger();

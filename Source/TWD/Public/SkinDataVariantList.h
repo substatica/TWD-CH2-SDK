@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct FSkinDataVariantList {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSubclassOf<USDISkinObject>> Variants;
     
     TWD_API FSkinDataVariantList();

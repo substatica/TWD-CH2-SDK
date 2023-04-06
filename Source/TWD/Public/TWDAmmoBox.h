@@ -11,10 +11,10 @@ class TWD_API ATWDAmmoBox : public ATWDProp, public ITWDDurabilityInterface {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bMergeBasedOnDurability;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTWDDurabilityInterfaceData TWDDurabilityData;
     
     UPROPERTY(ReplicatedUsing=OnRep_RepTWDDurabilityData)

@@ -44,7 +44,7 @@ public:
     UPROPERTY(EditAnywhere)
     float KnockBackInterpSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float KnockBackTime;
     
     UPROPERTY(EditAnywhere)
@@ -56,16 +56,16 @@ public:
     UPROPERTY(EditAnywhere)
     bool bDebugShowKnockBackVector;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ABP_TurnSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ABP_ExitSpeed;
     
     UPROPERTY(BlueprintReadWrite)
     ECharacterAnimationSet RequestedCharacterAnimationSet;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ASDIInventoryActor> WeaponClass;
     
 private:

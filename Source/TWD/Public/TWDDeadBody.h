@@ -66,7 +66,7 @@ protected:
     UPROPERTY(EditAnywhere)
     float StabMeleeDurabilityModifier;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FStuckWeapon> StuckWeapons;
     
 public:

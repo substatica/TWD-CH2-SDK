@@ -72,10 +72,10 @@ public:
     bool bInTutorial;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPhysicsConstraintComponent* NonVRLeftHandPhysicsConstraint;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPhysicsConstraintComponent* NonVRRightHandPhysicsConstraint;
     
     UPROPERTY(EditAnywhere)
@@ -378,7 +378,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float DodgeDamageReductionMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIPlayerVoiceAkComponent* PlayerVoiceLocalComponent;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
@@ -517,16 +517,16 @@ protected:
     TMap<TWeakObjectPtr<UTWDAnimNotifyState_Grapple>, FSDIAnimNotifyStateData> GrappleNotifies;
     
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleInstanceOnly)
     ATWDAIPerceptionModifierVolume* ActivePerceptionModifierVolume;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float PerceptionModifierSecondsRemaining;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float LastUnobscuredTimeSeconds;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float LastObscuredTimeSeconds;
     
     UPROPERTY(BlueprintReadWrite)
@@ -535,10 +535,10 @@ public:
     UPROPERTY(BlueprintReadWrite)
     float UnobscuredLongTimeIntervalSeconds;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bIsObscured;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bIsInDarkness;
     
 protected:
@@ -586,61 +586,61 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     bool bAllowTuningOverlaps;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputADSButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputPrimaryActionButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputSecondaryActionButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputReloadButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputInventoryBackpackButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputEquipLargeButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputEquipSmallButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputEquipConsumable1Button;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputEquipConsumable2Button;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputInventoryNotebookButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputInventoryFlashlightButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputInventoryFlashlightModeButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputInteractButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputGrabWorldButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputSprintButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MeleeButtonChargeTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIBlendOption MeleeButtonChargeBlend;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDodgeOnSprintButton;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDITimestampInputButton InputVRWithoutHMDActionButton;
     
 public:

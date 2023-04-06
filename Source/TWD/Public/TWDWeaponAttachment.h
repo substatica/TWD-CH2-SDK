@@ -21,13 +21,13 @@ class ATWDWeaponAttachment : public ASDIWeaponAttachment, public ITWDInventoryAc
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FTWDInventoryActorInterfaceData TWDInventoryData;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_RepTWDInventoryData)
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_RepTWDInventoryData)
     FTWDReplicatedInventoryActorInterfaceData RepTWDInventoryData;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ATWDWeaponActorAttachmentEditor* AttachmentEditor;
     
 public:

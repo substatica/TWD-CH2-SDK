@@ -28,22 +28,22 @@ public:
     FOnLockedStateChangedDelegate OnBoxLockedStateChanged;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* InventorySlotRoot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FTWDInventorySlotGrid InventorySlotGrid;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     UTWDExileOrderEvent* AssociatedExileOrderEvent;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bBoxOpen;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bBoxLocked;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bStartLocked;
     
 public:

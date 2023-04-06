@@ -13,10 +13,10 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDLoadingScreenSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<UUserWidget> WidgetClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<UUserWidget> WidgetClassBlack;
     
     UPROPERTY(EditAnywhere)

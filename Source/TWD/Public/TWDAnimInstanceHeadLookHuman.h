@@ -8,10 +8,10 @@ UCLASS(NonTransient)
 class TWD_API UTWDAnimInstanceHeadLookHuman : public UTWDAnimInstanceHeadLook {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float AngularVelocityScale;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HeadLookExtent;
     
     UPROPERTY(Transient)

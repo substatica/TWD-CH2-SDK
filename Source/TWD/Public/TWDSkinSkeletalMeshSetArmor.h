@@ -10,26 +10,26 @@ USTRUCT(BlueprintType)
 struct FTWDSkinSkeletalMeshSetArmor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 ArmorAmount;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSoftObjectPtr<UParticleSystem> BreakFXParticle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float BreakFXDestructibleMeshLifespan;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSoftObjectPtr<UDestructibleMesh> BreakFXDestructibleMesh;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float BreakFXDestructibleMeshImpulse;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* BreakFXSound;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName BreakFXSocket;
     
     UPROPERTY(Transient)
@@ -39,7 +39,7 @@ protected:
     UDestructibleMesh* PreloadedBreakFXDestructibleMesh;
     
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DestroyedTimestamp;
     
     TWD_API FTWDSkinSkeletalMeshSetArmor();

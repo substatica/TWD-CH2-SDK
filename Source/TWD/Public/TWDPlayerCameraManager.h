@@ -91,13 +91,13 @@ protected:
     UPROPERTY(Transient)
     FRotator ManualCameraResetRotation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector HMDCameraOffset;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 HMDCameraOffsetWasResetCounter;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HMDCameraHeightAboveFloor;
     
     UPROPERTY(Transient)

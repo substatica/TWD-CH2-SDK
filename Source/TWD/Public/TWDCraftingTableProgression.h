@@ -24,7 +24,7 @@ public:
     UPROPERTY(EditAnywhere)
     TSet<TSoftClassPtr<UTWDRecipe>> SpecificRecipesUnlockable;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 CurrentLevel;
     
     UPROPERTY(Transient)

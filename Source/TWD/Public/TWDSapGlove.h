@@ -15,7 +15,7 @@ class UTWDWeaponHitCapsuleComponent;
 class USDIPointGripComponent;
 class UMaterialInterface;
 class ATWDPlayerHand;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UDamageType;
 
 UCLASS()
@@ -93,19 +93,19 @@ private:
     float RemoveHandOffset;
     
     UPROPERTY(EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* EquippedHapticEffect;
+    UObject* EquippedHapticEffect;
     
     UPROPERTY(EditDefaultsOnly)
     float EquippedEffectScale;
     
     UPROPERTY(EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* RemovedHapticEffect;
+    UObject* RemovedHapticEffect;
     
     UPROPERTY(EditDefaultsOnly)
     float RemovedEffectScale;
     
     UPROPERTY(EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* EquippingHapticEffect;
+    UObject* EquippingHapticEffect;
     
     UPROPERTY(EditDefaultsOnly)
     float EquippingEffectScale;

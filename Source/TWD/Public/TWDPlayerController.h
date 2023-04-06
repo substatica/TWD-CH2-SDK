@@ -178,13 +178,13 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* LockonCameraLimitNoTargetInputCurveAOS;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraSettings LockonCameraSettingsAOS;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraSettings LockonCameraSettingsNoTargetAOS;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraShakeSettingsInst LockonCameraShakeAOS;
     
     UPROPERTY(EditDefaultsOnly)
@@ -208,34 +208,34 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* LockonCameraLimitReturnSpeedCurveWeaponStick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraSettings LockonCameraSettingsWeaponStick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraShakeSettingsInst LockonCameraShakeWeaponStick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float LockonCameraOffsetReturnSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDLockonType, FRotator> LockonCameraMaxOffsetOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDLockonType, FRotator> MaxLockonVelocityOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDLockonType, FFloatRK4SpringInterpolator> LockonYawSpringOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDLockonType, FFloatRK4SpringInterpolator> LockonPitchSpringOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float LockonCameraDismemberDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float LockonCameraDismemberEaseOutDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIBlendOption LockonCameraDismemberEaseOutBlend;
     
     UPROPERTY(EditDefaultsOnly)
@@ -247,7 +247,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FName MeleeTargetBoneName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraSettings ADSCameraSettings;
     
     UPROPERTY(Transient)
@@ -256,7 +256,7 @@ protected:
     UPROPERTY(Transient)
     bool bFreezeHMDCameraHideHands;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AActor* GamePausedUIActor;
     
     UPROPERTY(Transient)
@@ -289,7 +289,7 @@ protected:
     UPROPERTY(Transient)
     TMap<int32, FTWDPlayerControllerTimeDilation> PendingTimeDilations;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ViveControllerFullMovementSpeed;
     
     UPROPERTY(Transient)
@@ -322,7 +322,7 @@ protected:
     UPROPERTY(Transient)
     float LookatAccumulatedDeltaSeconds;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LastWeaponFiredTimestamp;
     
     UPROPERTY(Transient)
@@ -544,20 +544,20 @@ public:
     void SetAutoUpdateCachedUserHeight(bool bUpdate);
     
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCheatTogglePauseAI();
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCheatSetInvisibleToAI(bool bInvisibleToAI);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCheatSetHealth(float Health);
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerCheatRushBells(float NewDelay);
     
 public:
-    UFUNCTION(Reliable, Server, WithValidation)
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void Server_TWDDurabilityInterface_AlterDurability(AActor* Actor, float DurabilityDelta, bool bCanBreak, bool bCanFix);
     
     UFUNCTION(BlueprintCallable)

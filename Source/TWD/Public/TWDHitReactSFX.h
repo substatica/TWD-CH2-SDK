@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDHitReactSFX {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* AKEvent;
     
     FTWDHitReactSFX();

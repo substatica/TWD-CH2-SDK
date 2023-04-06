@@ -40,7 +40,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UTextRenderComponent* DebugInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UAIPerceptionStimuliSourceComponent* AIPerceptionStimuliSource;
     
     UPROPERTY(Instanced)
@@ -49,46 +49,46 @@ protected:
     UPROPERTY()
     EStatusIconState StatusIconState;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInstance* ThreatMeterIconMaterial;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UMaterialInstance* DialogueIconMaterial;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ThreatMeterFadeTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ThreatMeterAttackHoldTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ThreatMeterIconScale;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector ThreatMeterIconOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ThreatMeterColorLow;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ThreatMeterColorHigh;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor ThreatMeterColorAlert;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor FearMeterColorLow;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor FearMeterColorHigh;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FLinearColor FearMeterColorPanic;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bThreatMeterEnabled;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TMap<ETWDCharacterAIAnimationTypes, UAnimSequence*> AnimationSequences;
     
     UPROPERTY(EditDefaultsOnly)
@@ -106,10 +106,10 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<AVolume*> StimAllowVolumes;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDebugShowSignificance;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDebugShowLOD;
     
 public:
@@ -152,10 +152,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MenaceRadius;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ATWDAIPerceptionModifierVolume* PlayerPerceptionModifierVolume;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bRecentlySawPlayerInModifierVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -170,7 +170,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FDataTableRowHandle PersonalityDataTableRowHandle;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FEGOAIProperties EGOProperties;
     
     ATWDAICharacter(const FObjectInitializer& ObjectInitializer);

@@ -9,10 +9,10 @@ class TWD_API UTWDDialogueWidgetSnapTarget : public USceneComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SnapThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector Offset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

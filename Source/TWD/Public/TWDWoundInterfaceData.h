@@ -13,7 +13,7 @@ public:
     UPROPERTY(Transient)
     int32 NumberOfWounds;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 MaxWounds;
     
     TWD_API FTWDWoundInterfaceData();

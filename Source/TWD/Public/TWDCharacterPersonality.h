@@ -62,13 +62,13 @@ public:
     float NightModeAggravationEventModifier;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDebugShowPlayerAggravationLevel;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDebugShowBarks;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<TSubclassOf<UTWDDamageType>> PlayerAggravationWoundedAllowedDamageTypes;
     
     UPROPERTY(BlueprintAssignable)
@@ -77,10 +77,10 @@ protected:
     UPROPERTY(BlueprintAssignable)
     FOnSetPersonalAlert OnSetPersonalAlert;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDebugShowAlertPanicReason;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FString DebugAlertPanicReason;
     
 private:

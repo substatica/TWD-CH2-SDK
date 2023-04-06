@@ -12,25 +12,25 @@ USTRUCT(BlueprintType)
 struct FTWDHandItemState {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIHeldActor* PrevItem;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIHeldActor* Item;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TSubclassOf<ASDIHeldActor> PrevItemClass;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TSubclassOf<ASDIHeldActor> ItemClass;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDestroyed;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bConsume;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bAimingThrow;
     
     UPROPERTY(Transient)
@@ -39,22 +39,22 @@ public:
     UPROPERTY(Transient)
     FTWDNonVRMeleeAttackDetails DesiredAttackDetails;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bAttack;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTWDNonVRMeleeAttackDetails AttackDetails;
     
     UPROPERTY(Transient)
     ETWDGunAction DesiredGunAction;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ETWDGunAction GunAction;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GunReloadRounds;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GunChamberedRounds;
     
     UPROPERTY(Transient)
@@ -63,10 +63,10 @@ public:
     UPROPERTY(Transient)
     FTWDNonVREquipmentActionDetails DesiredEquipmentActionDetails;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bEquipmentAction;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTWDNonVREquipmentActionDetails EquipmentActionDetails;
     
     TWD_API FTWDHandItemState();

@@ -25,14 +25,14 @@ public:
     FName RoamerSpawnTag;
     
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FAICell> RoamerCells;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TMap<int32, FAICellMember> WalkerAIs;
     
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float AverageCellValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -44,7 +44,7 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     bool bLimitRoamingToPlayerArea;
     
-    UPROPERTY(AdvancedDisplay, BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float PlayerAreaCellPercentage;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)

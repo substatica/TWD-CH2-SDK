@@ -9,10 +9,10 @@ UCLASS()
 class TWD_API ATWDGutsActor : public ATWDProp {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float SwipeAccumulator;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float SwipeDelta;
     
     UPROPERTY(EditAnywhere)
@@ -27,7 +27,7 @@ public:
     UPROPERTY(EditAnywhere)
     bool bShowDebugData;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bIsApplying;
     
     ATWDGutsActor(const FObjectInitializer& ObjectInitializer);

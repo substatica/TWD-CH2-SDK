@@ -9,7 +9,7 @@ class UTWDInteractionUserWidget : public UTWDUserWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FSDIInteractionDescription> Descriptions;
     
 public:

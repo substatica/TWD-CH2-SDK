@@ -13,7 +13,7 @@ class TWD_API ATWDPawnShopDrawer : public ATWDInventoryHolderActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* InventorySlotRoot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

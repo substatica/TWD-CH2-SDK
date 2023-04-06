@@ -27,16 +27,16 @@ class TWD_API ATWDGripPhysicsDoor : public ATWDGripPhysicsActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ASDIPlayerHand* PlayerHand;
     
     UPROPERTY()
     ATWDCharacter* ServerCommPlayerPawn;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float CurrentSpeed;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float LastTickSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
@@ -45,7 +45,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanBeBroken;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bIsBroken;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -54,10 +54,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumAIRequiredToBreak;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<ATWDCharacter*> WalkersBreaking;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ATWDCharacter* PrimaryBreaker;
     
     UPROPERTY(Transient)
@@ -84,7 +84,7 @@ protected:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
     float AutoPopOpenYaw;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bDoorPassedShutThreshold;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -134,7 +134,7 @@ public:
     bool bDoorOpensOutward;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced)
     USceneComponent* ActiveDoorKnob;
     
 public:

@@ -26,7 +26,7 @@ protected:
     UPROPERTY(Transient)
     UTWDMapManager* MapManager;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<EMapTerritoryNodeType, FLevelScenerioData> MapData;
     
     UPROPERTY(Transient)
@@ -47,10 +47,10 @@ protected:
     UPROPERTY(EditDefaultsOnly, Transient)
     UDataTable* ExileOrderEventDeckContents;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bEventDeckUnlocked;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaximumEventsPerMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -59,7 +59,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRuntimeFloatCurve MaxEventsPerDayCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDWorldEventType, FRuntimeFloatCurve> EventTypeValueIncrement;
     
     UPROPERTY(EditDefaultsOnly)
@@ -71,16 +71,16 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float ExileOrderEventsPerDayDispersion;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<EMapTerritoryNodeType, TSubclassOf<UTWDWorldEvent>> ExileOrderEventValidationByTerritory;
     
     UPROPERTY(EditDefaultsOnly, Transient)
     TMap<EMapTerritoryNodeType, FTWDTowerPresenceInfo> TowerPresenceInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRuntimeFloatCurve TowerPresenceTierCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRuntimeFloatCurve TowerPresenceTierCurveReducedDifficulty;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

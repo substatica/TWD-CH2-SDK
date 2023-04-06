@@ -1,0 +1,152 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.27",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "TWD",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"UMG",
+				"Engine",
+				"AIModule",
+				"CoreUObject",
+				"Renderer"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ChaosEditor",
+			"Enabled": false
+		},
+		{
+			"Name": "ApexDestruction",
+			"Enabled": true
+		},
+		{
+			"Name": "SDICorePlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "SDISaveImportExportPlugin",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Android",
+				"PS4",
+				"Win64"
+			]
+		},
+		{
+			"Name": "SDISkinPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "SDIStimAndResponsePlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "SDITelemetryPlugin",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Android",
+				"PS4",
+				"Win64"
+			]
+		},
+		{
+			"Name": "SDITuningPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "SDIVRPlayerPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Annosoft",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemOculus",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "CoverGenerator",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayCameras",
+			"Enabled": true
+		},
+		{
+			"Name": "WebMMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Synthesis",
+			"Enabled": true
+		},
+		{
+			"Name": "Gauntlet",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorTests",
+			"Enabled": true
+		},
+		{
+			"Name": "FunctionalTestingEditor",
+			"Enabled": true
+		},
+		{
+			"Name": "CascadeToNiagaraConverter",
+			"Enabled": true
+		},
+		{
+			"Name": "RenderDocPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "GPULightmass",
+			"Enabled": true
+		},
+		{
+			"Name": "TWDWindowsDeviceProfileSelector",
+			"Enabled": true
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win32",
+				"Win64",
+				"Android"
+			]
+		}
+	],
+	"TargetPlatforms": [
+		"PS4",
+		"Win64",
+		"LinuxAArch64",
+		"WindowsNoEditor",
+		"Android"
+	]
+}

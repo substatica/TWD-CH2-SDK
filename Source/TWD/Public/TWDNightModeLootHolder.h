@@ -20,7 +20,7 @@ public:
     FOnContentChangedDelegate OnContentChanged;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USceneComponent* InventorySlotRoot;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

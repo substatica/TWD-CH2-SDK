@@ -18,35 +18,35 @@ class TWD_API ATWDWeaponImposterGun : public ASDIWeaponFirearm {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ASDIWeaponFirearm> FirearmToSpawnOnDrop;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ASDIHeldActor> BrokenFirearmToSpawnOnDrop;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BrokenFirearmSpawnChance;
     
     UPROPERTY(Transient)
     bool bReturningToInventory;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EWeaponAnimation WeaponAnimType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIsRevolver;
     
     UPROPERTY(EditAnywhere)
     float HitAccuracyMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     USkeletalMeshComponent* Mesh;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UAkComponent* AkAudioComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* FiredRoundAudioEvent;
     
     ATWDWeaponImposterGun(const FObjectInitializer& ObjectInitializer);

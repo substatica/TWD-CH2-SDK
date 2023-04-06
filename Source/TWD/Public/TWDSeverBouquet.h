@@ -9,10 +9,10 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDSeverBouquet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* AKEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FTWDSeverBouquetElement> Elements;
     
     FTWDSeverBouquet();

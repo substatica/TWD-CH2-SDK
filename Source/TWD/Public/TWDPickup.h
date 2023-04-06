@@ -20,10 +20,10 @@ class ATWDPickup : public ASDIInventoryActor, public ITWDSeamlessTravelActorInte
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FTWDInventoryActorInterfaceData TWDInventoryData;
     
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_RepTWDInventoryData)
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_RepTWDInventoryData)
     FTWDReplicatedInventoryActorInterfaceData RepTWDInventoryData;
     
 public:

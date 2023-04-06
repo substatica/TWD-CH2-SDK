@@ -30,13 +30,13 @@ private:
     bool bLastHoldingDraggedRagdollState;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CachedPreHoldingDraggedRagdollMass;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CachedPreHoldingDraggedRagdollAngularDamping;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CachedPreHoldingDraggedRagdollLinearDamping;
     
 public:

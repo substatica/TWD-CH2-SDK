@@ -55,31 +55,31 @@ public:
     UPROPERTY()
     FActorStimData CurrentTargetStimData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TeamNumber;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ATargetPoint* ExitPoint;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDisableCrowdAvoidance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowRange;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowExitRange;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowExitRangeForCombatCircle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowEnterRangeForCombatCircle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowRangeCheckTimer;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CrowdFollowRangeCheckTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -118,7 +118,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxConeHalfAngle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bCanBeTrickedByStealth;
     
     UPROPERTY(EditAnywhere)
@@ -130,7 +130,7 @@ public:
     UPROPERTY(EditAnywhere)
     float NearbyCombatEnemiesRange;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<ATWDCharacter*> StealthExceptionList;
     
     UPROPERTY(BlueprintReadWrite)
@@ -142,16 +142,16 @@ public:
     UPROPERTY(Transient)
     TMap<ATWDCharacter*, float> PersonalDebtMap;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FVector2D AimOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bUpdateAimOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bForceMiss;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinAgeAimOffset;
     
     UPROPERTY(EditAnywhere)
@@ -254,10 +254,10 @@ protected:
     UPROPERTY(EditAnywhere)
     bool ShareDeathByAIUseBodyLocation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AController* AICommandPossessor;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TMap<EAssignmentCategory, UTWDAIAssignment*> AssignmentMap;
     
     UPROPERTY(EditAnywhere)
@@ -332,7 +332,7 @@ protected:
     UPROPERTY(EditAnywhere)
     float ExplosiveDangerAggravationRadius;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FActorStimData> CumulativeStimulusList;
     
     UPROPERTY(Transient)

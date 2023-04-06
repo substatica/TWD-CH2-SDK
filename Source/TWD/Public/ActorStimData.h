@@ -28,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName Tag;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     ETWDStimType StimType;
     
     TWD_API FActorStimData();

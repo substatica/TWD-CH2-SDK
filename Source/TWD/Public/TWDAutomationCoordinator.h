@@ -12,13 +12,13 @@ class ATWDAutomationCoordinator : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TArray<TSoftObjectPtr<ATargetPoint>> ObservationPoints;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TSoftObjectPtr<ATWDAutomationSplineActor> WalkThroughSplineActor;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
     TSoftObjectPtr<ASDIPath> WalkThroughPath;
     
 public:

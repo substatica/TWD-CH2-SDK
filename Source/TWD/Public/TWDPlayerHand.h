@@ -12,7 +12,7 @@
 #include "Engine/EngineTypes.h"
 #include "TWDPlayerHand.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UPrimitiveComponent;
 class UTWDInventoryDataWidget;
 class UTWDWidgetComponent;
@@ -25,20 +25,20 @@ class ATWDPlayerHand : public ASDIPlayerHandAdvanced, public ITWDSeamlessTravelA
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<EGender, FSkinDataVariantList> GenderSkinVariantLists;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* StaminaDrainLoopFeedback;
+    UObject* StaminaDrainLoopFeedback;
     
     UPROPERTY(EditAnywhere)
     FRuntimeFloatCurve StaminaDrainLoopFeedbackCurve;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* StaminaActionFailedFeedback;
+    UObject* StaminaActionFailedFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* StaminaActionEndedFeedback;
+    UObject* StaminaActionEndedFeedback;
     
     UPROPERTY(EditAnywhere)
     float GrappledStabCooldown;
@@ -46,11 +46,11 @@ protected:
     UPROPERTY(EditAnywhere)
     float DismemberStabCooldown;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDWidgetComponent* PauseWidgetComponent;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* PauseButtonPressFeedback;
+    UObject* PauseButtonPressFeedback;
     
     UPROPERTY(Transient)
     FTransform IKThrowTransform;
@@ -103,7 +103,7 @@ protected:
     UPROPERTY(Transient)
     float LastHeldActorHitTimeStamp;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDWidgetComponent* InventoryDataWidgetComponent;
     
     UPROPERTY(EditDefaultsOnly)

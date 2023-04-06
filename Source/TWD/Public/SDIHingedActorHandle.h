@@ -25,7 +25,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     UArrowComponent* RotationDetectionArrow;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     ASDIPlayerHand* PlayerHand;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)

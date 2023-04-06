@@ -55,10 +55,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIDamageData SwipePlayerOnTopOfCar;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bHasHelmet;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bWasSpawnedFromHuman;
     
     UPROPERTY(BlueprintReadWrite, Transient)

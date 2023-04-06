@@ -126,7 +126,7 @@ class ATWDPlayerInventorySlot;
 class UParticleSystem;
 class UTWDAnimNotifyState_MeleeAttack;
 class UTWDAnimNotifyState_GunAction;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UToken;
 class UTWDCharacterArchetype;
 class UTWDAutoTickAkComponent;
@@ -186,16 +186,16 @@ class TWD_API ATWDCharacter : public ASDICharacterAdvanced, public IGenericTeamA
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDAutoTickAkComponent* AkAudioComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDAutoTickAkComponent* SpeechAudioComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UTWDActiveRagdollComponent* ActiveRagdollComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced)
     UStaticMeshComponent* VisualHint;
     
     UPROPERTY(Transient)
@@ -231,7 +231,7 @@ protected:
     UPROPERTY(EditAnywhere)
     FString VoiceId;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDefaultBarksAllowed;
     
     UPROPERTY(Transient)
@@ -260,13 +260,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDCharacterTargetPriorityOverride TargetPriorityOverride;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ATWDWaypointPath* PatrolPath;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UTWDWaypointPatrolComponent* WaypointPatrolComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> PerceptionSocketNames;
     
 public:
@@ -337,35 +337,35 @@ protected:
     UPROPERTY(EditAnywhere)
     FSDIInteractiveActorData InteractiveActorData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GrappleMoveLocationOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GrappleMoveLocationLeftAngle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GrappleMoveLocationRightAngle;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GrappleAttackMaxTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<ETWDCharacterGrappleLocation> GrappleTokenLocations;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<ETWDCharacterGrappleLocation> NonVRGrappleTokenLocations;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaxFeederTokens;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 MaxOuterRingTokens;
     
 public:
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bCrawlingTemp;
     
-    UPROPERTY(BlueprintReadOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, Instanced)
     UToken* HeldToken;
     
     UPROPERTY(BlueprintReadWrite, Instanced)
@@ -375,7 +375,7 @@ public:
     float GrappleBleedOutTime;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleLoopFeedback;
+    UObject* GrappleLoopFeedback;
     
     UPROPERTY(EditAnywhere)
     bool bHideGrappleHandTrackedMesh;
@@ -383,22 +383,22 @@ public:
     UPROPERTY(EditAnywhere)
     FLinearColor WindedGrappleHighlightColor;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bGrappleSyncToAttacker;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleSyncTranslationSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleSyncHMDTranslationSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleSyncHMDRotationSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleSyncHMDMaxYawOffsetDeg;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleSyncRotationSpeedDeg;
     
     UPROPERTY(EditDefaultsOnly)
@@ -416,7 +416,7 @@ public:
     UPROPERTY(EditDefaultsOnly)
     UCurveFloat* GrappleSyncRotationBlendCustomCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float NonVRGrappleSyncRotationSpeedDeg;
     
     UPROPERTY(EditDefaultsOnly)
@@ -425,13 +425,13 @@ public:
     UPROPERTY(EditDefaultsOnly)
     float NonVRGrappleCrawlCameraPitchTarget;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleGrabFistDamageTimeThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ESDIAxis GrappleGrabAxis;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bGrappleCanPushBack;
     
     UPROPERTY(EditAnywhere)
@@ -455,13 +455,13 @@ public:
     UPROPERTY(EditAnywhere)
     float NonVRGrappleAttackStamina;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIPlayerHandMove GrapplePushBackBreakMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleIgnorePushBackBreakMoveDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleCooldownTime;
     
     UPROPERTY(Transient)
@@ -473,22 +473,22 @@ public:
     UPROPERTY(Transient)
     float GrappleNeckCooldownTimestamp;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrappleCooldownRegrowthTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bGrappleReleaseCooldownSingleArmOnly;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStabGrappleCooldownSingleArmOnly;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bGrabHeadGrappleCooldownSingleArmOnly;
     
     UPROPERTY(EditAnywhere)
     float GrappleAdditionalLockHandDurationAfterRelease;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector GrappleAttackTargetOffset;
     
     UPROPERTY(EditAnywhere)
@@ -543,33 +543,33 @@ public:
     TSubclassOf<USDIDOTComponent> GrappleAttackHoldDOTClass;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleAttackLoopFeedback;
+    UObject* GrappleAttackLoopFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleAttackHoldLoopFeedback;
+    UObject* GrappleAttackHoldLoopFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleAttackPushBackGrabFeedback;
+    UObject* GrappleAttackPushBackGrabFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleAttackPushBackLoopFeedback;
+    UObject* GrappleAttackPushBackLoopFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleAttackPushBackBreakLoopFeedback;
+    UObject* GrappleAttackPushBackBreakLoopFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GenericDamageHMDFeedback;
+    UObject* GenericDamageHMDFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrapplePushBackDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GrapplePushBackTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRotator GrapplePushBackMaxRotVel;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bGrapplePushBackFaceDirection;
     
     UPROPERTY(EditAnywhere)
@@ -602,16 +602,16 @@ public:
     UPROPERTY(EditAnywhere)
     float GrappleHandStruggleStrengthRecoveryDamageDelay;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIPlayerHandMove GrappleHandStruggleBreakMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIPlayerHandMove GrappleHandStruggleWindedBreakMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIPlayerHandMove GrappleHandStruggleUIMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FFloatRK4SpringInterpolator GrappleHandStruggleUISpring;
     
     UPROPERTY(EditAnywhere)
@@ -624,13 +624,13 @@ public:
     float GrappleHandStruggleLockRollDeg;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleHandStruggleStartFeedback;
+    UObject* GrappleHandStruggleStartFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleHandStrugglePushOffFeedback;
+    UObject* GrappleHandStrugglePushOffFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrappleHandStruggleLoopFeedback;
+    UObject* GrappleHandStruggleLoopFeedback;
     
     UPROPERTY(EditAnywhere)
     FRuntimeFloatCurve GrappleHandStruggleLoopFeedbackCurve;
@@ -650,16 +650,16 @@ public:
     UPROPERTY(EditAnywhere)
     float PlayerLiftGrappleSyncVerticalOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PlayerLiftGrappleSyncVerticalTranslationSpeed;
     
     UPROPERTY(EditAnywhere)
     float GrappleNeckDeltaDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float FeedingMoveLocationOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float OuterRingMoveLocationOffset;
     
     UPROPERTY(EditAnywhere)
@@ -747,10 +747,10 @@ public:
     UPROPERTY(EditAnywhere)
     float FallDamageMinSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* FallDamageAKEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UDamageType> FallDamageTypeClass;
     
     UPROPERTY(Transient)
@@ -763,7 +763,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     int32 StealthModeActivationApplicationCount;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float StealthModeApplicationProgress;
     
     UPROPERTY(EditDefaultsOnly)
@@ -976,16 +976,16 @@ protected:
     UPROPERTY(Transient)
     float LastTimeUVFlashlightToggleInputHeldDownStart;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlPhysicalCrouch;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCrouchEngagedByPhysicalCrouch;
     
     UPROPERTY(EditAnywhere)
     TMap<UPhysicsAsset*, UPhysicsAsset*> RagdollPhysicsAssets;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FTWDCharacterDragEntry> GrappleDragEntries;
     
     UPROPERTY(Instanced, Transient)
@@ -1006,28 +1006,28 @@ protected:
     UPROPERTY(Transient)
     bool bGrapplePlayerArmCollisionRemoveRequested;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* GrappleHand;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* StabOtherHand;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrapplePercent;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleBleedOutTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GrappleLoopFeedbackId;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GrappleAttackLoopFeedbackLeftId;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GrappleAttackLoopFeedbackRightId;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GrappleAttackPushBackLoopFeedbackId;
     
     UPROPERTY(Replicated, Transient)
@@ -1036,58 +1036,58 @@ protected:
     UPROPERTY(Replicated, Transient)
     FSDITransform_NetQuantize RepGrappleRelTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepGrappleState)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepGrappleState)
     ETWDCharacterGrappleState RepGrappleState;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepGrapplePushBackDirection)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepGrapplePushBackDirection)
     FVector RepGrapplePushBackDirection;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     bool bRepGrappleAttacking;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepGrappleAttackSpeed;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepGrappleAttackHoldTime)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepGrappleAttackHoldTime)
     float RepGrappleAttackHoldTime;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleAttackHoldTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleAttackPushBackBreakTimeSinceBreakMove;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleAdditionalLockHandAfterReleaseTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleIgnorePushBackBreakMoveTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector GrappleHandStrugglePos;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector GrappleHandStruggleInterpStart;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleHandStruggleTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleHandStruggleStrengthLeft;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleHandStruggleStrengthRight;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrappleHandStruggleStrengthDamageTimestamp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 GrappleHandStruggleLoopFeedbackId;
     
     UPROPERTY(Transient)
     bool bADSArmCollisionRemoveRequested;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FStuckWeapon> StuckWeapons;
     
     UPROPERTY(Replicated, Transient)
@@ -1123,16 +1123,16 @@ protected:
     UPROPERTY(EditAnywhere)
     float PersonalSpaceThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PersonalSpaceRadiusHead;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PersonalSpaceRadiusChest;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PersonalSpaceRadiusHip;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float PersonalSpaceRadiusHand;
     
     UPROPERTY(EditAnywhere)
@@ -1294,7 +1294,7 @@ protected:
     UPROPERTY(Transient)
     int32 WindedGrappleCount;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<TSubclassOf<UDamageType>, FTWDHitReactSFX> HitReactSFXList;
     
     UPROPERTY(Transient)
@@ -1321,13 +1321,13 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bAngleOfStrikeWeakpointIsDiseased;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FQFloat AngleOfStrikeWeakpointAngle;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIBlendOption AngleOfStrikeWeakpointAngleBlend;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UCurveFloat* AngleOfStrikeWeakpointAngleNormalCurve;
     
     UPROPERTY(EditAnywhere)
@@ -1336,7 +1336,7 @@ protected:
     UPROPERTY(EditAnywhere)
     FName AngleOfStrikeWeakpointWoundBone;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FQVector AngleOfStrikeWeakpointWoundSize;
     
     UPROPERTY(EditAnywhere)
@@ -1348,7 +1348,7 @@ protected:
     UPROPERTY(EditAnywhere)
     float AngleOfStrikeWeakpointWoundOffsetDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FQFloat AngleOfStrikeWeakpointWoundOffsetRotation;
     
     UPROPERTY(EditAnywhere)
@@ -1372,11 +1372,11 @@ protected:
     UPROPERTY(Transient)
     TMap<ETWDCharacterSkinSection, FTWDSkinSkeletalMeshSetArmor> SkinArmor;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ETWDCharacterType CharacterType;
     
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FGuid PlacedObjectId;
     
     UPROPERTY(BlueprintAssignable, EditAnywhere)
@@ -1409,7 +1409,7 @@ public:
     UPROPERTY(EditAnywhere)
     float MaxSicknessPct;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float CurrentMaxHealth;
     
     UPROPERTY(EditAnywhere)
@@ -1456,7 +1456,7 @@ private:
     bool EnableRegen;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 TeamNumber;
     
 protected:
@@ -1473,7 +1473,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     bool IsAttacking;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepCurrentHealth)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepCurrentHealth)
     float RepCurrentHealth;
     
     UPROPERTY(BlueprintReadWrite, Transient)
@@ -1588,7 +1588,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     bool bUseHeadBoneForAIView;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DeathTimestamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -1597,7 +1597,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bHighPriorityCorpse;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<ATWDCharacter> CorpseCleanupSpawnWalkerClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -1631,7 +1631,7 @@ public:
     UPROPERTY(Transient)
     float RequestNewSignificance;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float SignificanceValue;
     
     UPROPERTY(Transient)
@@ -1646,19 +1646,19 @@ public:
     UPROPERTY(Transient)
     bool bSignificanceFreeze;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SignificanceMaxDistanceFreeze;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SignificanceMaxDistanceUnfreeze;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bParticipateInSleepingAI;
     
     UPROPERTY(Transient)
     bool bNonsignificantUntilRender;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ReapplyNonsignificantUntilRenderRadius;
     
     UPROPERTY(EditAnywhere)
@@ -1696,7 +1696,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxCoughInterval;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRuntimeFloatCurve SicknessMaxHealthPenalty;
     
     UPROPERTY(BlueprintReadWrite)

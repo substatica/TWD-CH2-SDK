@@ -11,19 +11,19 @@ UCLASS()
 class TWD_API ATWDAIPerceptionModifierVolume : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bNightModifier;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRuntimeFloatCurve PerceptionCurveOverride;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StickinessInSeconds;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIncludeRayCastFromPointSource;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RayCastInterval;
     
     UPROPERTY(Transient)

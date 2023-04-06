@@ -7,13 +7,13 @@ USTRUCT(BlueprintType)
 struct FTWDDurabilityInterfaceData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxDurability;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloatExp InitialDurability;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LocalDurability;
     
     TWD_API FTWDDurabilityInterfaceData();

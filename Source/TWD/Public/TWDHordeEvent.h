@@ -7,7 +7,7 @@ UCLASS()
 class TWD_API UTWDHordeEvent : public UTWDWorldEvent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HordeTimerMultiplier;
     
     UTWDHordeEvent();

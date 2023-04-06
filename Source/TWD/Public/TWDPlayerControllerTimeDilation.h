@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct FTWDPlayerControllerTimeDilation {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TimeDilation;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float Duration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* TimeDilationOverrideCurve;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)

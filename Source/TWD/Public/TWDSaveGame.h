@@ -225,7 +225,7 @@ public:
     UPROPERTY(VisibleAnywhere)
     bool bCompletedTutorial;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FTWDAchievementData AchievementProgress;
     
     UPROPERTY()

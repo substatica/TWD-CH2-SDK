@@ -20,7 +20,7 @@ protected:
     UPROPERTY(Transient)
     uint32 SeveredTorsoExtremityMask;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     TArray<UPhysicsConstraintComponent*> SplayConstraintComponents;
     
     UPROPERTY(Transient)

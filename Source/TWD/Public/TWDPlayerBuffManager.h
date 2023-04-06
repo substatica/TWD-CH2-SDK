@@ -17,7 +17,7 @@ class TWD_API UTWDPlayerBuffManager : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TSet<FName> CurrentBuffs;
     
     UPROPERTY(BlueprintReadWrite, Transient)
@@ -62,19 +62,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bNoReload;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSet<TSoftClassPtr<ATWDWeaponGun>> CraftedGuns;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float MaxHealthBoostAmount;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float MaxStaminaBoostAmount;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName HealthRegenBuffName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HealthRegenDuration;
     
     UPROPERTY(BlueprintReadWrite, Transient)
@@ -83,16 +83,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     float HealthRegenTimer;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FName, FTWDHealingBuffParams> HealBuffParams;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HealingRate;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HealingTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HealingAmountRemaining;
     
     UPROPERTY(BlueprintReadWrite, Transient)
@@ -104,7 +104,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     float PlayerGrappleBiteDelayFactor;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FName> TemporaryBuffs;
     
     UPROPERTY(Transient)

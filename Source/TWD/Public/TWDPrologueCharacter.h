@@ -11,7 +11,7 @@ class TWD_API ATWDPrologueCharacter : public ASDISkinnedCharacter {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTWDCharacterSkin> OverrideSkin;
     
 public:

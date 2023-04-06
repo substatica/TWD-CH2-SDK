@@ -36,7 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDoNotSwitchTargetsIfCurrentAlive;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     TMap<ETWDSuspiciousStates, float> StateUpperThreshold;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

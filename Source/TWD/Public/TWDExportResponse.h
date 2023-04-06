@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct TWD_API FTWDExportResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     EExportSaveGameResult TWDExportErrorCode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ESDIServiceErrorCategory ErrorCategory;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FSDISaveExportResponse SDIServiceResponse;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 HttpResponseCode;
     
     FTWDExportResponse();

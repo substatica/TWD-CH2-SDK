@@ -39,38 +39,38 @@ public:
     UPROPERTY(BlueprintAssignable)
     FMapTimeOfDayChanged OnTimeOfDayChanged;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 CurrentNode;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 PreviousNode;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool IsMapInitialized;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FMapTerritoryNode> MapNodes;
     
     UPROPERTY(BlueprintReadWrite)
     TSet<EMapTerritoryNodeType> LockedNodeOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMapTerritoryDataAsset* HubDataAsset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMapTerritoryDataAsset* PrologueDataAsset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UMapTerritoryDataAsset* TutorialDataAsset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<EMapTerritoryNodeType, UMapTerritoryDataAsset*> TerritoryNodeDataMapping;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDWorldEventType, UMapAttributeDataAsset*> AttributeDataMapping;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<EMapBiomeType, FMapBiomeTerritorySet> TerritoriesPerBiomeMapping;
     
 public:

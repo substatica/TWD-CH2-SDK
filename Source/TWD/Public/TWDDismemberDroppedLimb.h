@@ -25,7 +25,7 @@ class ATWDDismemberDroppedLimb : public ATWDDismemberActor, public ITWDWoundInte
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* SkeletalMeshComponent;
     
     UPROPERTY(EditDefaultsOnly)
@@ -82,7 +82,7 @@ protected:
     UPROPERTY(EditAnywhere)
     float StabMeleeDurabilityModifier;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FStuckWeapon> StuckWeapons;
     
 public:

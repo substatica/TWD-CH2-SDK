@@ -12,10 +12,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FQIntExpMulti RareSpawnCount;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 RareSpawnersActivated;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<UClass*> SkinTemplates;
     
 public:

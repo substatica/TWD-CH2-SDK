@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite)
     ETWDTaskStatusIcon CurrentStatusIcon;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     float LastUpdatedTime;
     
 private:

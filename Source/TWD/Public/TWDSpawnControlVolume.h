@@ -11,13 +11,13 @@ class TWD_API ATWDSpawnControlVolume : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDisableOnLoad;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FName> ControlledTags;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     UShapeComponent* Volume;
     
     UPROPERTY()

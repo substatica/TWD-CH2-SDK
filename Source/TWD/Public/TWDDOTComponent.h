@@ -8,7 +8,7 @@ class UTWDDOTComponent : public USDIDOTComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bRemoveOnDeath;
     
 public:

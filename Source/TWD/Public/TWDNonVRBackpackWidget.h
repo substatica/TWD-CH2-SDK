@@ -10,11 +10,11 @@ UCLASS(EditInlineNew)
 class TWD_API UTWDNonVRBackpackWidget : public UTWDNonVRInteractionWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ATWDBackpack* BackpackActor;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInventoryActor* CurrentlySelectedItem;
     
 public:

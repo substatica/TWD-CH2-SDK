@@ -11,13 +11,13 @@ UCLASS(BlueprintType)
 class TWD_API UMapTerritoryDataAsset : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FText TerritoryName;
     
     UPROPERTY(EditAnywhere)
     FPerPlatformString Level;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* TerritoryIcon;
     
     UPROPERTY(EditAnywhere)

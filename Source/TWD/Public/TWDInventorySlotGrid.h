@@ -14,13 +14,13 @@ public:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<ATWDPlayerInventorySlot> InventorySlotBlueprint;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FIntVector SlotCount;
     
     UPROPERTY(EditDefaultsOnly)
     FVector2D SlotSpacing;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<ATWDPlayerInventorySlot*> Slots;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

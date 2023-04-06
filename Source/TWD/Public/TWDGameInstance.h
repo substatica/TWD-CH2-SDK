@@ -47,34 +47,34 @@ public:
     UPROPERTY(Config)
     bool bAllowAutoSaving;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 CurrentUserProfileIndex;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 CurrentSaveProfileIndex;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinimumPlayerWalkerDistanceToAutoSave;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bRevivePlayer;
     
-    UPROPERTY(BlueprintReadOnly, Config)
+    UPROPERTY(BlueprintReadWrite, Config)
     TArray<FTWDVRPlatformInfo> VRPlatformInfoList;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bPerformedInitialVRReset;
     
-    UPROPERTY(BlueprintReadOnly, Config, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, VisibleDefaultsOnly)
     TArray<FTWDEstimatedLevelLoadingTime> EstimatedLevelLoadingTimes;
     
-    UPROPERTY(BlueprintReadOnly, Config, VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, VisibleDefaultsOnly)
     float DefaultLevelLoadingTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bBootSequenceShown;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float PreReadyForPlayTimerDefault;
     
     UPROPERTY(Transient)
@@ -123,13 +123,13 @@ protected:
     UPROPERTY(Transient)
     TMap<FSoftObjectPath, UObject*> PlatformAssetOverrideCache;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UDataTable* PurchaseEntitlementTable;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UDataTable* ProductEntitlementMapTable;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UDataTable* FakeEntitlementTestTable;
     
     UPROPERTY(Transient)
@@ -162,10 +162,10 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bFlushStreamingDuringLoadingScreen;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FString> PS4_LowGoreCoutryCodes;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     UObject* IntentRecognizer;
     
     UPROPERTY(Transient)
@@ -175,7 +175,7 @@ protected:
     UTWDGeneralSaveData* GeneralSaveData;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<TSubclassOf<AActor>> SaveImportExclusions;
     
 protected:
@@ -188,10 +188,10 @@ protected:
     UPROPERTY(Transient)
     UTWDSaveGame* LocalRecentAutoSave;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Transient)
     float LocalAutoSaveFrequency;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Transient)
     float AutoSaveFrequency;
     
     UPROPERTY(Config)

@@ -8,10 +8,10 @@ class ATWDBackpackInventorySlot : public ATWDPlayerInventorySlot {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MeshElementIndex;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AuxMeshElementIndex;
     
 public:

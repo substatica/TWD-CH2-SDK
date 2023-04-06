@@ -36,19 +36,19 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TMap<TSoftClassPtr<USDISkinObject>, TSubclassOf<UTWDCharacterSkin>> DismemberSkinMap;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ETWDCharacterHitRegion DismemberRegion;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EGender Gender;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bDead;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsEliteWalker;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsHumanSkelMesh;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_ReplicatedSkinData)

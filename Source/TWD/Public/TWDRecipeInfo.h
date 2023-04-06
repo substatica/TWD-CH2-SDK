@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct FTWDRecipeInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FGuid ItemGuid;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 quantity;
     
     TWD_API FTWDRecipeInfo();

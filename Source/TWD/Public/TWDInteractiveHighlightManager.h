@@ -15,16 +15,16 @@ class ATWDInteractiveHighlightManager : public ASDIInteractiveHighlightManager {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ETWDInteractionType, FTWDInteractiveHighlightActorPool> HighlightActorPools;
     
-    UPROPERTY(BlueprintReadOnly, Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditDefaultsOnly)
     float NearbyRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TEnumAsByte<ECollisionChannel> NearbyOverlapChannel;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TEnumAsByte<ECollisionChannel> NearbyLOSChannel;
     
     UPROPERTY(Config, EditDefaultsOnly)
@@ -33,10 +33,10 @@ protected:
     UPROPERTY(Config, EditDefaultsOnly)
     bool bNearbyDistributeUpdates;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FTWDInteractiveHighlightManagerEntry> Entries;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FTWDInteractiveHighlightManagerEntry> NearbyEntries;
     
     UPROPERTY(Transient)

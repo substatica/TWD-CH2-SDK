@@ -12,7 +12,7 @@ UCLASS(BlueprintType)
 class TWD_API UTWDSaveImporter : public UGameInstanceSubsystem {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     USaveGame* LegacySave;
     
     UPROPERTY(BlueprintAssignable)

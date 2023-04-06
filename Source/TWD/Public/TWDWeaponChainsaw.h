@@ -22,7 +22,7 @@ class TWD_API ATWDWeaponChainsaw : public ATWDWeaponActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     USDIAsyncOverlapEventGeneratorComponent* OverlapGenerator;
     
     UPROPERTY(EditDefaultsOnly)
@@ -52,14 +52,14 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FSDIBlendOption OverlapScaleSpeedBlend;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowWorldOverlap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float FuelAmount;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ASDIInventoryActor> FuelCurrencyClass;
     
 protected:
@@ -93,13 +93,13 @@ protected:
     UPROPERTY(Transient)
     UObject* SoundStopEvent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* RefuelGuideMeshComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ChainsawThreatDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ChainsawHighThreatDistance;
     
     UPROPERTY(Transient)

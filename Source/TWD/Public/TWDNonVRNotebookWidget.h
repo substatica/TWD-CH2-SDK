@@ -9,7 +9,7 @@ UCLASS(EditInlineNew)
 class TWD_API UTWDNonVRNotebookWidget : public UTWDNonVRInteractionWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ATWDNotebook* NotebookActor;
     
     UTWDNonVRNotebookWidget();

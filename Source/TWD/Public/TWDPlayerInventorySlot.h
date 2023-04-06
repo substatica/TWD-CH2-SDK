@@ -26,22 +26,22 @@ class ATWDPlayerInventorySlot : public ASDIInventorySlot {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UCapsuleComponent* SlotCollision;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ETWDInventoryType InventoryType;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVector InventoryReplacementDropOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIgnoreSlotScale;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUpdateVisualOnTick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bPlayInvalidNotificationOnOverlap;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
@@ -62,7 +62,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ETWDPlayerCharacterTickInventory InventorySlotTickGroup;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ATWDBackpack* BackpackOwner;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -109,7 +109,7 @@ public:
     TWeakObjectPtr<ASDIInventoryActor> PreviousInventory;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* SlotMesh;
     
 private:
