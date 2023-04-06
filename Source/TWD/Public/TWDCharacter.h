@@ -988,7 +988,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FTWDCharacterDragEntry> GrappleDragEntries;
     
-    UPROPERTY(Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UGrappleTokenSystem* GrappleTokenSystem;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepGrappleAttackers)
