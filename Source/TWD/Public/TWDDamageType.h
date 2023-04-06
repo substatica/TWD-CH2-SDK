@@ -103,7 +103,7 @@ public:
     bool GetUseDeathBlowWounds() const;
     
     UFUNCTION(BlueprintPure)
-    static UTWDDamageType* GetTWDDamageType(UClass* DamageTypeClass, bool& bValid);
+    UTWDDamageType* GetTWDDamageType(UClass* DamageTypeClass, bool& bValid) const;
     
     UFUNCTION(BlueprintPure)
     FVector GetSplashSize() const;
