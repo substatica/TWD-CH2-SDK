@@ -268,7 +268,7 @@ ASDICorePlayerController::ASDICorePlayerController() {
     this->LockonYawMaxOffsetByRadius = 180.00f;
     this->LockonYawMaxOffsetByPitch = 180.00f;
     this->AnimatedControlRotationOffsetRecoverTime = 0.50f;
-    this->ConsoleCommandsManager = CreateDefaultSubobject<USDIConsoleCommandsManager>(TEXT("ConsoleCommandsManager"));
+    // this->ConsoleCommandsManager = CreateDefaultSubobject<USDIConsoleCommandsManager>(TEXT("ConsoleCommandsManager"));
     this->AimAssistEngageTime = 0.00f;
     this->bWasAimAssistEnabled = false;
     this->bIsAimAssistEnabled = false;

@@ -1,31 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/SplineMeshActor.h"
-#include "Kismet/GameplayStaticsTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/SplineComponent.h"
+#include "Kismet/GameplayStaticsTypes.h"
 #include "SDISplineMeshActor.generated.h"
 
-class USplineComponent;
 class USplineMeshComponent;
+class USplineComponent;
 class UMaterialInterface;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SDICOREPLUGIN_API ASDISplineMeshActor : public ASplineMeshActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USplineComponent* SplineComp;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumSegments;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<USplineMeshComponent*> SplineSegments;
     
 public:
-    ASDISplineMeshActor(const FObjectInitializer& ObjectInitializer);
+    ASDISplineMeshActor();
     UFUNCTION(BlueprintCallable)
     void UpdateSpline();
     
@@ -57,4 +57,3 @@ public:
     FVector GetPoint(int32 PointIndex, TEnumAsByte<ESplineCoordinateSpace::Type> CoordinateSpace) const;
     
 };
-

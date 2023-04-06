@@ -2,4 +2,3 @@
 
 USDITriggerResistanceFeedbackEffect_Curve::USDITriggerResistanceFeedbackEffect_Curve() {
 }
-

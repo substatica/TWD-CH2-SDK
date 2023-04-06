@@ -2,4 +2,3 @@
 
 FSDIAuxTickFunction::FSDIAuxTickFunction() {
 }
-
