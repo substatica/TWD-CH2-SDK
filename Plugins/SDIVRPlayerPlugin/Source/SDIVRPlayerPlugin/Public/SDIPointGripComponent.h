@@ -24,7 +24,7 @@ protected:
     UPROPERTY(EditAnywhere)
     EControllerHand hand;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     ESDIHandPose HandPose;
     
     UPROPERTY(EditAnywhere)

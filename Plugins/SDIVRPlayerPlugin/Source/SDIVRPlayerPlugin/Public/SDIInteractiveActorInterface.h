@@ -30,49 +30,49 @@ class SDIVRPLAYERPLUGIN_API USDIInteractiveActorInterface : public UInterface {
 class SDIVRPLAYERPLUGIN_API ISDIInteractiveActorInterface : public IInterface {
     GENERATED_BODY()
 public:
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool RemoveInteractionHighlight(ASDIPlayerController* PC, EControllerHand hand, ESDIInteractRangeType RangeType, UPrimitiveComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnPhysicalInteractRelease(ASDIPlayerHand* hand, UPrimitiveComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool OnPhysicalInteractPush(ASDIPlayerHand* hand, UPrimitiveComponent* Component, const FVector& PushDelta, float PushTime, bool bPushCollisionValid, const FHitResult& PushCollision);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     AActor* OnPhysicalInteractPress(ASDIPlayerHand* hand, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnInteractRelease(ESDIInteractiveInteractType Type, ASDIPlayerHand* hand);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     AActor* OnInteractPress(ESDIInteractiveInteractType Type, ASDIPlayerHand* hand, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnInteractLongHeld(ESDIInteractiveInteractType Type, ASDIPlayerHand* hand, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnInteractionHighlightChanged(bool bAnyInteractions, bool bLeftHandClose, bool bLeftHandRanged, bool bRightHandClose, bool bRightHandRanged);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnHandEndOverlap(ASDIPlayerController* PC, EControllerHand hand, ESDIInteractRangeType RangeType, UPrimitiveComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnHandBeginOverlap(ASDIPlayerController* PC, EControllerHand hand, ESDIInteractRangeType RangeType, UPrimitiveComponent* Component);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void OnGripRelease(ASDIPlayerHand* hand);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     AActor* OnGripPress(ASDIPlayerHand* hand, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsValidPhysicalInteractionMagnet(ASDIPlayerHand* hand, USDIPlayerHandPhysicalInteractComponent* InteractComp, UPrimitiveComponent* Component, const FVector& InteractCompCapsuleTop, FVector& MagnetLocation, FVector& MagnetAxis);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool IsValidInteractionHighlight(ASDIPlayerController* PC, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void HandLockIsExceedingArmLengthReleaseFactor(ASDIPlayerHand* hand, float Time);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -90,7 +90,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool GetInteractionHighlights(bool& bLeftHandClose, bool& bLeftHandRanged, bool& bRightHandClose, bool& bRightHandRanged);
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<FSDIInteractionDescription> GetInteractionDescriptions(ASDIPlayerController* PC, UPrimitiveComponent* Component, const FSDIPlayerHandInteractComponentEntry& Entry);
     
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
@@ -111,7 +111,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool GetDisableNonVRInteractionMovement();
     
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool AddInteractionHighlight(ASDIPlayerController* PC, EControllerHand hand, ESDIInteractRangeType RangeType, UPrimitiveComponent* Component);
     
 };

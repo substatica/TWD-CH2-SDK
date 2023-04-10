@@ -21,54 +21,54 @@ class SDIVRPLAYERPLUGIN_API ASDIInteractiveActor : public ASDIStimAndResponseAct
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIExportData ExportData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText DisplayName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText Description;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText FlavorText;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UTexture2D> UIIcon;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIInteractiveActorData InteractiveActorData;
     
 public:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIActorActivatedSignature OnInteractiveActorActivated;
     
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIActorDeactivatedSignature OnInteractiveActorDeactivated;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIInteractiveActorGripPressedSignature OnInteractiveActorGripPressed;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIInteractiveActorGripReleasedSignature OnInteractiveActorGripReleased;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIInteractiveActorInteractPressedSignature OnInteractiveActorInteractPressed;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSDIInteractiveActorInteractReleasedSignature OnInteractiveActorInteractReleased;
     
     ASDIInteractiveActor(const FObjectInitializer& ObjectInitializer);
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     UTexture2D* GetUIIcon() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FText GetFlavorText() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FText GetDisplayName() const;
     
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     FText GetDescription() const;
     
     
