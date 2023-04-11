@@ -54,21 +54,21 @@ protected:
     void ServerSetInventorySlotIdx_IFC(uint8 InventorySlotIdx);
     
 public:
-    UFUNCTION(BlueprintCallable,BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void ReturnKeyItemToBackpack();
     
     UFUNCTION(BlueprintCallable)
     int32 PostEventToAkAudioComponent(UAkAudioEvent* Event, const FString& EventName);
     
 protected:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_RepTWDInventoryData_Timer();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnRep_RepTWDInventoryData(const FTWDReplicatedInventoryActorInterfaceData& OldRepTWDInventoryData);
     
 public:
-    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UFUNCTION(BlueprintNativeEvent)
     FText GetCollectibleString() const;
     
     UFUNCTION(BlueprintCallable)
