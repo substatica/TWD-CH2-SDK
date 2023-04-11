@@ -12,7 +12,7 @@ UCLASS()
 class SDICOREPLUGIN_API ASDIActorSpawnerTrigger : public ATriggerVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     ASDIActorSpawnerNetwork* SpawnNetwork;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)

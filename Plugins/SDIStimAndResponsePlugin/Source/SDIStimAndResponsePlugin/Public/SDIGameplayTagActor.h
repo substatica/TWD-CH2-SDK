@@ -12,7 +12,7 @@ class SDISTIMANDRESPONSEPLUGIN_API ASDIGameplayTagActor : public AActor, public 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
 public:

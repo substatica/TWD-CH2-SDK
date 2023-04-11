@@ -14,7 +14,7 @@ class SDISTIMANDRESPONSEPLUGIN_API USDIStimAndResponseDOTComponent : public USDI
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
 public:

@@ -32,28 +32,28 @@ class SDIVRPLAYERPLUGIN_API USDIMeleeWeaponHitCapsuleComponent : public UCapsule
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DamageHistoryDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CollisionHistoryDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIMotionHistory TopMotionHistory;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIMotionHistory BottomMotionHistory;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIMotionHistory RelativeTopMotionHistory;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIMotionHistory RelativeBottomMotionHistory;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIMeleeWeaponHitCapsuleComponentDamage> Damages;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIMeleeWeaponHitCapsuleComponentDamage> TwoHandedDamages;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -65,10 +65,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float DamageIndexVelocityAvgTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUseOverlapHitDetection;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUseActorForDamageHistory;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -77,19 +77,19 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanDamageInstigator;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAlwaysTickWhenActive;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDetachFromHierarchy;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HitReactImpulseMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float HitReactMinSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDICachedCollisionInfoShapeScaleOverride> OverlapScaleOverrides;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -110,10 +110,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIMeleeWeaponStabSettings> StabSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUsedForDefense;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 CheckForBlockSubdivisions;
     
     UPROPERTY()

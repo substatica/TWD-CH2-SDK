@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIRopeReactionFunctionDetachedParams : public FSDIRopeReactionAttachment {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector WorldLocation;
     
     FSDIRopeReactionFunctionDetachedParams();

@@ -1,6 +1,6 @@
 #include "SDIPlayerControllerAdvanced.h"
 
-ASDIPlayerControllerAdvanced::ASDIPlayerControllerAdvanced(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDIPlayerControllerAdvanced::ASDIPlayerControllerAdvanced() {
     this->MaxVRYawDeltaDegrees = 0.00f;
     this->VRFacingHMDScale = 100.00f;
     this->VRFacingHandsScale = 1.00f;

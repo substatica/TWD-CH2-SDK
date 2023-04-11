@@ -18,10 +18,10 @@ class SDIVRPLAYERPLUGIN_API ASDIInteractiveRopeActor : public ASDIInteractiveAct
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIInteractiveRopeComponent* RopeComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanBeUsedForMovement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -45,10 +45,10 @@ protected:
     UPROPERTY(EditAnywhere)
     float SoftRangedGrabInterpolationConstraintDamping;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* GripAudioEvent;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UAkAudioEvent* ReleaseAudioEvent;
     
     UPROPERTY(Transient)

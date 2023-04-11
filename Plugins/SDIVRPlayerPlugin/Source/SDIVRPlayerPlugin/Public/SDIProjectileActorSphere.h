@@ -5,15 +5,14 @@
 
 class USphereComponent;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SDIVRPLAYERPLUGIN_API ASDIProjectileActorSphere : public ASDIProjectileActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     USphereComponent* SphereCollision;
     
 public:
-    ASDIProjectileActorSphere(const FObjectInitializer& ObjectInitializer);
+    ASDIProjectileActorSphere();
 };
-

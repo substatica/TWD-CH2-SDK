@@ -12,25 +12,25 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIMeleeWeaponStabParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIMeleeWeaponActor* Weapon;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     USDIMeleeWeaponHitCapsuleComponent* Capsule;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIMeleeWeaponStabSettings Settings;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FHitResult LocalStabHit;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FHitResult WorldStabHit;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector LocalActorStabImpactVel;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector WorldActorStabImpactVel;
     
     FSDIMeleeWeaponStabParams();

@@ -28,10 +28,10 @@ class SDICOREPLUGIN_API USDICoreCableComponent : public USDIMultiBodyPrimitiveCo
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CableRadius;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CableLength;
     
     UPROPERTY(EditAnywhere)
@@ -40,7 +40,7 @@ protected:
     UPROPERTY(EditAnywhere)
     int32 InitSplineComponentResolution;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsPhysical;
     
     UPROPERTY(EditAnywhere)
@@ -49,19 +49,19 @@ protected:
     UPROPERTY(EditAnywhere)
     TArray<FSDICableBind> BindPoints;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BodySegmentRadiusOverride;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float BodySegmentLength;
     
     UPROPERTY(EditAnywhere)
     float SwingLimitDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAdjustMassToMatchVisuals;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDistributeMassEqually;
     
     UPROPERTY(EditAnywhere)
@@ -178,19 +178,19 @@ protected:
     UPROPERTY(EditAnywhere)
     UMaterialInterface* Material;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaterialLength;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bInvertMaterial;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SplineTension;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float RenderUpdateMovementThreshold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDICableLODSettings> LODSettings;
     
     UPROPERTY(EditAnywhere)

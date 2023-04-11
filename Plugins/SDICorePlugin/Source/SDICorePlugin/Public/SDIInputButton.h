@@ -8,10 +8,10 @@ struct SDICOREPLUGIN_API FSDIInputButton : public FSDIInputButtonBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float PressedTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float ReleasedTimer;
     
 public:

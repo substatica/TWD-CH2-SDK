@@ -9,22 +9,22 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIWeaponHitEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UPrimitiveComponent* Component;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FName> BoneNames;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform Transform;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform PrevTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float Lerp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FString TraceString;
     
     FSDIWeaponHitEntry();

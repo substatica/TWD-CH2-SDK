@@ -10,7 +10,7 @@ class SDISTIMANDRESPONSEPLUGIN_API ASDIStimAndResponseActorStaticMesh : public A
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* StaticMeshComponent;
     
 public:

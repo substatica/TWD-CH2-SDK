@@ -8,22 +8,22 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIRopeReactionStruggleActiveParams : public FSDIRopeReactionFunctionSharedParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsTaut;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float TautPct;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float TautLength;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector RopeDirection;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector HandOffset;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector MovementStick;
     
     FSDIRopeReactionStruggleActiveParams();

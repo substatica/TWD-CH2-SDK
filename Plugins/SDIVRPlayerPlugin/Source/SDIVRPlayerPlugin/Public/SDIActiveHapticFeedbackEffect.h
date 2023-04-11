@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "SDIActiveHapticFeedbackEffect.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 
 USTRUCT()
 struct SDIVRPLAYERPLUGIN_API FSDIActiveHapticFeedbackEffect {
     GENERATED_BODY()
 public:
     UPROPERTY(Transient)
-    UHapticFeedbackEffect_Base* HapticEffect;
+    UObject* HapticEffect;
     
     UPROPERTY(Transient)
     bool bLoop;

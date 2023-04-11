@@ -8,7 +8,7 @@
 #include "SDIGripInfo.h"
 #include "SDIPlayerHandAdvanced.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UPrimitiveComponent;
 class UActorComponent;
 
@@ -18,16 +18,16 @@ class SDIVRPLAYERPLUGIN_API ASDIPlayerHandAdvanced : public ASDIPlayerHand {
 public:
 protected:
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrabSurfaceFeedback;
+    UObject* GrabSurfaceFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrabClimbableSurfaceFeedback;
+    UObject* GrabClimbableSurfaceFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* TouchSurfaceFeedback;
+    UObject* TouchSurfaceFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* TouchClimbableSurfaceFeedback;
+    UObject* TouchClimbableSurfaceFeedback;
     
     UPROPERTY(EditAnywhere)
     FSDIHandPoseInfo GripSurfacePose;
@@ -59,7 +59,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float SurfaceClenchDownHitClenchMinCollisionTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TEnumAsByte<ECollisionChannel> ClimbingTraceChannel;
     
     UPROPERTY(Transient)

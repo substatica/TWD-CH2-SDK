@@ -8,13 +8,13 @@ struct SDICOREPLUGIN_API FSDITimestampInputButton : public FSDIInputButtonBase {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAllowTimeDilation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float PressedTimestamp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float ReleasedTimestamp;
     
 public:

@@ -11,34 +11,34 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIWeaponFirearmFiredShotInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AController* EventInstigator;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIWeaponFirearm* Firearm;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     USDIWeaponFirearmFireModeComponent* Firemode;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIWeaponFirearmAmmo* FiredAmmo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsPlayer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsADS;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float Accuracy;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 NumRoundsFired;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 Burst;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 BurstCount;
     
     FSDIWeaponFirearmFiredShotInfo();

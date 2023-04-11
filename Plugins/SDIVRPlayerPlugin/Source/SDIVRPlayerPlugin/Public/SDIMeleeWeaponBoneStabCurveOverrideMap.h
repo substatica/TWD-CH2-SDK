@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIMeleeWeaponBoneStabCurveOverrideMap {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<TSoftClassPtr<ASDIMeleeWeaponActor>, FSDIBoneStabCurveOverrideMap> BoneStabCurveOverrideMap;
     
     FSDIMeleeWeaponBoneStabCurveOverrideMap();

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIWeaponFirearmFiredPelletInfo : public FSDIWeaponFirearmFiredShotInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 Pellet;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 PelletCount;
     
     FSDIWeaponFirearmFiredPelletInfo();

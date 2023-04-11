@@ -9,35 +9,35 @@ class SDIVRPLAYERPLUGIN_API ASDIThrowInputSplineActor : public ASDIInputSplineAc
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bArcRequiresHold;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bArcThrowOnRelease;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bArcAllowThrowBehind;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bArcUseThrowMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIPlayerHandMove ArcThrowMove;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ArcThrowMoveYawAngleDeltaDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bMinArcVelocityUpdateArc;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MinArcVelocityResolution;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinArcVelocityMaxDistanceError;
     
 public:
-    ASDIThrowInputSplineActor(const FObjectInitializer& ObjectInitializer);
+    ASDIThrowInputSplineActor();
 protected:
     UFUNCTION(BlueprintNativeEvent)
     void UpdateThrowInputSpline(float DeltaSeconds);

@@ -18,7 +18,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FSDIExportData ExportData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
 public:

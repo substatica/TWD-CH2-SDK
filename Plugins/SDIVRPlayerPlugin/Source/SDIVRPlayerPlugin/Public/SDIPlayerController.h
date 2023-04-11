@@ -26,7 +26,7 @@ class ASDINonVRObjectInteractionActor;
 class ASDIPlayerHand;
 class UCurveFloat;
 class ASDIInventoryActor;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UObject;
 class AActor;
 
@@ -38,7 +38,7 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TSubclassOf<ASDIInteractiveHighlightManager> DefaultInteractiveHighlightManagerClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ASDINonVRObjectInteractionActor> DefaultNonVRObjectInteractionActorClass;
     
     UPROPERTY(EditDefaultsOnly)
@@ -61,91 +61,91 @@ private:
     FSDIHapticFeedbackManager HMDHapticFeedbackManager;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float OnScreenMaxHorizontalDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float OnScreenMaxVerticalDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<ESDIInteractRangeType, TEnumAsByte<ECollisionChannel>> NonVROverlapChannels;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TEnumAsByte<ECollisionChannel> InteractLOSChannel;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRInteractCapsuleHalfHeightInner;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRInteractCapsuleRadiusInner;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRInteractCapsuleHalfHeightOuter;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRInteractCapsuleRadiusOuter;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bFilterInteractionsToCylinder;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bFilterInteractionsCylinderUseCameraXY;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float FilterInteractionsCylinderHeightAbove;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float FilterInteractionsCylinderHeightBelow;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float FilterInteractionsCylinderDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bNonVRFilterInteractionsToCylinder;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bNonVRFilterInteractionsCylinderUseCameraXY;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRFilterInteractionsCylinderHeightAbove;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRFilterInteractionsCylinderHeightBelow;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRFilterInteractionsCylinderInnerDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonVRFilterInteractionsCylinderOuterDistance;
     
     UPROPERTY(Config, VisibleAnywhere)
     bool bUseSystemResetHMD;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInteractiveHighlightManager* HighlightManager;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDINonVRObjectInteractionActor* NonVRObjectInteractionActor;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* PlayerHandLeft;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* PlayerHandRight;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float QuickTurnIncrement;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bQuickTurnWorldIncrements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float QuickTurnTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EAlphaBlendOption QuickTurnBlend;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* QuickTurnBlendCustomCurve;
     
     UPROPERTY(EditDefaultsOnly)
@@ -285,7 +285,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bDisableMusic;
     
-    ASDIPlayerController(const FObjectInitializer& ObjectInitializer);
+    ASDIPlayerController();
     UFUNCTION(Exec)
     void ToggleMusic();
     
@@ -299,7 +299,7 @@ public:
     void SynchronizeHapticEffectId(int32 ID);
     
     UFUNCTION(BlueprintCallable)
-    void SynchronizeHapticEffect(UHapticFeedbackEffect_Base* HapticEffect);
+    void SynchronizeHapticEffect(UObject* HapticEffect);
     
     UFUNCTION(BlueprintCallable)
     void StopNonVRObjectInteraction();
@@ -308,7 +308,7 @@ public:
     void StopHapticsByValue(EControllerHand hand, UObject* EffectOwner);
     
     UFUNCTION(BlueprintCallable)
-    void StopHapticEffectObject(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, UObject* EffectOwner);
+    void StopHapticEffectObject(UObject* HapticEffect, EControllerHand hand, UObject* EffectOwner);
     
     UFUNCTION(BlueprintCallable)
     bool StopHapticEffectId(int32 ID);
@@ -388,7 +388,7 @@ public:
     void QuickTurn(float DegIncrement, EAlphaBlendOption Blend, float OverrideTime, float ClampToIncrement, bool bDoFade, UCurveFloat* CustomCurve);
     
     UFUNCTION(BlueprintCallable)
-    int32 PlayHapticEffectSDI(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, float Scale, float FrequencyScale, float PlaybackSpeed, bool bLoop, int32 Priority, UObject* EffectOwner);
+    int32 PlayHapticEffectSDI(UObject* HapticEffect, EControllerHand hand, float Scale, float FrequencyScale, float PlaybackSpeed, bool bLoop, int32 Priority, UObject* EffectOwner);
     
     UFUNCTION(BlueprintPure)
     bool IsQuickTurning() const;
@@ -403,7 +403,7 @@ public:
     bool IsPlayingHapticEffectId(int32 ID) const;
     
     UFUNCTION(BlueprintPure)
-    bool IsPlayingHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, UObject* EffectOwner) const;
+    bool IsPlayingHapticEffect(UObject* HapticEffect, EControllerHand hand, UObject* EffectOwner) const;
     
     UFUNCTION(BlueprintPure)
     bool IsNonVRObjectInteracting() const;
@@ -538,7 +538,7 @@ public:
     EControllerHand GetHapticFeedbackHand(int32 ID) const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetHapticFeedbackEffect(int32 ID) const;
+    UObject* GetHapticFeedbackEffect(int32 ID) const;
     
     UFUNCTION(BlueprintPure)
     FTransform GetCameraTransform2D() const;
@@ -571,19 +571,19 @@ public:
     bool AdjustHapticEffectScaleId(int32 ID, float Scale);
     
     UFUNCTION(BlueprintCallable)
-    void AdjustHapticEffectScale(UHapticFeedbackEffect_Base* HapticEffect, float Scale, EControllerHand hand, UObject* EffectOwner);
+    void AdjustHapticEffectScale(UObject* HapticEffect, float Scale, EControllerHand hand, UObject* EffectOwner);
     
     UFUNCTION(BlueprintCallable)
     bool AdjustHapticEffectPlaybackSpeedId(int32 ID, float PlaybackSpeed);
     
     UFUNCTION(BlueprintCallable)
-    void AdjustHapticEffectPlaybackSpeed(UHapticFeedbackEffect_Base* HapticEffect, float PlaybackSpeed, EControllerHand hand, UObject* EffectOwner);
+    void AdjustHapticEffectPlaybackSpeed(UObject* HapticEffect, float PlaybackSpeed, EControllerHand hand, UObject* EffectOwner);
     
     UFUNCTION(BlueprintCallable)
     bool AdjustHapticEffectFrequencyScaleId(int32 ID, float FrequencyScale);
     
     UFUNCTION(BlueprintCallable)
-    void AdjustHapticEffectFrequencyScale(UHapticFeedbackEffect_Base* HapticEffect, float FrequencyScale, EControllerHand hand, UObject* EffectOwner);
+    void AdjustHapticEffectFrequencyScale(UObject* HapticEffect, float FrequencyScale, EControllerHand hand, UObject* EffectOwner);
     
     UFUNCTION(BlueprintCallable)
     void AddAbsYawInput(float Val);

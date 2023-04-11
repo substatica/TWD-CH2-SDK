@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDISkinSkeletalMeshRandomPiecesSet {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString SetName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRInt NumToChoose;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDISkinSkeletalMeshSet> Sets;
     
     FSDISkinSkeletalMeshRandomPiecesSet();

@@ -29,7 +29,7 @@ protected:
     UPROPERTY(Transient)
     float SmoothedServerTickMS;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     uint8 RepServerTickMS;
     
     UPROPERTY(Transient)

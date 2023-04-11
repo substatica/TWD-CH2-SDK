@@ -11,10 +11,10 @@ class ATWDInteractiveActor : public ASDIInteractiveActor, public ITWDInteractive
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPreloadReferencedDialogueLines;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UDataTable*> DialogueLineDataTableReferences;
     
 public:

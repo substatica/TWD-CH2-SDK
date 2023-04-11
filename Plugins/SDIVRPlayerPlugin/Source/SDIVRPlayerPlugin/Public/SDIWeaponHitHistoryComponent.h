@@ -13,10 +13,10 @@ class SDIVRPLAYERPLUGIN_API USDIWeaponHitHistoryComponent : public UActorCompone
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIComponentHistory DamageHistory;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIComponentHistory CollisionHistory;
     
 public:

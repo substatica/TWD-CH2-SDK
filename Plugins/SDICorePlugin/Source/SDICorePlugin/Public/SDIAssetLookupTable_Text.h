@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDIAssetLookupTable_Text {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName Key;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FText Text;
     
     FSDIAssetLookupTable_Text();

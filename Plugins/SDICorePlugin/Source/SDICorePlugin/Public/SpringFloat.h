@@ -11,10 +11,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     float Target;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float Current;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float Velocity;
     
 public:

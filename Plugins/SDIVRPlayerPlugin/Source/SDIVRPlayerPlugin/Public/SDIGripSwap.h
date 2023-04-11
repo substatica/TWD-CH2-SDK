@@ -3,7 +3,7 @@
 #include "Engine/EngineTypes.h"
 #include "SDIGripSwap.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UAkAudioEvent;
 
 USTRUCT(BlueprintType)
@@ -17,11 +17,11 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FComponentReference TargetGripRef;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* GripSwapSound;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* GripSwapFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* GripSwapFeedback;
     
 public:
     FSDIGripSwap();

@@ -10,7 +10,7 @@ class SDIVRPLAYERPLUGIN_API ASDIHeldActorSkeletalMesh : public ASDIHeldActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* SkeletalMeshComponent;
     
 public:

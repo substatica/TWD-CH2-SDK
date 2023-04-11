@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDISkinReplicationData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TSubclassOf<USDISkinObject> Skin;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bUsePreAuthoredMeshes;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FSDISkinReplicationDataCustomization> CustomizationData;
     
     UPROPERTY(Transient)

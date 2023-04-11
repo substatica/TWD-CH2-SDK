@@ -12,16 +12,16 @@ struct SDIVRPLAYERPLUGIN_API FSDIMeleeWeaponStabInterfaceData {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIMeleeWeaponBoneStabCurveOverrideMap BoneStabCurveOverrideMap;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FName, bool> BoneStabMap;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName StabConstraintProfile;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName StabPhysicalAnimationProfile;
     
     UPROPERTY(Transient)

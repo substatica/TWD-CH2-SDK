@@ -9,10 +9,10 @@ class SDICOREPLUGIN_API ASDICorePlayerState : public APlayerState {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     ESDIUtilityAIDifficulty RepMonkeyDifficulty;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     uint8 RepMonkeyMode;
     
 public:

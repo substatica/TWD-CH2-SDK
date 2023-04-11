@@ -9,16 +9,16 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDIRandomSkinParamSetEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float Weight;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, float> Scalars;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FLinearColor> Colors;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, TSoftObjectPtr<UTexture>> Textures;
     
     FSDIRandomSkinParamSetEntry();

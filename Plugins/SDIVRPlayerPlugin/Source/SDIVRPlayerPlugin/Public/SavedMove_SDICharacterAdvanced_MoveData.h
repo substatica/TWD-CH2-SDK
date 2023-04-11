@@ -13,61 +13,61 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSavedMove_SDICharacterAdvanced_MoveData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TEnumAsByte<EMovementMode> MovementMode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TEnumAsByte<eCustomMovement::Type> CustomMovementMode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FSDITransform_NetQuantize LeftHandTrackedTransform;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FSDITransform_NetQuantize LeftHandTransform;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FVector_NetQuantize10 LeftHandVelocity;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FHitResult LeftHandGrip;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bLeftHandClimbing;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bLeftHandValid;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FSDITransform_NetQuantize RightHandTrackedTransform;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FSDITransform_NetQuantize RightHandTransform;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FVector_NetQuantize10 RightHandVelocity;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FHitResult RightHandGrip;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bRightHandClimbing;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bRightHandValid;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FHitResult MantleTargetInfo;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bMantleOver;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bMantleRequireCrouch;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FVector_NetQuantize100 HMDMovementDelta;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FSDICablePivot> RopePivots;
     
     FSavedMove_SDICharacterAdvanced_MoveData();

@@ -2,7 +2,7 @@
 
 class UObject;
 class UAkAudioEvent;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UCurveFloat;
 class ASDIInteractiveRopeActor;
 
@@ -24,7 +24,7 @@ void USDIRopeReactionInterfaceUtil::SetRopeStrugglePaused(UObject* InterfaceOwne
 void USDIRopeReactionInterfaceUtil::SetRopeStruggleHandOffset(UObject* InterfaceOwner, FSDIRopeReactionData& RopeReactionData, float OffsetSpeed, bool bRequireTwoHands) {
 }
 
-void USDIRopeReactionInterfaceUtil::SetRopeStruggleFeedback(UObject* InterfaceOwner, FSDIRopeReactionData& RopeReactionData, UHapticFeedbackEffect_Base* FeedbackLoop, UHapticFeedbackEffect_Base* StartFeedback, UHapticFeedbackEffect_Base* CompleteFeedback) {
+void USDIRopeReactionInterfaceUtil::SetRopeStruggleFeedback(UObject* InterfaceOwner, FSDIRopeReactionData& RopeReactionData, UObject* FeedbackLoop, UObject* StartFeedback, UObject* CompleteFeedback) {
 }
 
 void USDIRopeReactionInterfaceUtil::SetRopeStruggleDecay(UObject* InterfaceOwner, FSDIRopeReactionData& RopeReactionData, float DecayDelay, float DecaySpeed, UCurveFloat* DecaySpeedCurve) {

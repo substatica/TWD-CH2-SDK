@@ -10,13 +10,13 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIRopeReactionFunctionSharedParams : public FSDIRopeReactionAttachment {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* GripHand;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsTwoHanded;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector WorldLocation;
     
     FSDIRopeReactionFunctionSharedParams();

@@ -12,7 +12,7 @@ class SDICOREPLUGIN_API ASDISignificanceActor : public AActor, public ISDISignif
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName SignificanceTag;
     
 public:

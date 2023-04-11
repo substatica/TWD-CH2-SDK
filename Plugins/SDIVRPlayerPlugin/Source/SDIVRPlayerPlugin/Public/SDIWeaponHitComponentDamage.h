@@ -7,7 +7,7 @@
 #include "SDIDamageData.h"
 #include "SDIWeaponHitComponentDamage.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class AActor;
 
 USTRUCT(BlueprintType)
@@ -47,11 +47,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftClassPtr<AActor>> DamageSoundClasses;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDICachedCollisionInfoShapeScaleOverride> DamageOverlapScaleOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UHapticFeedbackEffect_Base* DamageFeedback;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UObject* DamageFeedback;
     
     FSDIWeaponHitComponentDamage();
 };

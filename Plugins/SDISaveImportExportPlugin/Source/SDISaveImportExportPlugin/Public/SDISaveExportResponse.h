@@ -8,16 +8,16 @@ USTRUCT(BlueprintType)
 struct SDISAVEIMPORTEXPORTPLUGIN_API FSDISaveExportResponse {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ESDIServiceErrorCategory ErrorCategory;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     ESaveExportErrorCode ErrorCode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 HttpResponseCode;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FString FileCode;
     
     FSDISaveExportResponse();

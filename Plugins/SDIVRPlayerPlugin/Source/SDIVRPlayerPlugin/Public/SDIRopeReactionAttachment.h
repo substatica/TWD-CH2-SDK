@@ -10,22 +10,22 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIRopeReactionAttachment {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInteractiveRopeActor* Rope;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     USceneComponent* Component;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FName BoneName;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector RelativeLocation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bRopeEndAttached;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector ElasticityWorldLocation;
     
     FSDIRopeReactionAttachment();

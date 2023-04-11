@@ -8,10 +8,10 @@ UCLASS(BlueprintType, CollapseCategories, EditInlineNew)
 class SDICOREPLUGIN_API USDIAnimFootMetaData : public UAnimMetaData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDISingleFootStrideData LeftFoot;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDISingleFootStrideData RightFoot;
     
     USDIAnimFootMetaData();

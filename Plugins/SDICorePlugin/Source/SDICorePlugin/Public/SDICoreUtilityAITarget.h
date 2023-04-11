@@ -22,13 +22,13 @@ public:
     UPROPERTY(EditAnywhere)
     float PriorityForceSwitchThreshold;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDICoreUtilityAITargetEntry CachedTarget;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float Timer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bChangedTarget;
     
     UPROPERTY(Transient)

@@ -13,16 +13,16 @@ class SDIVRPLAYERPLUGIN_API USDIInteractiveRopeComponent : public USDICoreCableC
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bEnableGripTautConstraints;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CosmeticGripExtension;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bEnableGripTautInterpolation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float GripTautStartDistance;
     
     UPROPERTY(EditAnywhere)

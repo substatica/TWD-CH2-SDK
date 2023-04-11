@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDIRandomSkinTextureParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Param;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<TSoftObjectPtr<UTexture>> Values;
     
     FSDIRandomSkinTextureParam();

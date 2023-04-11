@@ -8,7 +8,7 @@ UCLASS()
 class SDISKINPLUGIN_API USDIStaticMeshSkin : public USDISkinBasic {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDISkinStaticMesh StaticMesh;
     
     USDIStaticMeshSkin();

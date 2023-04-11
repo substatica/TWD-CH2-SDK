@@ -24,13 +24,13 @@ protected:
     UPROPERTY(Replicated, Transient)
     int32 RepInitialRepCountHack;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bOverrideInitialRepCount;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRIntExp InitialRepCount;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, ReplicatedUsing=OnRep_RepCount)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, ReplicatedUsing=OnRep_RepCount)
     int32 RepCount;
     
     UPROPERTY(EditDefaultsOnly)
@@ -66,16 +66,16 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bCanBeRemovedDuringPlay;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInventorySlot* Slot;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepInventoryOwner)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepInventoryOwner)
     AActor* RepInventoryOwner;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AActor* LocalInventoryOwner;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bLocalInventoryOwnerEverSet;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_bRepInsideInventory)
@@ -84,7 +84,7 @@ protected:
     UPROPERTY(Transient)
     bool bLocalInsideInventory;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bLocalInsideInventoryEverSet;
     
     UPROPERTY(Transient)

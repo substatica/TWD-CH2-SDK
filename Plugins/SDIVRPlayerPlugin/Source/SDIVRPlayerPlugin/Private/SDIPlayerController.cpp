@@ -1,7 +1,7 @@
 #include "SDIPlayerController.h"
 #include "Templates/SubclassOf.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UObject;
 class UCurveFloat;
 class ASDIInventoryActor;
@@ -22,7 +22,7 @@ void ASDIPlayerController::ToggleDebugRenderMotionControllerTracking() {
 void ASDIPlayerController::SynchronizeHapticEffectId(int32 ID) {
 }
 
-void ASDIPlayerController::SynchronizeHapticEffect(UHapticFeedbackEffect_Base* HapticEffect) {
+void ASDIPlayerController::SynchronizeHapticEffect(UObject* HapticEffect) {
 }
 
 void ASDIPlayerController::StopNonVRObjectInteraction() {
@@ -31,7 +31,7 @@ void ASDIPlayerController::StopNonVRObjectInteraction() {
 void ASDIPlayerController::StopHapticsByValue(EControllerHand hand, UObject* EffectOwner) {
 }
 
-void ASDIPlayerController::StopHapticEffectObject(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, UObject* EffectOwner) {
+void ASDIPlayerController::StopHapticEffectObject(UObject* HapticEffect, EControllerHand hand, UObject* EffectOwner) {
 }
 
 bool ASDIPlayerController::StopHapticEffectId(int32 ID) {
@@ -119,7 +119,7 @@ void ASDIPlayerController::QuickTurnTo(float AngleDeg, EAlphaBlendOption Blend, 
 void ASDIPlayerController::QuickTurn(float DegIncrement, EAlphaBlendOption Blend, float OverrideTime, float ClampToIncrement, bool bDoFade, UCurveFloat* CustomCurve) {
 }
 
-int32 ASDIPlayerController::PlayHapticEffectSDI(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, float Scale, float FrequencyScale, float PlaybackSpeed, bool bLoop, int32 Priority, UObject* EffectOwner) {
+int32 ASDIPlayerController::PlayHapticEffectSDI(UObject* HapticEffect, EControllerHand hand, float Scale, float FrequencyScale, float PlaybackSpeed, bool bLoop, int32 Priority, UObject* EffectOwner) {
     return 0;
 }
 
@@ -139,7 +139,7 @@ bool ASDIPlayerController::IsPlayingHapticEffectId(int32 ID) const {
     return false;
 }
 
-bool ASDIPlayerController::IsPlayingHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, EControllerHand hand, UObject* EffectOwner) const {
+bool ASDIPlayerController::IsPlayingHapticEffect(UObject* HapticEffect, EControllerHand hand, UObject* EffectOwner) const {
     return false;
 }
 
@@ -288,7 +288,7 @@ EControllerHand ASDIPlayerController::GetHapticFeedbackHand(int32 ID) const {
     return EControllerHand::Left;
 }
 
-UHapticFeedbackEffect_Base* ASDIPlayerController::GetHapticFeedbackEffect(int32 ID) const {
+UObject* ASDIPlayerController::GetHapticFeedbackEffect(int32 ID) const {
     return NULL;
 }
 
@@ -328,27 +328,27 @@ bool ASDIPlayerController::AdjustHapticEffectScaleId(int32 ID, float Scale) {
     return false;
 }
 
-void ASDIPlayerController::AdjustHapticEffectScale(UHapticFeedbackEffect_Base* HapticEffect, float Scale, EControllerHand hand, UObject* EffectOwner) {
+void ASDIPlayerController::AdjustHapticEffectScale(UObject* HapticEffect, float Scale, EControllerHand hand, UObject* EffectOwner) {
 }
 
 bool ASDIPlayerController::AdjustHapticEffectPlaybackSpeedId(int32 ID, float PlaybackSpeed) {
     return false;
 }
 
-void ASDIPlayerController::AdjustHapticEffectPlaybackSpeed(UHapticFeedbackEffect_Base* HapticEffect, float PlaybackSpeed, EControllerHand hand, UObject* EffectOwner) {
+void ASDIPlayerController::AdjustHapticEffectPlaybackSpeed(UObject* HapticEffect, float PlaybackSpeed, EControllerHand hand, UObject* EffectOwner) {
 }
 
 bool ASDIPlayerController::AdjustHapticEffectFrequencyScaleId(int32 ID, float FrequencyScale) {
     return false;
 }
 
-void ASDIPlayerController::AdjustHapticEffectFrequencyScale(UHapticFeedbackEffect_Base* HapticEffect, float FrequencyScale, EControllerHand hand, UObject* EffectOwner) {
+void ASDIPlayerController::AdjustHapticEffectFrequencyScale(UObject* HapticEffect, float FrequencyScale, EControllerHand hand, UObject* EffectOwner) {
 }
 
 void ASDIPlayerController::AddAbsYawInput(float Val) {
 }
 
-ASDIPlayerController::ASDIPlayerController(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDIPlayerController::ASDIPlayerController() {
     this->DefaultInteractiveHighlightManagerClass = NULL;
     this->DefaultNonVRObjectInteractionActorClass = NULL;
     this->DefaultPlayerHandBlueprint = NULL;

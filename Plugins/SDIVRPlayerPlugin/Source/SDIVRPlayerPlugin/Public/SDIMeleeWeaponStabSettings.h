@@ -6,111 +6,111 @@
 #include "SDIMeleeWeaponStabSettings.generated.h"
 
 class UCurveFloat;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UAkAudioEvent;
 
 USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIMeleeWeaponStabSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ESDIAxis StabAxis;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabAngleDeg;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabInterpolationDuration;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabNormalAngleDeg;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabForcedCapsuleOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabStartDepth;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabMaxDepth;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabExtractionDepth;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabExtractionDelay;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float StabExtractionTime;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* StabInitialDepthVelocityCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bStabCanPush;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* StabCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* StabPullCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIDamageData StabStartDamageData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIDamageData StabCompleteDamageData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIDamageData StabPullDamageData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FString StabImpactVelocityRTPC;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* StabStartAudio;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* StabCompleteAudio;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAkAudioEvent* StabPullAudio;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIAkAudioEventPairDynamicLoop StabSawLoop;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FString StabSawLoopVelocityRTPC;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabStartFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabStartFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabCompleteFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabCompleteFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabPullFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabPullFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabPushLoopFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabPushLoopFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* StabPushLoopFeedbackScaleCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabPullLoopFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabPullLoopFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* StabPullLoopFeedbackScaleCurve;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 StabSawIncrements;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabIncrementalSawInFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabIncrementalSawInFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* StabIncrementalSawOutFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* StabIncrementalSawOutFeedback;
     
     FSDIMeleeWeaponStabSettings();
 };

@@ -14,7 +14,7 @@ class SDIVRPLAYERPLUGIN_API ASDIWeaponFirearmAmmoProjectile : public ASDIWeaponF
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ASDIProjectileActor> ProjectileClass;
     
 public:

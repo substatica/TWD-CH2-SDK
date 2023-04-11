@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDIRandomSkinColorParam {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName Param;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FLinearColor> Values;
     
     FSDIRandomSkinColorParam();

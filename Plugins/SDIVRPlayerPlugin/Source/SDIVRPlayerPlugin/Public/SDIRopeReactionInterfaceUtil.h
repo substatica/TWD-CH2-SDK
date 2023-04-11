@@ -21,7 +21,7 @@
 #include "SDIRopeReactionInterfaceUtil.generated.h"
 
 class UObject;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UCurveFloat;
 class UAkAudioEvent;
 class ASDIInteractiveRopeActor;
@@ -50,7 +50,7 @@ public:
     static void SetRopeStruggleHandOffset(UObject* InterfaceOwner, UPARAM(Ref) FSDIRopeReactionData& RopeReactionData, float OffsetSpeed, bool bRequireTwoHands);
     
     UFUNCTION(BlueprintCallable)
-    static void SetRopeStruggleFeedback(UObject* InterfaceOwner, UPARAM(Ref) FSDIRopeReactionData& RopeReactionData, UHapticFeedbackEffect_Base* FeedbackLoop, UHapticFeedbackEffect_Base* StartFeedback, UHapticFeedbackEffect_Base* CompleteFeedback);
+    static void SetRopeStruggleFeedback(UObject* InterfaceOwner, UPARAM(Ref) FSDIRopeReactionData& RopeReactionData, UObject* FeedbackLoop, UObject* StartFeedback, UObject* CompleteFeedback);
     
     UFUNCTION(BlueprintCallable)
     static void SetRopeStruggleDecay(UObject* InterfaceOwner, UPARAM(Ref) FSDIRopeReactionData& RopeReactionData, float DecayDelay, float DecaySpeed, UCurveFloat* DecaySpeedCurve);

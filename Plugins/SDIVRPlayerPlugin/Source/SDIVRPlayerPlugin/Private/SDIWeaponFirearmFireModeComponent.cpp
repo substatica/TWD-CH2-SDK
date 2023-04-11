@@ -1,7 +1,7 @@
 #include "SDIWeaponFirearmFireModeComponent.h"
 
 class USceneComponent;
-class UHapticFeedbackEffect_Base;
+class UObject;
 
 void USDIWeaponFirearmFireModeComponent::UpdateTickEnabled() {
 }
@@ -27,23 +27,23 @@ FTransform USDIWeaponFirearmFireModeComponent::GetShotTransform(const FSDIWeapon
     return FTransform{};
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetSecondaryStopFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetSecondaryStopFireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetSecondaryStartFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetSecondaryStartFireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetSecondaryRefireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetSecondaryRefireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetSecondaryFireRoundFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetSecondaryFireRoundFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetSecondaryDryFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetSecondaryDryFireFeedback() const {
     return NULL;
 }
 
@@ -51,23 +51,23 @@ FSDIRecoil USDIWeaponFirearmFireModeComponent::GetRecoil(const FSDIWeaponFirearm
     return FSDIRecoil{};
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetPrimaryStopFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetPrimaryStopFireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetPrimaryStartFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetPrimaryStartFireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetPrimaryRefireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetPrimaryRefireFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetPrimaryFireRoundFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetPrimaryFireRoundFeedback() const {
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* USDIWeaponFirearmFireModeComponent::GetPrimaryDryFireFeedback() const {
+UObject* USDIWeaponFirearmFireModeComponent::GetPrimaryDryFireFeedback() const {
     return NULL;
 }
 

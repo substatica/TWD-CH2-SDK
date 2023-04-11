@@ -29,7 +29,7 @@ class USDIPhysicsMotorComponent;
 class USDICollisionChannelIgnoranceComponent;
 class UPrimitiveComponent;
 class USDIImpactEffectsComponent;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UAkAudioEvent;
 class UObject;
 class UActorComponent;
@@ -46,7 +46,7 @@ class SDIVRPLAYERPLUGIN_API ASDIHeldActor : public ASDIInteractiveActor, public 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIImpactEffectsComponent* ImpactEffectsComponent;
     
     UPROPERTY(BlueprintReadWrite, Instanced)
@@ -58,13 +58,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, Instanced)
     UPrimitiveComponent* SimulatePhysicsComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDICollisionChannelIgnoranceComponent* CollisionIgnoranceComp;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Instanced)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Instanced)
     USDIPhysicsMotorComponent* PhysicsMotorComp;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName PhysicsMotorRigidBodyName;
     
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
@@ -73,25 +73,25 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     bool bDestroyObsoleteRootComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowRangedPickup;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDisablePhysicsCollisionDuringInterpolation;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowHoldingWithSecondary;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIgnoreSecondaryGripForIK;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bApplyCosmeticMovementForOneHanded;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bMoveToHolderLevelOnPickup;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bMoveToOriginalLevelOnDrop;
     
     UPROPERTY(EditDefaultsOnly)
@@ -110,7 +110,7 @@ protected:
     float ArmLengthReleaseFactorTime;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GrabbedFeedback;
+    UObject* GrabbedFeedback;
     
     UPROPERTY(EditAnywhere)
     UAkAudioEvent* GrabbedSound;
@@ -121,7 +121,7 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bPlayGrabbedFeedbackAfterInterpolation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bThrowInputSplineUseMinVelocity;
     
     UPROPERTY(EditDefaultsOnly)
@@ -154,31 +154,31 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float CustomThrowPhysicsMinLinearVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bDebugReplicationInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float PhysicsHandGripInterpolationSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HandPoseBlendSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bSetHandPoseAfterInterpolation;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName NonVRAnimatedAttachSocket;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIMotionHistory NonVRSimulatedPhysicsComponentMotionHistory;
     
     UPROPERTY()
     FSDIAuxTickFunction NonVRPostPhysicsTick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool HitReactsEnabled;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDIGripSwap> GripSwaps;
     
     UPROPERTY(Transient)
@@ -190,76 +190,76 @@ protected:
     UPROPERTY(Transient)
     FVector PhysicsTimerAngularVelocity;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* PrimaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UActorComponent* PrimaryHeldHandGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo PrimaryHeldHandGripCompInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EControllerHand PrimaryHeldHandEnum;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float PrimaryHeldHandGripLerp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float PrevPrimaryHeldHandGripLerp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIPlayerHand* SecondaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UActorComponent* SecondaryHeldHandGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo SecondaryHeldHandGripCompInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EControllerHand SecondaryHeldHandEnum;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float SecondaryHeldHandGripLerp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float PrevSecondaryHeldHandGripLerp;
     
     UPROPERTY(Replicated, Transient)
     bool bRepDropIsAttached;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     AActor* RepHeldBy;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AActor* LocalHeldBy;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<AActor> LastHeldBy;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<ASDIPlayerHand> LastPrimaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, Export, Transient)
     TWeakObjectPtr<UActorComponent> LastPrimaryHeldHandGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo LastPrimaryHeldHandGripCompInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EControllerHand LastPrimaryHeldHandEnum;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<ASDIPlayerHand> LastSecondaryHeldHand;
     
-    UPROPERTY(BlueprintReadOnly, Export, Transient)
+    UPROPERTY(BlueprintReadWrite, Export, Transient)
     TWeakObjectPtr<UActorComponent> LastSecondaryHeldHandGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo LastSecondaryHeldHandGripCompInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EControllerHand LastSecondaryHeldHandEnum;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepPrimaryHandGripInfo)
@@ -431,7 +431,7 @@ public:
     void RecreatePhysicsConstraints();
     
     UFUNCTION(BlueprintCallable)
-    void PlayHapticEffectOnGrip(ESDIGripType GripType, UHapticFeedbackEffect_Base* HapticEffect, bool bLooping, float Scale, int32 Priority, bool bSynchronized);
+    void PlayHapticEffectOnGrip(ESDIGripType GripType, UObject* HapticEffect, bool bLooping, float Scale, int32 Priority, bool bSynchronized);
     
     UFUNCTION(BlueprintNativeEvent)
     void PlayGrabbedEffects();
@@ -568,7 +568,7 @@ public:
     UActorComponent* GetGripPoint(const FTransform& HandTransform, EControllerHand hand, const ASDIPlayerHand* HandPtr, ESDIGripType GripType, ESDIInteractRangeType RangeType, FSDIHandPoseInfo& OutHandPose, FSDIGripInfo& OutGripInfo, bool bUseDesiredGripInfo, bool bDistanceOnly) const;
     
     UFUNCTION(BlueprintNativeEvent)
-    UHapticFeedbackEffect_Base* GetGrabbedFeedback(ASDIPlayerHand* hand, float InterpolationTime) const;
+    UObject* GetGrabbedFeedback(ASDIPlayerHand* hand, float InterpolationTime) const;
     
     UFUNCTION(BlueprintPure)
     FVector GetAvgGripLocation(ESDIGripType GripType) const;

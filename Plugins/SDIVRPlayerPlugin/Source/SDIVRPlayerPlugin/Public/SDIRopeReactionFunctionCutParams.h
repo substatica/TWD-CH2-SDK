@@ -9,7 +9,7 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIRopeReactionFunctionCutParams : public FSDIRopeReactionFunctionSharedParams {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInteractiveRopeActor* OtherRope;
     
     FSDIRopeReactionFunctionCutParams();

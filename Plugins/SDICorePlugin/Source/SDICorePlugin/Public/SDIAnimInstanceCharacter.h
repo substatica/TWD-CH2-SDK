@@ -15,10 +15,10 @@ class SDICOREPLUGIN_API USDIAnimInstanceCharacter : public USDIAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIAnimationHandIKTarget LeftHandIK;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIAnimationHandIKTarget RightHandIK;
     
 public:

@@ -14,10 +14,10 @@ class SDIVRPLAYERPLUGIN_API ASDIWeaponActor : public ASDISkinnedTuningInventoryA
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<TSubclassOf<ASDIWeaponAttachment>> ValidAttachments;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIInitialWeaponAttachment> InitialAttachments;
     
 private:
@@ -28,10 +28,10 @@ protected:
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepAttachments)
     TArray<ASDIWeaponAttachment*> RepAttachments;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bSwappingAttachments;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<AActor*> SpawnedActors;
     
 public:

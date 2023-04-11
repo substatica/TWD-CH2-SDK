@@ -19,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, Transient)
     FName InputAction;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FKey Input;
     
     UPROPERTY(BlueprintReadWrite, Transient)

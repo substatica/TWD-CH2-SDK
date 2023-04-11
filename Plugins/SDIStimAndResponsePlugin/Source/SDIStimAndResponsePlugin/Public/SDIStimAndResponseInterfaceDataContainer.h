@@ -9,31 +9,31 @@ USTRUCT(BlueprintType)
 struct SDISTIMANDRESPONSEPLUGIN_API FSDIStimAndResponseInterfaceDataContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer StimulusFilter;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float StimulusTickInterval;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStartStimulusTickWhenStimulated;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bStopStimulusTickWhenNotStimulated;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bUpdateStimuliOnTick;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     TArray<UPrimitiveComponent*> OnOverlapComponents;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FGameplayTagContainer LastReplicatedStimuli;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FGameplayTagContainer LatentUpdateStimuli;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LastTickTimeStamp;
     
     FSDIStimAndResponseInterfaceDataContainer();

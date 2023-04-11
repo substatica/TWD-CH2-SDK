@@ -1,8 +1,7 @@
 #include "SDIInputSplineActorMovement.h"
 
-ASDIInputSplineActorMovement::ASDIInputSplineActorMovement(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDIInputSplineActorMovement::ASDIInputSplineActorMovement() {
     this->VisibleMovementTargetRadius = 2048.00f;
     this->bOnlyToMovementTargets = false;
     this->bInputFacingOnlyWithMovementTargets = false;
 }
-

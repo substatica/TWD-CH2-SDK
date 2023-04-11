@@ -34,10 +34,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxImpactVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MinImpactInterval;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FString MagnitudeRTPCParam;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

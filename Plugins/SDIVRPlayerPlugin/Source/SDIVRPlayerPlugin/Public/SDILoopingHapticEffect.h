@@ -3,7 +3,7 @@
 #include "InputCoreTypes.h"
 #include "SDILoopingHapticEffect.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class ASDIPlayerController;
 
 USTRUCT(BlueprintType)
@@ -11,7 +11,7 @@ struct SDIVRPLAYERPLUGIN_API FSDILoopingHapticEffect {
     GENERATED_BODY()
 public:
     UPROPERTY(Transient)
-    UHapticFeedbackEffect_Base* Effect;
+    UObject* Effect;
     
     UPROPERTY(Transient)
     float Scale;

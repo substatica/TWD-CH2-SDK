@@ -7,22 +7,22 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDISkinParamSelections {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 CustomizationStartIndex;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 Count;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FSDISkinSelection> ScalarParamSelections;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FSDISkinSelection> ColorParamSelections;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TArray<FSDISkinSelection> TextureParamSelections;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     TMap<FName, FSDISkinSelection> ParamSetSelections;
     
     FSDISkinParamSelections();

@@ -10,7 +10,7 @@ class SDIVRPLAYERPLUGIN_API ASDIHeldActorStaticMesh : public ASDIHeldActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UStaticMeshComponent* StaticMeshComponent;
     
 public:

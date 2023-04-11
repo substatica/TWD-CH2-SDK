@@ -18,26 +18,26 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bForceTeamAttitudeUpdates;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     USDICoreUtilityAI* Owner;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 LOSCheckIndex;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FGenericTeamId OwnerTeam;
     
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FSDICoreUtilityAITargetEntry> Targets;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FRFloat Distance;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FRFloat Distance2D;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FRFloat ViewAngleDeg;
     
     FSDICoreUtilityAITargetList();

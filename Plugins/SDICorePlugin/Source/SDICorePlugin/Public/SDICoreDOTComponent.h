@@ -21,40 +21,40 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     FSDIExportData ExportData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIDamageData Damage;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloatExp Delay;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloatExp Duration;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloatExp Interval;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAffectedByTimeDilation;
     
     UPROPERTY(Transient)
     float IntervalTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepTotalDuration)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepTotalDuration)
     float RepTotalDuration;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepDurationTimer;
     
     UPROPERTY(Transient)
     float DelayTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float AttachedTime;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AController* EventInstigator;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepDamageCauser)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepDamageCauser)
     AActor* RepDamageCauser;
     
 public:

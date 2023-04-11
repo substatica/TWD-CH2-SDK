@@ -11,13 +11,13 @@ class SDICOREPLUGIN_API USDICoreAttributeComponent : public UActorComponent {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
     FSDICoreAttributeComponentSettings RepSettings;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepValue)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepValue)
     int32 RepValue;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepBoost)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepBoost)
     int32 RepBoost;
     
     UPROPERTY(Transient)

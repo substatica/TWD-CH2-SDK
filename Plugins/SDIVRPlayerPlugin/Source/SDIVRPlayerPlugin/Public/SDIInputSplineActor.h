@@ -123,10 +123,10 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasValidArc() const;
-    
-//   UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-//   TEnumAsByte<ECollisionChannel> GetTraceChannel() const;
-    
+/*
+    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
+    TEnumAsByte<ECollisionChannel> GetTraceChannel() const;
+*/       
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     TArray<AActor*> GetIgnoredActors() const;
     

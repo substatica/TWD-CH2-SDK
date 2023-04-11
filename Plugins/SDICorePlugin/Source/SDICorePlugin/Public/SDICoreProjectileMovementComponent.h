@@ -45,10 +45,10 @@ protected:
     UPROPERTY(Transient)
     int32 LocalBounceCount;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float BounceRotationRate;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector BounceRotationAxis;
     
     UPROPERTY(Replicated, Transient)

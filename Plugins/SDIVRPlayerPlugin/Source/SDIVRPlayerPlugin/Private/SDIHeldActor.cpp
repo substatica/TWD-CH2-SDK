@@ -8,7 +8,7 @@ class ASDIThrowInputSplineActor;
 class AActor;
 class USceneComponent;
 class UActorComponent;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UPrimitiveComponent;
 class UObject;
 class ASDIPlayerHand;
@@ -86,7 +86,7 @@ bool ASDIHeldActor::SetDropAttachInfo(USceneComponent* Parent, FName SocketName,
 void ASDIHeldActor::RecreatePhysicsConstraints() {
 }
 
-void ASDIHeldActor::PlayHapticEffectOnGrip(ESDIGripType GripType, UHapticFeedbackEffect_Base* HapticEffect, bool bLooping, float Scale, int32 Priority, bool bSynchronized) {
+void ASDIHeldActor::PlayHapticEffectOnGrip(ESDIGripType GripType, UObject* HapticEffect, bool bLooping, float Scale, int32 Priority, bool bSynchronized) {
 }
 
 void ASDIHeldActor::PlayGrabbedEffects_Implementation() {
@@ -256,7 +256,7 @@ UActorComponent* ASDIHeldActor::GetGripPoint_Implementation(const FTransform& Ha
     return NULL;
 }
 
-UHapticFeedbackEffect_Base* ASDIHeldActor::GetGrabbedFeedback_Implementation(ASDIPlayerHand* hand, float InterpolationTime) const {
+UObject* ASDIHeldActor::GetGrabbedFeedback_Implementation(ASDIPlayerHand* hand, float InterpolationTime) const {
     return NULL;
 }
 

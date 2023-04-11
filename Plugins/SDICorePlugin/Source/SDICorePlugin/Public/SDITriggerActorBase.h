@@ -13,10 +13,10 @@ class SDICOREPLUGIN_API ASDITriggerActorBase : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bIsActive;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     ESDITriggerFilterType TriggerFilter;
     
 public:

@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIBoneStabCurveOverrideMapEntry {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIncludeChildren;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* Curve;
     
     FSDIBoneStabCurveOverrideMapEntry();

@@ -67,22 +67,22 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     float ServerHMDHandReplicationFrequency;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName LeftHandAttachSocket;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName RightHandAttachSocket;
     
     UPROPERTY(EditAnywhere)
     FSDIInventoryHolderInterfaceInventoryList InitialInventory;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HandActivityLevelFadeDownSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HandActivityLevelFadeUpSpeed;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
     UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_RepStimulusData)
@@ -99,46 +99,46 @@ protected:
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepInventoryList)
     TArray<ASDIInventoryActor*> RepInventoryList;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepLeftHandHeldActor)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepLeftHandHeldActor)
     ASDIHeldActor* RepLeftHandHeldActor;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepRightHandHeldActor)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepRightHandHeldActor)
     ASDIHeldActor* RepRightHandHeldActor;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepHMDTransform)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepHMDTransform)
     FSDISpaceTimestampTransform_NetQuantize RepHMDTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepLeftHandTransform)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepLeftHandTransform)
     FSDISpaceTimestampTransform_NetQuantize RepLeftHandTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepRightHandTransform)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepRightHandTransform)
     FSDISpaceTimestampTransform_NetQuantize RepRightHandTransform;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepLeftHandTargetActivityLevel;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepLeftHandTargetActivityLevelFadeScale;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepRightHandTargetActivityLevel;
     
-    UPROPERTY(BlueprintReadOnly, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, Replicated, Transient)
     float RepRightHandTargetActivityLevelFadeScale;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LeftHandActivityLevel;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float RightHandActivityLevel;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDISpaceTimestampTransform_NetQuantize LerpHMDTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDISpaceTimestampTransform_NetQuantize LerpLeftHandTransform;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDISpaceTimestampTransform_NetQuantize LerpRightHandTransform;
     
     UPROPERTY(Transient)
@@ -153,10 +153,10 @@ protected:
     UPROPERTY(Replicated, Transient)
     float RepLastServerHMDHandReplicationTimestamp;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIMeleeWeaponStabInterfaceData StabInterfaceData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonHeldWeaponStabDropTime;
     
 public:

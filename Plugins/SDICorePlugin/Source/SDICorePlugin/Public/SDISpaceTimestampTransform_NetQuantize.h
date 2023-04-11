@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDISpaceTimestampTransform_NetQuantize : public FSDITimestampTransform_NetQuantize {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ESDITransformSpace Space;
     
     FSDISpaceTimestampTransform_NetQuantize();

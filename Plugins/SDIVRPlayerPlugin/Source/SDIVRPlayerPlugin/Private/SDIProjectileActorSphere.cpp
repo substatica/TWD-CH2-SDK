@@ -1,7 +1,6 @@
 #include "SDIProjectileActorSphere.h"
 #include "Components/SphereComponent.h"
 
-ASDIProjectileActorSphere::ASDIProjectileActorSphere(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+ASDIProjectileActorSphere::ASDIProjectileActorSphere() {
     this->SphereCollision = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCollision"));
 }
-

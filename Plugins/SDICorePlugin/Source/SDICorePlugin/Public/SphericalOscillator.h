@@ -10,10 +10,10 @@ struct SDICOREPLUGIN_API FSphericalOscillator {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FRotator CurrentRotation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector Current;
     
 public:

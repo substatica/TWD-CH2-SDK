@@ -8,10 +8,10 @@ struct FSDICableLODSettings : public FSDIDynamicMeshLODSettings {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SegmentsPerMeter;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 NumSides;
     
     UPROPERTY(Transient)

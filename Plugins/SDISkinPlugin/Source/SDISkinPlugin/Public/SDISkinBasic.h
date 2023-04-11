@@ -17,34 +17,34 @@ UCLASS()
 class SDISKINPLUGIN_API USDISkinBasic : public USDISkinObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinStitchedSkeletalMesh> StitchedSkeletalMeshes;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinStitchedStaticMesh> StitchedStaticMeshes;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinChildComponentSkeletalMesh> ChildComponentSkeletalMeshes;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinChildComponentStaticMesh> ChildComponentStaticMeshes;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinChildComponentMaterial> ChildComponentMaterials;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISkinAttachment> Attachments;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIRandomSkinScalarParam> ScalarParams;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIRandomSkinColorParam> ColorParams;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIRandomSkinTextureParam> TextureParams;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<FName, FSDIRandomSkinParamSet> ParamSetMap;
     
     USDISkinBasic();

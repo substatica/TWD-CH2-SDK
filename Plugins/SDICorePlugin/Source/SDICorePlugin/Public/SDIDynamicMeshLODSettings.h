@@ -7,7 +7,7 @@ struct FSDIDynamicMeshLODSettings {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EngageDistance;
     
     UPROPERTY(Transient)

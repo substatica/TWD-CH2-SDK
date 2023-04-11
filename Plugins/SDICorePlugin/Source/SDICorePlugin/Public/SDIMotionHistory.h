@@ -11,10 +11,10 @@ protected:
     UPROPERTY(Transient)
     TArray<FSDIMotionHistoryEntry> Entries;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxHistoryTime;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxHistoryEntries;
     
 public:

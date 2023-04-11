@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SDIInteractiveActorData.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class USDITriggerResistanceFeedbackEffect_Curve;
 
 USTRUCT(BlueprintType)
@@ -10,16 +10,16 @@ struct SDIVRPLAYERPLUGIN_API FSDIInteractiveActorData {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* HighlightFeedback;
+    UObject* HighlightFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* GripFeedback;
+    UObject* GripFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* InteractFeedback;
+    UObject* InteractFeedback;
     
     UPROPERTY(EditAnywhere)
-    UHapticFeedbackEffect_Base* PhysicalInteractFeedback;
+    UObject* PhysicalInteractFeedback;
     
     UPROPERTY(EditAnywhere)
     bool bUseInteractTriggerResistanceCurveForHighlightedInteractions;

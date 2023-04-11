@@ -15,28 +15,28 @@ class SDIVRPLAYERPLUGIN_API ASDIWeaponFirearmAmmo : public ASDIWeaponAttachment 
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ASDIInventoryActor> CurrencyClass;
     
     UPROPERTY(EditDefaultsOnly)
     bool bNonPlayerHasInfiniteCurrency;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 Cost;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 NumPellets;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SpreadDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> PelletSpreadSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> PlayerPelletSpreadSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> NonVRPlayerPelletSpreadSettings;
     
     UPROPERTY(Transient)

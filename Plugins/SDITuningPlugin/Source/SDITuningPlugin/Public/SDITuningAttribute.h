@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct SDITUNINGPLUGIN_API FSDITuningAttribute {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     FName AttributeName;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     bool bHasSubAttributes;
     
     FSDITuningAttribute();

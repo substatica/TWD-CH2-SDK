@@ -12,7 +12,7 @@ class SDIVRPLAYERPLUGIN_API USDITuningGameplayTagActorComponent : public USDITun
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
 public:

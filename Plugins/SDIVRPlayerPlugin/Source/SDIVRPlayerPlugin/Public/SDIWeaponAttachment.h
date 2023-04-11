@@ -12,40 +12,40 @@ class SDIVRPLAYERPLUGIN_API ASDIWeaponAttachment : public ASDITuningInventoryAct
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ESDIWeaponAttachmentType AttachmentType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName AttachComponentName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName AttachSocketName;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FTransform AttachRelativeTransform;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowRemoval;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float AttachDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bTryAttachOnTick;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bTryAttachOnDropped;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_RepWeaponOwner)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_RepWeaponOwner)
     ASDIWeaponActor* RepWeaponOwner;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIWeaponActor* LocalWeaponOwner;
     
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_bRepAttached)
+    UPROPERTY(BlueprintReadWrite, Transient, ReplicatedUsing=OnRep_bRepAttached)
     bool bRepAttached;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bLocalAttached;
     
 public:

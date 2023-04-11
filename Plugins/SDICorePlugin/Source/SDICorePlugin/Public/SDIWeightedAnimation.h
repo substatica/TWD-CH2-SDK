@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDIWeightedAnimation {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UAnimSequenceBase* AnimSequence;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float AnimSequencePlayRate;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUsesRootMotion;
     
     UPROPERTY(EditDefaultsOnly)

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIBoneStabCurveOverrideMap {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FName, FSDIBoneStabCurveOverrideMapEntry> BoneStabCurveOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FName, FSDIBoneStabCurveOverrideMapEntry> BoneStabPullCurveOverrides;
     
     FSDIBoneStabCurveOverrideMap();

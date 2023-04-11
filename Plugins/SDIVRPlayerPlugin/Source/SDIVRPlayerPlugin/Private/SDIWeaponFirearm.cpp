@@ -5,7 +5,7 @@
 class USDIWeaponFirearmFireModeComponent;
 class ASDIWeaponFirearm;
 class ASDIWeaponFirearmAmmo;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class ASDIInventoryActor;
 class USDIWeaponFirearmADSComponent;
 
@@ -73,7 +73,7 @@ FSDIWeaponFirearmFiredShotInfo ASDIWeaponFirearm::ModePrepareFiredShotInfo_Imple
     return FSDIWeaponFirearmFiredShotInfo{};
 }
 
-void ASDIWeaponFirearm::ModeGetFireFeedback_Implementation(USDIWeaponFirearmFireModeComponent* Firemode, bool bRefire, UHapticFeedbackEffect_Base*& Primary, UHapticFeedbackEffect_Base*& Secondary) {
+void ASDIWeaponFirearm::ModeGetFireFeedback_Implementation(USDIWeaponFirearmFireModeComponent* Firemode, bool bRefire, UObject*& Primary, UObject*& Secondary) {
 }
 
 void ASDIWeaponFirearm::ModeFiredRound_Implementation(USDIWeaponFirearmFireModeComponent* Firemode, ASDIWeaponFirearmAmmo* FiredAmmo) {

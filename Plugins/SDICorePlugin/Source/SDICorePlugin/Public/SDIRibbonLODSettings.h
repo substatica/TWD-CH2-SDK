@@ -14,7 +14,7 @@ protected:
     UPROPERTY(EditAnywhere)
     int32 MotionResolution;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MotionSplineTension;
     
 public:

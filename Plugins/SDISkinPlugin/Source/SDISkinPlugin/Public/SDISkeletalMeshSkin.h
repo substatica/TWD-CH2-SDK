@@ -8,10 +8,10 @@ UCLASS()
 class SDISKINPLUGIN_API USDISkeletalMeshSkin : public USDISkinBasic {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDISkinSkeletalMesh BaseSkeletalMesh;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIgnoreBaseSkeletalMeshForMerging;
     
     USDISkeletalMeshSkin();

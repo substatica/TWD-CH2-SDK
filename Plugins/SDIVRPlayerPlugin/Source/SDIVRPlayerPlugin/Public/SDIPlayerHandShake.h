@@ -16,10 +16,10 @@ protected:
     float Scale;
     
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FVectorRandomOscillator Location;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRotatorRandomOscillator Rotation;
     
     FSDIPlayerHandShake();

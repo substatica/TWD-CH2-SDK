@@ -52,7 +52,7 @@ protected:
     UPROPERTY(EditAnywhere)
     float StuckVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICoreUtilityAITargetList TargetList;
     
     UPROPERTY(EditAnywhere)
@@ -82,34 +82,34 @@ protected:
     UPROPERTY(Instanced, Transient)
     UPathFollowingComponent* PathFollowingComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ESDIUtilityAIDifficulty DesiredDifficulty;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ESDIUtilityAIDifficulty CurrentDifficulty;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bRequestingRepath;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDICoreUtilityAIMovementTarget MovementTarget;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bWasFalling;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float StuckTimer;
     
     UPROPERTY(Transient)
     FVector StuckLocation;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<USDICoreUtilityAIState*> AllStates;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     USDICoreUtilityAIState* ActiveState;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCurrentlyInsideTick;
     
 public:

@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDISkinSelection {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 CustomizationIndex;
     
-    UPROPERTY(BlueprintReadOnly)
+    UPROPERTY(BlueprintReadWrite)
     int32 ArrayIndex;
     
     FSDISkinSelection();

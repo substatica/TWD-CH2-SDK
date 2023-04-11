@@ -33,16 +33,16 @@ class SDICOREPLUGIN_API ASDICoreCharacter : public ACharacter, public ISDIDamage
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDICollisionChannelIgnoranceComponent* CapsuleCollisionIgnoranceComp;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDICollisionChannelIgnoranceComponent* MeshCollisionIgnoranceComp;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIRigidBodySleeperComponent* RigidBodySleeperComponent;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPhysicalAnimationComponent* RagdollPhysicalAnimationComponent;
     
     UPROPERTY(EditDefaultsOnly)
@@ -57,7 +57,7 @@ protected:
     UPROPERTY(EditDefaultsOnly, Replicated)
     TArray<FSDIReplicatedRagdollBone> RepRagdollBones;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIInputStick InputMoveStick;
     
     UPROPERTY(EditAnywhere)
@@ -69,25 +69,25 @@ protected:
     UPROPERTY(EditAnywhere)
     TSubclassOf<USDICoreUtilityAI> UtilityAIClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NetObstructedCullDistanceSquared;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_bRepADS)
     bool bRepADS;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlSprint;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlSprintWasToggled;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float SprintCancelTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlCrouch;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlCrouchWasToggled;
     
     UPROPERTY(Transient)

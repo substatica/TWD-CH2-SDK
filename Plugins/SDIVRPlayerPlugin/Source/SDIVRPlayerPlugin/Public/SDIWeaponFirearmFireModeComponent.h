@@ -11,7 +11,7 @@
 #include "SDIWeaponFirearmFiredShotInfo.h"
 #include "SDIWeaponFirearmFireModeComponent.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class USceneComponent;
 
 UCLASS(EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -19,103 +19,103 @@ class SDIVRPLAYERPLUGIN_API USDIWeaponFirearmFireModeComponent : public UArrowCo
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ESDIInteractiveInteractType DefaultInteractionType;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bRepeatingFire;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bVariableFireRate;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ShotsPerSecond;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ShotsPerSecondTrigger;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bBurstFire;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     int32 BurstShots;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float BurstShotsPerSecond;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SpreadDegrees;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIRecoil Recoil;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraRecoilSettings NonVRRecoil;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraRecoilSettings NonVRRecoilADS;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> SpreadSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> PlayerSpreadSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDISpreadSettings> NonVRPlayerSpreadSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAutoChamberNextRound;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryStartFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryStartFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryRefireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryRefireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryStopFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryStopFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryFireRoundFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryFireRoundFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryDryFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryDryFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryStartFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryStartFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryRefireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryRefireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryStopFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryStopFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryFireRoundFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryFireRoundFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryDryFireFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryDryFireFeedback;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bIsFiring;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bFiringRequested;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bFiringRequestHeld;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float RefireTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 BurstCounter;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float BurstTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 RoundsFired;
     
     UPROPERTY(Transient)
@@ -156,37 +156,37 @@ public:
     FTransform GetShotTransform(const FSDIWeaponFirearmFiredShotInfo& FiredShotInfo, bool bIgnoreSpread);
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetSecondaryStopFireFeedback() const;
+    UObject* GetSecondaryStopFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetSecondaryStartFireFeedback() const;
+    UObject* GetSecondaryStartFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetSecondaryRefireFeedback() const;
+    UObject* GetSecondaryRefireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetSecondaryFireRoundFeedback() const;
+    UObject* GetSecondaryFireRoundFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetSecondaryDryFireFeedback() const;
+    UObject* GetSecondaryDryFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
     FSDIRecoil GetRecoil(const FSDIWeaponFirearmFiredShotInfo& FiredShotInfo) const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetPrimaryStopFireFeedback() const;
+    UObject* GetPrimaryStopFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetPrimaryStartFireFeedback() const;
+    UObject* GetPrimaryStartFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetPrimaryRefireFeedback() const;
+    UObject* GetPrimaryRefireFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetPrimaryFireRoundFeedback() const;
+    UObject* GetPrimaryFireRoundFeedback() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetPrimaryDryFireFeedback() const;
+    UObject* GetPrimaryDryFireFeedback() const;
     
     UFUNCTION(BlueprintPure)
     FSDICameraRecoilSettings GetNonVRRecoil(const FSDIWeaponFirearmFiredShotInfo& FiredShotInfo) const;

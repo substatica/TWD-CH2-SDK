@@ -16,10 +16,10 @@ class SDIVRPLAYERPLUGIN_API ASDIWeaponFirearmAmmoLauncher : public ASDIWeaponFir
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSubclassOf<ASDIHeldActor> LaunchedClass;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FRFloatExp LaunchSpeed;
     
 public:

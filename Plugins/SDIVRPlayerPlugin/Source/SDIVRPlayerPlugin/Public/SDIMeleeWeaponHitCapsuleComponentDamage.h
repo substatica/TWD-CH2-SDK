@@ -5,7 +5,7 @@
 #include "SDIDamageData.h"
 #include "SDIMeleeWeaponHitCapsuleComponentDamage.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct SDIVRPLAYERPLUGIN_API FSDIMeleeWeaponHitCapsuleComponentDamage {
@@ -26,11 +26,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIDamageData DamageData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDICachedCollisionInfoShapeScaleOverride> DamageOverlapScaleOverrides;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UHapticFeedbackEffect_Base* DamageFeedback;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UObject* DamageFeedback;
     
     FSDIMeleeWeaponHitCapsuleComponentDamage();
 };

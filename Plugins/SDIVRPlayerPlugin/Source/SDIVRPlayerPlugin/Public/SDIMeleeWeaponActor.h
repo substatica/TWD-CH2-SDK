@@ -26,7 +26,7 @@ class SDIVRPLAYERPLUGIN_API ASDIMeleeWeaponActor : public ASDIWeaponActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UAkComponent* AkAudioComponent;
     
     UPROPERTY(EditDefaultsOnly)
@@ -53,10 +53,10 @@ protected:
     UPROPERTY(EditInstanceOnly)
     bool bExtractWhenEmbedded;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bIsShield;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bShieldStrappedToArm;
     
 public:
@@ -73,22 +73,22 @@ public:
     FSDIMeleeWeaponStabEndedSignature StabEndedDelegate;
     
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ESDIMeleeWeaponStabState StabState;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIMeleeWeaponStabParams StabParams;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float InitialStabDepth;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float StabDepth;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     UCurveFloat* CachedStabCurve;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     UCurveFloat* CachedStabPullCurve;
     
     UPROPERTY(Transient)

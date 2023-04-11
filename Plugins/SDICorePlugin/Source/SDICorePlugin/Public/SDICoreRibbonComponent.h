@@ -54,7 +54,7 @@ protected:
     UPROPERTY(EditAnywhere)
     UMaterialInterface* Material;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FSDIRibbonLODSettings> LODSettings;
     
     UPROPERTY(EditAnywhere)

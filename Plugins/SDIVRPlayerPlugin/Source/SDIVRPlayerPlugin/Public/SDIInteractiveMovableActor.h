@@ -21,28 +21,28 @@ class SDIVRPLAYERPLUGIN_API ASDIInteractiveMovableActor : public ASDIInteractive
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPhysicsConstraintComponent* PhysicsConstraint;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDICollisionChannelIgnoranceComponent* CollisionIgnoranceComp;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bCanBeMoved;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAxialMovementOnly;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bSlopeTransitionAssistance;
     
     UPROPERTY(EditAnywhere)
     FSDIQuatPIDController SlopeRotationPIDController;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float SlopeTransitionForce;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAllowMantle;
     
     UPROPERTY(EditAnywhere)
@@ -54,7 +54,7 @@ protected:
     UPROPERTY(EditAnywhere)
     FRFloatExp HandOffsetRange;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float MaxMovementVelocity;
     
     UPROPERTY(EditAnywhere)
@@ -99,7 +99,7 @@ protected:
     UPROPERTY(Transient)
     FVector CurrentFloorNormal;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FHitResult SlopeTransitionImpact;
     
     UPROPERTY(Transient)

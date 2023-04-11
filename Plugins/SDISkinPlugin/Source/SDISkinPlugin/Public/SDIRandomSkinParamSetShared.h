@@ -9,7 +9,7 @@ class SDISKINPLUGIN_API USDIRandomSkinParamSetShared : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TArray<FSDIRandomSkinParamSetEntry> Entries;
     
 public:

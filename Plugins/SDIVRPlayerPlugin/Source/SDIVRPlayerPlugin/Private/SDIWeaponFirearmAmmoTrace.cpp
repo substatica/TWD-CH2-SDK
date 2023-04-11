@@ -32,9 +32,11 @@ void ASDIWeaponFirearmAmmoTrace::HandleNearMisses_Implementation(const TArray<FS
 void ASDIWeaponFirearmAmmoTrace::HandleHit_Implementation(int32 ShotID, const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform, const FTransform& SpreadShotTransform, const FHitResult& Hit, const int32& HitIndex, const TArray<AActor*>& InDamagedActors, TArray<AActor*>& OutDamagedActors) {
 }
 
+/*
 float ASDIWeaponFirearmAmmoTrace::GetTraceRange_Implementation(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform) {
     return 0.0f;
 }
+*/
 
 float ASDIWeaponFirearmAmmoTrace::GetTraceImpactVelocity_Implementation(const FSDIWeaponFirearmFiredPelletInfo& FiredPelletInfo, const FTransform& ShotTransform, const FTransform& SpreadShotTransform, const FHitResult& Hit, const int32& HitIndex, const TArray<AActor*>& DamagedActors) {
     return 0.0f;
@@ -70,13 +72,13 @@ bool ASDIWeaponFirearmAmmoTrace::AllowHitPassThrough_Implementation(int32 PassTh
 }
 
 ASDIWeaponFirearmAmmoTrace::ASDIWeaponFirearmAmmoTrace(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->TraceRange = 16384.00f;
+    // this->TraceRange = 16384.00f;
     this->TraceImpactVelocity = 8192.00f;
     this->TraceImpactMass = 1.00f;
     this->HitReactImpulseMultiplier = 1.00f;
     this->NearMissAlertRange = 50.00f;
     this->AsyncTracePlatformLevel = 2;
     this->PassThroughAsyncTracePlatformLevel = 2;
-    this->TraceChannel = ECC_WorldDynamic;
+    // this->TraceChannel = ECC_WorldDynamic;
 }
 

@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDICoreUtilityAIFloat {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TMap<ESDIUtilityAIDifficulty, float> Floats;
     
     FSDICoreUtilityAIFloat();

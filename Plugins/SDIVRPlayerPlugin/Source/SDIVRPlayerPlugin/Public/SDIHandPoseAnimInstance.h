@@ -18,64 +18,64 @@ class SDIVRPLAYERPLUGIN_API USDIHandPoseAnimInstance : public USDIAnimInstance {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     EControllerHand hand;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     bool bGripInfoValid;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FSDIGripInfo GripInfo;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     float ThumbClench;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     float PointingClench;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     float MiddleClench;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     float RingClench;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     float PinkyClench;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FVector HandLinearOrientX;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FVector HandLinearOrientY;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
     FVector HandLinearOrientZ;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     AActor* PoseActor;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bGripChange;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIHandPoseInfo GripChangePrevPose;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UActorComponent* GripChangePrevGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo GripChangePrevGripInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIHandPoseInfo GripChangeNewPose;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     UActorComponent* GripChangeNewGripComp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo GripChangeNewGripInfo;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     USDIControllerInputAnimInstance* MasterInst;
     
 public:

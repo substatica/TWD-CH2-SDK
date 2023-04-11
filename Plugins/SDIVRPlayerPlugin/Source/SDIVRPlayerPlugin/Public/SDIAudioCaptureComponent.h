@@ -17,6 +17,6 @@ public:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIPlayerVoiceAkComponent* PlayerVoiceAkComponent;
     
-    USDIAudioCaptureComponent();
+    USDIAudioCaptureComponent(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -6,7 +6,7 @@
 
 class UObject;
 class APawn;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UAnimSequenceBase;
 class USceneComponent;
 class UActorComponent;
@@ -42,7 +42,7 @@ bool ASDIPlayerHandBase::StopHapticEffectId(int32 ID) const {
     return false;
 }
 
-bool ASDIPlayerHandBase::StopHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, UObject* EffectOwner) const {
+bool ASDIPlayerHandBase::StopHapticEffect(UObject* HapticEffect, UObject* EffectOwner) const {
     return false;
 }
 
@@ -88,7 +88,7 @@ void ASDIPlayerHandBase::SetDebugTrackedHandMeshFadeInDistanceScale(float Scale)
 void ASDIPlayerHandBase::RecreatePhysicsConstraints() {
 }
 
-int32 ASDIPlayerHandBase::PlayHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, float Scale, bool bLoop, int32 Priority, UObject* EffectOwner) const {
+int32 ASDIPlayerHandBase::PlayHapticEffect(UObject* HapticEffect, float Scale, bool bLoop, int32 Priority, UObject* EffectOwner) const {
     return 0;
 }
 
@@ -166,7 +166,7 @@ bool ASDIPlayerHandBase::IsPlayingHapticEffectId(int32 ID) const {
     return false;
 }
 
-bool ASDIPlayerHandBase::IsPlayingHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, UObject* EffectOwner) const {
+bool ASDIPlayerHandBase::IsPlayingHapticEffect(UObject* HapticEffect, UObject* EffectOwner) const {
     return false;
 }
 
@@ -264,7 +264,7 @@ bool ASDIPlayerHandBase::GetIsIndicatingDirection() const {
     return false;
 }
 
-UHapticFeedbackEffect_Base* ASDIPlayerHandBase::GetHapticFeedbackEffect(int32 ID) const {
+UObject* ASDIPlayerHandBase::GetHapticFeedbackEffect(int32 ID) const {
     return NULL;
 }
 
@@ -363,7 +363,7 @@ bool ASDIPlayerHandBase::AdjustHapticEffectScaleId(int32 ID, float Scale) const 
     return false;
 }
 
-bool ASDIPlayerHandBase::AdjustHapticEffectScale(UHapticFeedbackEffect_Base* HapticEffect, float Scale, UObject* EffectOwner) const {
+bool ASDIPlayerHandBase::AdjustHapticEffectScale(UObject* HapticEffect, float Scale, UObject* EffectOwner) const {
     return false;
 }
 

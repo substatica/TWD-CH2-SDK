@@ -8,13 +8,13 @@ USTRUCT(BlueprintType)
 struct SDICOREPLUGIN_API FSDIEnumTypeHandle {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UEnum* EnumData;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName EnumValue;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName EnumName;
     
     FSDIEnumTypeHandle();

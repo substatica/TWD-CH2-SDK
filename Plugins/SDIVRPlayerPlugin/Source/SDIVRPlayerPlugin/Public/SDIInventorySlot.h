@@ -50,7 +50,7 @@ protected:
     UPROPERTY(EditAnywhere)
     bool bRequireRangedLOS;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     ASDIInventoryActor* CurrentInventory;
     
     UPROPERTY(Transient)

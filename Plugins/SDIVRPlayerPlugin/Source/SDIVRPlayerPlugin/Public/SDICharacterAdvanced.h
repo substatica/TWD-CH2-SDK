@@ -32,10 +32,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float CrawlEyeHeight;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloat EyeHeightOffsetRange;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRFloat HMDEyeHeightAllowedRange;
 
     UPROPERTY(EditAnywhere)
@@ -47,22 +47,22 @@ protected:
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightGroundMovementSpring;
 
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EyeHeightGroundMovementSpringMaxOffset;
 
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightRopeMovementSpring;
 
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EyeHeightRopeMovementSpringMaxOffset;
 
     UPROPERTY(EditAnywhere)
     FFloatRK4SpringInterpolator EyeHeightLandingMovementSpring;
 
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EyeHeightLandingMovementSpringMaxOffset;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float EyeHeightLandingMovementSpringMaxVel;
 
     UPROPERTY(EditAnywhere)
@@ -74,23 +74,23 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     bool bNeverCrouch;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCtrlCrawl;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CtrlCrouchTimer;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DesiredEyeHeightOffset;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DesiredEyeHeightOffsetFromFloor;
     
     UPROPERTY(Transient)
     float EyeHeightCapsuleAdjustment;
     
 public:
-    UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_bRepIsCrawling)
+    UPROPERTY(BlueprintReadWrite, ReplicatedUsing=OnRep_bRepIsCrawling)
     bool bRepIsCrawling;
     
     ASDICharacterAdvanced(const FObjectInitializer& ObjectInitializer);

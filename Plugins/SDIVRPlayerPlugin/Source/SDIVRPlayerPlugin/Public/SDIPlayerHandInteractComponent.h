@@ -39,10 +39,10 @@ protected:
     float AsyncGripWorldInflation;
     
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bRanged;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bPhysical;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)

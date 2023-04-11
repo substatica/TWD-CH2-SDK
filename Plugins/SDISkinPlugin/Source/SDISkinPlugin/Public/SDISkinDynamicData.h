@@ -17,28 +17,28 @@ USTRUCT(BlueprintType)
 struct SDISKINPLUGIN_API FSDISkinDynamicData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<USDISkinObject> DefaultSkin;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAsyncLoadSkin;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bMergeSkeletalMeshes;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bForcePhysicsStateRecreation;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 AsyncLoadPriority;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TMap<UObject*, FSDISkinAttachment> Attachments;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TMap<USkeletalMeshComponent*, FSDISkinStitchedSkeletalMesh> StitchedSkeletalMeshes;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TMap<UStaticMeshComponent*, FSDISkinStitchedStaticMesh> StitchedStaticMeshes;
     
     UPROPERTY(Transient)
@@ -50,7 +50,7 @@ public:
     UPROPERTY(Transient)
     bool bInitializingSkinReplicationData;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bUsingFallbackMesh;
     
     FSDISkinDynamicData();

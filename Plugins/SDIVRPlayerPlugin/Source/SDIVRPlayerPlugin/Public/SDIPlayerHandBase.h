@@ -24,7 +24,7 @@ class UActorComponent;
 class UMaterialInstanceDynamic;
 class USceneComponent;
 class UObject;
-class UHapticFeedbackEffect_Base;
+class UObject;
 class UAnimSequenceBase;
 class APawn;
 
@@ -33,214 +33,214 @@ class SDIVRPLAYERPLUGIN_API ASDIPlayerHandBase : public AActor {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDIMotionControllerComponent* MotionController;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* HandMesh;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* TrackedHandMesh;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USkeletalMeshComponent* CosmeticHandMesh;
     
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDILatePhysicalAnimationComponent* CosmeticHandMeshPhysicalAnimation;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     USDICollisionChannelIgnoranceComponent* HandMeshCollisionIgnoranceComp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float VelocitySmoothingFactor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector ShoulderOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ShoulderHeadRotationDeltaPercent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ShoulderHeadRotationPitchThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector ArmDebugOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVector EditorCameraOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TrackedHandMeshFadeInStart;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TrackedHandMeshFadeInDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TrackedHandMeshFadeInExp;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TrackedHandMeshFadeInAlpha;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DebugTrackedHandMeshFadeStartDistanceScale;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float DebugTrackedHandMeshFadeInDistanceScale;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bEnableHandCollisionIgnoranceRestorationPullback;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float HandCollisionIgnoranceRestorationSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowTeleport;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TeleportDistance;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TeleportMinArmLengthMultiplier;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MaxSimulatingPhysicsMassToPushAround;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName WristBone;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ElbowBone;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FName ShoulderBone;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float ArmMeshLengthMultiplier;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FRuntimeFloatCurve ArmMeshWidthMultiplierCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIPlayerHandLock HandLock;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIPlayerHandLock ShoulderLock;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FString, FRotator> RelativeRotationPerControllerName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<FString, FVector> RelativeLocationPerControllerName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CosmeticHandMeshReturnSpeed;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bCosmeticPhysicsFingers;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CosmeticPhysicsFingersBlendInTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float CosmeticPhysicsFingersBlendOutTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName CosmeticPhysicsFingersRootBodyName;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FName CosmeticPhysicsFingersProfile;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FPhysicalAnimationData CosmeticPhysicsFingersSettings;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bShouldCorrectPhysicsForCharacterMovement;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     EControllerHand ControllerHand;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<UMaterialInstanceDynamic*> TrackedHandMaterialInstances;
     
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<USceneComponent> HandMeshTarget;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FVector HandOffsetDelta;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform PreLockHandModifier;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform HandModifier;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bHandMeshHidden;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bTrackedHandMeshHidden;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bWristBoneValid;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bElbowBoneValid;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bShoulderBoneValid;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float BaseForeArmLength;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float BaseUpperArmLength;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float ForeArmLength;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float UpperArmLength;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LastHandTeleportTimestamp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<UObject> ShoulderLockOwner;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float ShoulderLockLimitedTime;
     
     UPROPERTY(EditAnywhere, Transient)
     TArray<TWeakObjectPtr<USDICollisionChannelIgnoranceComponent>> CollisionIgnoranceRestorationPullbackComps;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bHandCollisionIgnoranceRestorationTargetCamera;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CosmeticHandMeshReturnLerp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform CosmeticHandMeshReturnTransform;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform RelativeControllerTransform;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIHandPoseInfo CurrentHandPose;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bCurrentHandPoseForHighlight;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float CosmeticPhysicsFingersAlpha;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform CosmeticPhysicsFingersTransformToRoot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform CosmeticHandMeshRelTransform;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FSDIPlayerHandShake> HandShakes;
     
 public:
@@ -270,7 +270,7 @@ public:
     bool StopHapticEffectId(int32 ID) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    bool StopHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, UObject* EffectOwner) const;
+    bool StopHapticEffect(UObject* HapticEffect, UObject* EffectOwner) const;
     
     UFUNCTION(BlueprintCallable)
     void StopHandShake(int32 ID);
@@ -314,7 +314,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    int32 PlayHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, float Scale, bool bLoop, int32 Priority, UObject* EffectOwner) const;
+    int32 PlayHapticEffect(UObject* HapticEffect, float Scale, bool bLoop, int32 Priority, UObject* EffectOwner) const;
     
     UFUNCTION(BlueprintCallable)
     int32 PlayHandShake(const FSDIPlayerHandShake& Shake, float Scale);
@@ -374,7 +374,7 @@ public:
     bool IsPlayingHapticEffectId(int32 ID) const;
     
     UFUNCTION(BlueprintPure)
-    bool IsPlayingHapticEffect(UHapticFeedbackEffect_Base* HapticEffect, UObject* EffectOwner) const;
+    bool IsPlayingHapticEffect(UObject* HapticEffect, UObject* EffectOwner) const;
     
     UFUNCTION(BlueprintPure)
     bool IsPlayingHandShake(int32 ID) const;
@@ -451,7 +451,7 @@ public:
     bool GetIsIndicatingDirection() const;
     
     UFUNCTION(BlueprintPure)
-    UHapticFeedbackEffect_Base* GetHapticFeedbackEffect(int32 ID) const;
+    UObject* GetHapticFeedbackEffect(int32 ID) const;
     
     UFUNCTION(BlueprintPure)
     FSDIHandPoseInfo GetHandPoseInfo(bool& bOutForHighlight) const;
@@ -526,7 +526,7 @@ public:
     bool AdjustHapticEffectScaleId(int32 ID, float Scale) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure=false)
-    bool AdjustHapticEffectScale(UHapticFeedbackEffect_Base* HapticEffect, float Scale, UObject* EffectOwner) const;
+    bool AdjustHapticEffectScale(UObject* HapticEffect, float Scale, UObject* EffectOwner) const;
     
     UFUNCTION(BlueprintCallable)
     void AdjustHandShakeScale(int32 ID, float Scale);

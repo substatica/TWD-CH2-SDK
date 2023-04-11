@@ -10,10 +10,10 @@ class SDICOREPLUGIN_API ASDISignificanceStasisActor : public ASDISignificanceAct
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxActiveBin;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 MaxVisibleBin;
     
     UPROPERTY(Instanced, Transient)

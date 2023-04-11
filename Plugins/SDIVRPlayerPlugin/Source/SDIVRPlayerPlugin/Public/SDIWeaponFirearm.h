@@ -10,7 +10,7 @@
 #include "UObject/NoExportTypes.h"
 #include "SDIWeaponFirearm.generated.h"
 
-class UHapticFeedbackEffect_Base;
+class UObject;
 class ASDIWeaponFirearmAmmo;
 class USDIWeaponFirearmADSComponent;
 class ASDIWeaponFirearm;
@@ -28,11 +28,11 @@ protected:
     UPROPERTY(Replicated, Transient)
     int32 RepInitialRepChamberedAmmoCountHack;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* PrimaryClipEmptyFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* PrimaryClipEmptyFeedback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UHapticFeedbackEffect_Base* SecondaryClipEmptyFeedback;
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UObject* SecondaryClipEmptyFeedback;
     
     UPROPERTY(EditDefaultsOnly)
     int32 ClipSize;
@@ -58,7 +58,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, Instanced)
     USDIWeaponFirearmADSComponent* ADSComponent;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDICameraSettings ADSCameraSettings;
     
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepAmmoCount)
@@ -67,22 +67,22 @@ protected:
     UPROPERTY(Transient, ReplicatedUsing=OnRep_RepChamberedAmmoCount)
     int32 RepChamberedAmmoCount;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 DryFireCount;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float LastDryFireTimestamp;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bClipLoaded;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bAmmoHasBeenSetExternally;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     TArray<USDIWeaponFirearmFireModeComponent*> FireModes;
     
-    UPROPERTY(BlueprintReadOnly, Instanced, Transient)
+    UPROPERTY(BlueprintReadWrite, Instanced, Transient)
     TMap<ESDIInteractiveInteractType, USDIWeaponFirearmFireModeComponent*> FireModeMap;
     
 public:
@@ -147,7 +147,7 @@ protected:
     FSDIWeaponFirearmFiredShotInfo ModePrepareFiredShotInfo(USDIWeaponFirearmFireModeComponent* Firemode, ASDIWeaponFirearmAmmo* FiredAmmo);
     
     UFUNCTION(BlueprintNativeEvent)
-    void ModeGetFireFeedback(USDIWeaponFirearmFireModeComponent* Firemode, bool bRefire, UHapticFeedbackEffect_Base*& Primary, UHapticFeedbackEffect_Base*& Secondary);
+    void ModeGetFireFeedback(USDIWeaponFirearmFireModeComponent* Firemode, bool bRefire, UObject*& Primary, UObject*& Secondary);
     
     UFUNCTION(BlueprintNativeEvent)
     void ModeFiredRound(USDIWeaponFirearmFireModeComponent* Firemode, ASDIWeaponFirearmAmmo* FiredAmmo);

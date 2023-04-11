@@ -30,7 +30,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIBlendOption InterpolatedOption;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 ID;
     
     UPROPERTY(Transient)
@@ -54,10 +54,10 @@ protected:
     UPROPERTY(Transient)
     bool bInterpolatedInitialized;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<ASDICorePlayerCameraManager> WeakCameraManager;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<UObject> WeakOwner;
     
 public:

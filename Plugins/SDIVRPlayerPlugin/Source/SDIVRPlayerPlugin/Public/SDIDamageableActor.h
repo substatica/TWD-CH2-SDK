@@ -49,13 +49,13 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     TArray<FSDIDamageableActorSkin> DamageSkins;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TMap<TSubclassOf<UDamageType>, float> DamageModifierTypeMap;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonDamageHitMinImpactVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float NonDamageHitInterval;
     
     UPROPERTY(Transient)
@@ -90,7 +90,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     bool bAllowStab;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FSDIMeleeWeaponStabInterfaceData StabInterfaceData;
     
 public:

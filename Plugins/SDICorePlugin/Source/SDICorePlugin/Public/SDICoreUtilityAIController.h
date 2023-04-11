@@ -21,13 +21,13 @@ protected:
     UPROPERTY(EditDefaultsOnly)
     bool bUtilityAIEnabled;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     ESDIUtilityAIDifficulty Difficulty;
     
     UPROPERTY(Transient)
     TSubclassOf<USDICoreUtilityAI> LastCharacterUtilityAIClass;
     
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     USDICoreUtilityAI* UtilityAI;
     
 public:
