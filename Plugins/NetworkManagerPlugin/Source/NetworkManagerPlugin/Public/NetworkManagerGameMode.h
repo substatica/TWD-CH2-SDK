@@ -34,6 +34,6 @@ protected:
     bool bIsRunningOnAWS;
     
 public:
-    ANetworkManagerGameMode();
+    ANetworkManagerGameMode(const FObjectInitializer& ObjectInitializer);
 };
 

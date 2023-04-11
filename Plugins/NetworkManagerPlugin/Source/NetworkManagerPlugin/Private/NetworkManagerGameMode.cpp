@@ -1,6 +1,6 @@
 #include "NetworkManagerGameMode.h"
 
-ANetworkManagerGameMode::ANetworkManagerGameMode() {
+ANetworkManagerGameMode::ANetworkManagerGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bSDICallbackSucceeded = false;
     this->PendingGameServerUpdate = false;
     this->PendingGameServerStatus = 1;

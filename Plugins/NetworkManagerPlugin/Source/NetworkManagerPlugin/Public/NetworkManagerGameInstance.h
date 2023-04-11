@@ -9,7 +9,7 @@ UCLASS(NonTransient, Config=Engine)
 class NETWORKMANAGERPLUGIN_API UNetworkManagerGameInstance : public UGameInstance {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FString BuildInfo;
     
 protected:
