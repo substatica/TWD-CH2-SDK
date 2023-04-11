@@ -1495,7 +1495,7 @@ public:
     FBehaviorEventCalled BehaviorEventCalled;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     UTWDCharacterPersonality* Personality;
     
     UPROPERTY(Instanced, VisibleAnywhere)
@@ -1504,28 +1504,28 @@ protected:
     UPROPERTY(EditAnywhere)
     FTWDInitialContext InitialContext;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTWDCharacterSkin> OverrideSkin;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditDefaultsOnly)
     FSoftClassPath PlatformOverrideSkin;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTWDCharacterSkin> NonVROverrideSkin;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TSubclassOf<UTWDCharacterSkin> ToolDisplayOverrideSkin;
     
-    UPROPERTY(Config, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, Config, EditDefaultsOnly)
     TSoftClassPtr<UTWDCharacterSkin> NonVRPlatformOverrideSkin;
     
     UPROPERTY(Transient)
     ATWDCharacterHandSlot* CharacterHandSlot;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     UTWDCharacterArchetype* Archetype;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FTWDRequiredInventory> RequiredInventory;
     
     UPROPERTY(Transient)
@@ -1715,25 +1715,25 @@ protected:
     UPROPERTY(EditAnywhere)
     FTWDWoundInterfaceData TWDWoundData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* SplashColorTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* SplashNormalTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* MeatColorTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* MeatNormalTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* NoGoreSplashColorTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     UTexture2D* NoGoreMeatColorTexture;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     float WoundSeverityScale;
     
     UPROPERTY(EditAnywhere)
@@ -1756,7 +1756,7 @@ public:
     bool bUseActualHeadForStableHead;
     
 protected:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     bool bRequestDeath;
     
     UPROPERTY(EditDefaultsOnly)
