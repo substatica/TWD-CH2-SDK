@@ -285,7 +285,10 @@ void ATWDWeaponActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutL
 
 ATWDWeaponActor::ATWDWeaponActor(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->AkAudioComponent = CreateDefaultSubobject<UTWDAutoTickAkComponent>(TEXT("AkAudioComponent"));
+    this->AkAudioComponent->AttachTo(GetRootComponent());
+    
     this->WeaponShoveComp = CreateDefaultSubobject<UTWDWeaponShoveComponent>(TEXT("WeaponShove"));
+
     this->BrokenReplacementClass = NULL;
     this->BrokenPrimaryHapticEffect = NULL;
     this->BrokenPrimaryHapticScale = 0.00f;
