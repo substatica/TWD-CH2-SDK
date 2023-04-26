@@ -1,102 +1,103 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ETWDInventoryType.h"
-#include "UObject/NoExportTypes.h"
+#include "TWDUniqueEntitlementItemID.h"
 #include "ETWDLootType.h"
+#include "UObject/NoExportTypes.h"
 #include "ETWDNonVREquipmentType.h"
 #include "UObject/NoExportTypes.h"
 #include "TWDInventoryActorInterfaceData.generated.h"
 
 class UAkAudioEvent;
-class UTWDRecipe;
 class UMaterialInterface;
+class UTWDRecipe;
 
 USTRUCT(BlueprintType)
 struct FTWDInventoryActorInterfaceData {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETWDInventoryType InventoryType;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETWDLootType LootType;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ETWDNonVREquipmentType NonVREquipmentType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName OnlineEntitlementName;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FTWDUniqueEntitlementItemID OnlineItemID;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SharpnessRating;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DurabilityRating;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ThrowRating;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString SerializationString;
     
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid PlacedObjectId;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNearbyHighlightShown;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIgnorePositioningForInventoryData;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNeverShowInventoryData;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDropOnArmGrapple;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDropOnArmGrappleOnlyIfTwoHanded;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bApplyPrimaryGripPitchOffsetUserSetting;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform BackpackSlotTransform;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform CharacterSlotTransform;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform ShoulderSlotTransform;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTransform NonVRInteractTransform;
     
-    UPROPERTY(VisibleDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bNonVRInteractTransformIsValid;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSheathed;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     uint8 LocalInventorySlotIdx;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bIgnoreReturnToInventoryAudio;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UMaterialInterface*> OriginalMaterials;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAkAudioEvent* AudioStoreInInventory;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UAkAudioEvent* AudioRemoveFromInventory;
     
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UTWDRecipe> SalvageRecipe;
     
-    UPROPERTY(BlueprintReadWrite)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGuid SalvageRecipeGuid;
     
     TWD_API FTWDInventoryActorInterfaceData();
