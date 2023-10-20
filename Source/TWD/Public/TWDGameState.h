@@ -12,95 +12,95 @@
 class ULevel;
 class UWorld;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TWD_API ATWDGameState : public ASDICoreGameState {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DefaultTimeUntilBells;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BellAlarmTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PreHordeBellTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PreHordeAutosaveCutoff;
-    
-    UPROPERTY(Transient)
+       
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 ActiveSurvivorsMax;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 ActiveTotalCharactersMax;
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     int32 SurvivorMaxSeenSignifanceBucket[4];
     
-    UPROPERTY(Transient)
+    UPROPERTY(EditAnywhere, Transient)
     int32 WalkerMaxSeenSignifanceBucket[4];
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveBeforeHordeTimerDelay;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReviveAfterHordeTimerDelay;
     
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTimerHandle HordeTimerHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTimerHandle PreHordeTimerHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTimerHandle BellAlarmTimerHandle;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTimerHandle HordeAchievementTimerHandle;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTWDGameState_OnResetBells OnResetBellsDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTWDGameState_OnRingBells OnRingBellsDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTWDGameState_OnPreRingBells OnPreRingBellsDelegate;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBellAlarm BellAlarm;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHordeTimerChanged HordeTimerChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHordeTimerChanged PreHordeTimerChanged;
     
-    UPROPERTY(BlueprintAssignable)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FHordeTimerChanged AlarmTimerChanged;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float HordeTimerStartTimestamp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float LeastSignificance;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxFullsignificanceAllowed;
     
-    UPROPERTY(Config)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 MaxCharactersSwitchAllowed;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 CurrentCharactersSwitch;
     
     UPROPERTY(Transient)
     bool bOnGameActivityActivationRequested;
     
     ATWDGameState(const FObjectInitializer& ObjectInitializer);
-    UFUNCTION(BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
     void StopMusic();
     
     UFUNCTION(BlueprintCallable)
