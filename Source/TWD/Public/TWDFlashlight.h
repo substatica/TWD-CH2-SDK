@@ -34,17 +34,16 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetPowered(bool inPowered);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable)
     bool IsUVMode() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable)
     bool IsSwitchedOn() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable)
     bool IsPowered() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable)
     bool IsOn() const;
-    
 };
 
