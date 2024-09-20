@@ -78,22 +78,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
     UPhysicsConstraintComponent* NonVRPhysicsConstraint;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bCollideHeldActor;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     bool bCollidePhysicalInteractComponent;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float CollidePhysicalInteractComponentShapeInflation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     FName HeldActorAttachPointSocket;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float GripPressThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
     float GripReleaseThreshold;
     
     UPROPERTY(Config, VisibleAnywhere)
@@ -102,121 +102,121 @@ protected:
     UPROPERTY(Config, VisibleAnywhere)
     float GripCapacitiveTouchReleaseThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float KnucklesGripPressThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float KnucklesGripReleaseThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bGripValidInteractionHighlightsOnly;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bGripAllowOffscreenRanged;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bGripAllowOffscreenClose;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowRangedGrip;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowRangedInteract;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GripOffScreenAngleDeg;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float InteractPressThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float InteractReleaseThreshold;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bInteractValidInteractionHighlightsOnly;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bUseVisualHandsForDesiredHandRotation;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float MaxSimulatingPhysicsMassToPickup;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UObject* GrabPhysicsFeedback;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowAvgVelocityBlend;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowAvgVelocityTime;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowVelocityMultiplier;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* ThrowVelocityMultiplierMassCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     UCurveFloat* ThrowMaxVelocityMassCurve;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowVelocityPhysicsOverrideBlend;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowinginReleaseTimeOffset;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ThrowinginReleaseTimeOffsetQuestLink;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     TSoftClassPtr<ASDIThrowInputSplineActor> ThrowInputSplineClass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowTeleportWhileGrippingWorld;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowTeleportWhileGrippingPhysics;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bAllowTeleportWhileGrippingInteractive;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float TeleportMaxSimulatingPhysicsMass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     bool bSimulateHeldActorWeight;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedHeldActorWeightMinMass;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedGravityTorqueAngularAcc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedGravityLinearAcc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedInertiaTorqueAcc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedInertiaLinearAcc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedAngularVelocityMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedAngularVelocityDecay;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedLinearVelocityMax;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedLinearVelocityDecay;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedHandTorqueAngularAcc;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float SimulatedHandLinearAcc;
     
     UPROPERTY(BlueprintReadWrite, Instanced, VisibleAnywhere)
@@ -243,22 +243,22 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float BodySlotOnscreenAngleDegrees;
 
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripLocationSpring;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripTwistSpring;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripSwing1Spring;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FFloatRK4SpringInterpolator CosmeticGripSwing2Spring;
 
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     FVectorRK4SpringInterpolator UnderWaterLocationSpring;
 
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float ExitUnderWaterInterpolationDuration;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -267,10 +267,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIHandPoseInfo SwimmingHandPoseInfo;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GripInteractiveSafetyTimeBeforePress;
     
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
     float GripInteractiveSafetyTimeAfterPress;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -282,10 +282,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FGameplayTagContainer GameplayTagContainer;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIReplicatedStimAndResponseInterfaceDataContainer RepStimulusData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     FSDIStimAndResponseInterfaceDataContainer StimulusData;
     
 public:
@@ -350,16 +350,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     ASDIThrowInputSplineActor* ThrowInputSpline;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<AActor> CachedHolderActor;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TWeakObjectPtr<AActor> CachedInventoryOwner;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIPlayerHandLock TwoHandIKLock;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIPlayerHandLock GripAttachPhysicsLock;
     
     UPROPERTY(BlueprintReadWrite, Transient)
@@ -377,43 +377,43 @@ protected:
     UPROPERTY(BlueprintReadWrite, Transient)
     FName GrippingPhysicsComponentBoneName;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float GrippingPhysicsComponentArmLengthReleaseTime;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HandActivityLevel;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HandTargetActivityLevel;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HandTargetActivityLevelFadeScale;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float HandActivityLevelIdleTime;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FTransform HandActivityLevelLastActorRelTransform;
     
     UPROPERTY(EditAnywhere, Transient)
     TWeakObjectPtr<UActorComponent> CosmeticGripComp;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo CosmeticGripInfo;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     FSDIGripInfo AdjustedCosmeticGripInfo;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     TArray<FSDIPlayerHandInteractComponentEntry> GripInteractiveSafetyEntries;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     float ExitUnderWaterInterpolationTime;
     
     UPROPERTY(BlueprintReadWrite, Transient)
     USDITriggerResistanceFeedbackEffect_Curve* CurrentTriggerResistance;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, Transient)
     int32 TriggerResistanceId;
     
     UPROPERTY(BlueprintReadWrite, Transient)
