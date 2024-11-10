@@ -371,10 +371,14 @@ void ASDIPlayerHandBase::AdjustHandShakeScale(int32 ID, float Scale) {
 }
 
 ASDIPlayerHandBase::ASDIPlayerHandBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
     this->MotionController = CreateDefaultSubobject<USDIMotionControllerComponent>(TEXT("MotionController"));
     this->HandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("HandMesh"));
+    this->HandMesh->AttachTo(GetRootComponent());
     this->TrackedHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TrackedHandMesh"));
+    this->TrackedHandMesh->AttachTo(GetRootComponent());
     this->CosmeticHandMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("CosmeticHandMesh"));
+    this->CosmeticHandMesh->AttachTo(GetRootComponent());
     this->CosmeticHandMeshPhysicalAnimation = CreateDefaultSubobject<USDILatePhysicalAnimationComponent>(TEXT("CosmeticHandMeshPhysicalAnimation"));
     this->HandMeshCollisionIgnoranceComp = CreateDefaultSubobject<USDICollisionChannelIgnoranceComponent>(TEXT("HandMeshCollisionIgnorance"));
     this->VelocitySmoothingFactor = 10.00f;

@@ -410,7 +410,9 @@ void ASDIPlayerHand::AdjustThrowInfo(UPrimitiveComponent* ThrownComponent, FTran
 
 ASDIPlayerHand::ASDIPlayerHand(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->InteractComponent = CreateDefaultSubobject<USDIPlayerHandInteractComponent>(TEXT("InteractComponent"));
+    this->InteractComponent->AttachTo(GetRootComponent());
     this->RangedInteractComponent = CreateDefaultSubobject<USDIPlayerHandInteractComponent>(TEXT("RangedInteractComponent"));
+    this->RangedInteractComponent->AttachTo(GetRootComponent());
     this->PhysicalInteractComponent = NULL;
     this->PhysicsHandle = CreateDefaultSubobject<UPhysicsHandleComponent>(TEXT("PhysicsHandle"));
     this->GripPhysicsConstraint = CreateDefaultSubobject<UPhysicsConstraintComponent>(TEXT("GripPhysicsConstraint"));
