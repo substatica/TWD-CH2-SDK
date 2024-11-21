@@ -1,4 +1,4 @@
-# TWD-CH2-proj
+# The Walking Dead: Saints & Sinners Chapter 2: Retribution SDK
 
 * Generate Visual Studio project files for Unreal 4.27.2
   * Right click on the .uproject file in File Explorer and select General Visual Studio project files
