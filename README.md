@@ -12,7 +12,7 @@ This is an Unreal 4.27.2 shell project to be used as a platform for developing m
   * https://www.audiokinetic.com/en/products/wwise/
   * Install Wwise 2019.2.15.7667.2164
   * Integrate Wwise into an empty Unreal 4.27.2 project (in Unreal Editor create an empty project, then in Wwise integrate the referenced version into that new project)
-  * Copy contents of [EmptyUnrealProject]\Plugins\Wwise\ to [TWD-CH2-proj]\Plugins\Wwise\
+  * Copy contents of [EmptyUnrealProject]\Plugins\Wwise\ to [TWD-CH2-SDK]\Plugins\Wwise\
 * Build Visual Studio project
   * Open TWD.sln (solution file) in Visual Studio (2019 or higher), you may have to install additional components depending on your Visual Studio install
   * Right click on TWD in the Solution Explorer on the Right Side of Visual Studio and select Build
