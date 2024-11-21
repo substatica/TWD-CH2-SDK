@@ -1,4 +1,8 @@
-# The Walking Dead: Saints & Sinners Chapter 2: Retribution SDK
+# The Walking Dead: Saints & Sinners - Chapter 2: Retribution SDK
+
+Support by Getting 10% Off Meta Quest Games - https://referrals.substatica.com
+
+This is an Unreal 4.27.2 shell project to be used as a platform for developing mods for Skydance Interative's game The Walking Dead: Saints & Sinners - Chapter 2: Retribution.
 
 * Generate Visual Studio project files for Unreal 4.27.2
   * Right click on the .uproject file in File Explorer and select General Visual Studio project files
@@ -13,3 +17,5 @@
   * Open TWD.sln (solution file) in Visual Studio (2019 or higher), you may have to install additional components depending on your Visual Studio install
   * Right click on TWD in the Solution Explorer on the Right Side of Visual Studio and select Build
 * Open TWD.uproject in Unreal Editor
+  
+![Skydance Modding Guidelines](https://github.com/substatica/TWD-CH1-SDK/blob/main/Skydance_Modding_Guidelines.png)
